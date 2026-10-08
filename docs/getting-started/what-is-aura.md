@@ -7,20 +7,21 @@ description: Learn what Aura is, what it helps teams do, and where it fits in th
 
 Aura is Linuscent's product security and compliance workspace.
 
-It helps engineering, security, product, and compliance teams work from the same product evidence when managing software components, vulnerabilities, security decisions, and compliance activities.
+It helps engineering, security, product, and compliance teams work from the same project and release evidence when managing software components, vulnerabilities, security decisions, and compliance activities.
 
-Aura connects information about a product and its releases with software inventory, vulnerability findings, documented decisions, and supporting evidence.
+Aura connects projects and their releases with software inventory, security findings, documented decisions, and supporting evidence.
 
 ## What can you do with Aura?
 
 You can use Aura to:
 
-- maintain software inventory for product releases using SBOMs;
-- import and export supported SBOMs;
+- create workspaces and projects for product-security work;
+- upload supported SBOMs and create project releases;
+- maintain software inventory for each release;
 - identify vulnerabilities associated with software components;
-- review vulnerability, licence, and policy information;
+- review vulnerability, license, and policy information;
 - document vulnerability assessments and decisions;
-- monitor active product releases for changes in findings;
+- monitor active releases for changes in findings;
 - maintain traceable evidence for security and compliance work;
 - export evidence for review, reporting, and audit preparation.
 
@@ -32,7 +33,7 @@ Product security information often exists across different tools, teams, and doc
 
 For example, an engineering team may maintain build information in one system, vulnerability findings in another, and compliance evidence in tickets, spreadsheets, or shared folders.
 
-Aura provides a shared workspace that connects this information to the product and release it belongs to.
+Aura provides a shared workspace that connects this information to the project and release it belongs to.
 
 This helps teams answer questions such as:
 
@@ -50,7 +51,7 @@ Aura is designed for teams involved in building, securing, and maintaining produ
 
 Typical users may include:
 
-- **Engineering teams** managing product releases and software dependencies;
+- **Engineering teams** managing project releases and software dependencies;
 - **Product security teams** reviewing vulnerabilities and remediation;
 - **Compliance teams** maintaining evidence for regulatory requirements;
 - **Product teams** coordinating security and compliance work across releases.
@@ -69,12 +70,13 @@ Your organisation remains responsible for determining which requirements apply t
 
 You will see several important concepts throughout Aura:
 
-- **Product** — the product being managed in Aura.
-- **Release** — a specific version or release of a product.
+- **Workspace** — the top-level area used to organise work in Aura.
+- **Project** — the main unit used to organise releases, SBOMs, and related security data.
+- **Release** — a release created from an SBOM upload to a project.
 - **SBOM** — a machine-readable inventory of software components associated with a release.
-- **Component** — a software package, library, or other item included in the product inventory.
+- **Component** — a software package, library, framework, module, or other item included in the inventory.
 - **Finding** — information that may require review, such as a vulnerability or policy result.
-- **Vulnerability decision** — a documented assessment of how a vulnerability applies to a product or release.
+- **Vulnerability decision** — a documented assessment of how a vulnerability applies to a project release.
 - **Evidence** — records that support security, compliance, and review activities.
 
 You do not need to understand all of these concepts before getting started.

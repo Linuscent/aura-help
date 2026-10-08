@@ -1,70 +1,80 @@
 ---
 title: How Aura works
-description: Understand the main Aura workflow, from product inventory and SBOMs to vulnerability decisions, evidence, and ongoing monitoring.
+description: Understand the main Aura workflow, from workspaces and projects to SBOM releases, findings, decisions, evidence, and ongoing monitoring.
 ---
 
 # How Aura works
 
-Aura connects product inventory, security findings, engineering decisions, and compliance evidence in one workflow.
+Aura connects software inventory, security findings, engineering decisions, and compliance evidence in one workflow.
 
 At a high level, the process looks like this:
 
 ```text
-Product
+Workspace
   ↓
-Release
+Project
   ↓
-SBOM and software inventory
+Upload SBOM
   ↓
-Security and policy findings
+Aura creates a release
+  ↓
+Inventory and analysis
+  ↓
+Risks, licenses, and policies
   ↓
 Assessment and decisions
   ↓
-Remediation
-  ↓
-Evidence
+Remediation and evidence
   ↓
 Ongoing monitoring
 ```
 
 The exact capabilities available to you may depend on your Aura plan and workspace configuration.
 
-## 1. Start with a product and release
+## 1. Work inside a workspace
 
-Aura organizes security and compliance information around products and their releases.
+A workspace is the top-level area used to organise work in Aura.
 
-A release represents a specific version of a product that has its own software inventory, findings, decisions, and supporting evidence.
+A workspace can contain multiple projects and has its own plan and configuration.
 
-Keeping this information associated with a specific release makes it easier to understand what was shipped and what security decisions applied at that point in time.
+## 2. Create a project
 
-## 2. Add software inventory
+A project is the main unit used to organise SBOM releases and related security data.
 
-Aura uses software inventory to understand which components are included in a product release.
+Create a project before uploading an SBOM.
 
-One way to provide this inventory is by importing a supported Software Bill of Materials (SBOM).
+## 3. Upload an SBOM
 
-Aura supports CycloneDX SBOM workflows for importing and exporting software-component information.
+Open a project and upload a supported SBOM.
 
-After an SBOM is processed, its components become part of the release inventory.
+Manual upload is available from the project.
 
-## 3. Analyse components
+Aura accepts supported CycloneDX SBOM files in JSON or XML format.
 
-Aura uses the component inventory to identify information that may require review.
+## 4. Aura creates a release
 
-Depending on the available capabilities, this may include:
+Each successful SBOM upload creates a new release for the project.
 
-- known vulnerabilities;
-- licence information;
-- policy results;
-- other product-security findings.
+This also applies when another SBOM is uploaded for the same software version.
 
-A finding does not automatically mean that a product is exploitable or non-compliant.
+The release is processed by Aura before analysis results become available.
 
-It indicates that additional review may be required.
+## 5. Review inventory and analysis
 
-## 4. Review and prioritise findings
+After processing completes, the release can be used to review information such as:
 
-Teams can review findings in the context of the affected product and release.
+- components;
+- services;
+- dependency relationships;
+- vulnerabilities;
+- license information;
+- policy results.
+
+The exact views available may depend on your plan and workspace configuration.
+
+## 6. Review and prioritise findings
+
+Teams can review findings in the context of the affected project and release.
 
 This may involve considering:
 
@@ -75,9 +85,11 @@ This may involve considering:
 - available fixes;
 - internal security policies.
 
-Prioritisation helps teams focus on findings that require the most attention.
+A finding does not automatically mean that the product is exploitable or non-compliant.
 
-## 5. Record decisions
+It indicates that additional review may be required.
+
+## 7. Record decisions
 
 Security decisions should be traceable.
 
@@ -85,11 +97,11 @@ For a vulnerability, a team may need to document whether the issue affects the p
 
 Where supported, Aura can maintain vulnerability decisions and VEX-related information alongside the release that was assessed.
 
-Aura does not automatically replace accountable engineering or security judgement.
+Aura does not replace accountable engineering or security judgement.
 
-## 6. Track remediation
+## 8. Track remediation and evidence
 
-When action is required, teams can track the work needed to address the finding.
+When action is required, teams can track the work needed to address a finding.
 
 This may include:
 
@@ -99,36 +111,27 @@ This may include:
 - accepting a documented risk;
 - completing another approved remediation activity.
 
-The goal is to keep the finding, decision, action, and outcome connected.
+Aura can also retain evidence that supports security reviews, compliance activities, and audit preparation.
 
-## 7. Maintain evidence
+## 9. Monitor active releases
 
-Aura maintains records that can support security reviews, compliance activities, and audit preparation.
-
-Evidence may connect information such as:
-
-- product and release identity;
-- software inventory;
-- vulnerability findings;
-- assessment decisions;
-- remediation information;
-- approvals and related records.
-
-This creates a traceable history of what was reviewed and why decisions were made.
-
-## 8. Monitor active releases
-
-Security information changes after a product is released.
+Security information changes after a release is created.
 
 New vulnerabilities may be published, policies may change, and previously accepted findings may need to be reviewed again.
 
-Aura can monitor active product releases so teams can identify relevant changes without treating security review as a one-time activity.
+Aura can monitor active releases so teams can identify relevant changes over time.
 
 Notification and monitoring capabilities may depend on your Aura plan.
 
+## Manual and automated SBOM ingestion
+
+Manual SBOM upload is available from a project and is useful when getting started or testing Aura.
+
+The **SBOM Ingestion** area is intended for automated ingestion workflows, including API and CI/CD integrations.
+
 ## Aura and compliance
 
-Aura helps teams structure and preserve the product-security information that can support compliance activities.
+Aura helps teams structure and preserve product-security information that can support compliance activities.
 
 For example, this information may contribute to work related to the EU Cyber Resilience Act (CRA).
 
@@ -143,4 +146,4 @@ Continue with:
 - [Key concepts](./key-concepts.md)
 - [First steps in Aura](./first-steps.md)
 - [What is an SBOM?](../sbom/what-is-an-sbom.md)
-- [Products and releases](../products-and-releases/products-and-releases.md)
+- [Projects and releases](../projects-and-releases/overview.md)

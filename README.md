@@ -15,13 +15,14 @@ Help content is located in the `docs/` directory.
 Current sections include:
 
 - Getting Started
-- Products and Releases
+- Projects and Releases
 - SBOM
-- Vulnerabilities
-- Licences and Policies
-- Evidence and CRA
+- Inventory
+- Risks
+- Licenses and Policies
+- Compliance
 - Integrations
-- Workspace and Team
+- Workspace and Account
 - Troubleshooting
 
 ## Content approach
@@ -32,6 +33,7 @@ The documentation is designed to be:
 - easy to search;
 - understandable for both technical and non-technical users;
 - based on real Aura workflows;
+- consistent with the terminology used in the Aura interface;
 - explicit about prerequisites, expected results, and troubleshooting.
 
 ## Documentation generator
@@ -48,6 +50,7 @@ When adding or updating documentation:
 
 - use lowercase file names;
 - use kebab-case for file names;
+- use the same terminology as the Aura interface;
 - keep article titles clear and task-oriented;
 - avoid documenting unconfirmed product behaviour;
 - link related articles where useful;

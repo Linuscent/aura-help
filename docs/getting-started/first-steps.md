@@ -16,6 +16,8 @@ Verify email
   ↓
 Create workspace
   ↓
+Choose workspace plan
+  ↓
 Create project
   ↓
 Upload SBOM
@@ -74,9 +76,7 @@ Aura creates the workspace and switches you to it automatically.
 
 ## 4. Create your first project
 
-From the main navigation, select:
-
-**Projects**
+From the main navigation, select **Projects**.
 
 Select **New**.
 
@@ -88,7 +88,7 @@ In the **New Project** dialog:
 
 The project appears in the project list.
 
-A project is used to organize its releases, SBOMs, and related security data.
+A project is used to organise its releases, SBOMs, and related security data.
 
 ## 5. Upload your first SBOM
 
@@ -96,14 +96,14 @@ Open the project you created.
 
 Select **Upload SBOM**.
 
-Aura accepts CycloneDX SBOM files in:
+Aura accepts supported CycloneDX SBOM files in:
 
 - JSON;
 - XML.
 
 Choose or drag your SBOM file into the upload dialog, then select **Upload SBOM**.
 
-Each successful upload creates a new release for the project, including when another SBOM is uploaded for the same software version.
+Each successful SBOM upload creates a new release for the project, including when another SBOM is uploaded for the same software version.
 
 ## 6. Wait for the release to be processed
 
@@ -113,7 +113,7 @@ When processing completes, the release status changes to:
 
 **READY**
 
-The release can then be used throughout Aura for inventory, vulnerability, dependency, licence, policy, and reporting views.
+The release can then be used throughout Aura for inventory, vulnerability, dependency, license, policy, and reporting views.
 
 ## 7. Review your first results
 
@@ -159,22 +159,23 @@ You can continue by reviewing:
 1. the components identified in the SBOM;
 2. vulnerability findings;
 3. dependency relationships;
-4. licence information;
+4. license information;
 5. policy findings;
 6. the security posture of the release.
 
-You can upload another SBOM later to create another release and compare how the product changes over time.
+You can upload another SBOM later to create another release and compare how the project changes over time.
 
-## Automating SBOM uploads
+## Manual and automated SBOM ingestion
 
-Manual upload is useful when getting started or testing Aura.
+Manual SBOM upload is available from a project and is useful when getting started or testing Aura.
 
-For regular engineering workflows, Aura also provides automated SBOM ingestion through its API and CI/CD integrations.
+The **SBOM Ingestion** area is intended for automated ingestion workflows, including API and CI/CD integrations.
 
 See:
 
-- [SBOM ingestion overview](../integrations/overview.md)
-- [GitHub Actions](../integrations/github-action.md)
+- [SBOM ingestion](../integrations/sbom-ingestion.md)
+- [API ingestion](../integrations/api-ingestion.md)
+- [GitHub Actions](../integrations/github-actions.md)
 
 ## Troubleshooting
 

@@ -7,7 +7,7 @@ description: Help and documentation for Linuscent Aura.
 
 Welcome to the Aura Help documentation.
 
-Aura helps engineering, security, product, and compliance teams manage software inventory, vulnerability information, security decisions, and compliance evidence across product releases.
+Aura helps engineering, security, product, and compliance teams manage software inventory, security findings, decisions, and compliance evidence across projects and releases.
 
 ## New to Aura?
 
@@ -20,33 +20,37 @@ Start with:
 
 ## Help topics
 
-### Products and releases
+### Projects and releases
 
-Learn how Aura organizes products, releases, software inventory, and ongoing monitoring.
+Learn how to create and manage projects, upload SBOMs, and work with releases created from SBOM uploads.
 
 ### SBOM
 
-Learn what an SBOM is, which formats Aura supports, and how to import, export, and troubleshoot SBOMs.
+Learn what an SBOM is, which formats Aura supports, and how to upload, export, and troubleshoot SBOMs.
 
-### Vulnerabilities
+### Inventory
 
-Learn how to understand findings, assess severity, prioritize vulnerabilities, record decisions, and track remediation.
+Explore components, services, and dependency relationships identified from project releases.
 
-### Licences and policies
+### Risks
 
-Understand licence information, policy results, and how to review policy-related findings.
+Learn how to understand security findings, review vulnerability severity, prioritize risks, record decisions, and track remediation.
 
-### Evidence and CRA
+### Licenses and policies
 
-Learn how Aura supports evidence management and activities related to the EU Cyber Resilience Act.
+Understand license information and policy-related findings.
+
+### Compliance
+
+Learn about regulations, evidence, compliance workflows, and CRA-related activities.
 
 ### Integrations
 
-Learn how Aura connects with engineering and operational tools.
+Learn how to automate SBOM ingestion using the Aura API and supported CI/CD workflows.
 
-### Workspace and team
+### Workspace and account
 
-Learn how workspaces, collaboration, access, and permissions are managed.
+Learn how to work with workspaces, account settings, access, and permissions.
 
 ### Troubleshooting
 
