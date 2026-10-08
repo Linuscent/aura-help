@@ -26,7 +26,7 @@ Learn how to create and manage projects, upload SBOMs, and work with releases cr
 
 ### SBOM
 
-Learn what an SBOM is, which formats Aura supports, and how to upload, export, and troubleshoot SBOMs.
+Learn what an SBOM is, which formats Aura supports, and how to upload and troubleshoot SBOMs.
 
 ### Inventory
 
