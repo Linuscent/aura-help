@@ -1,13 +1,12 @@
 ---
 title: Supported SBOM formats
 description: Learn which SBOM formats can be uploaded to Aura and what to check before importing a file.
+sidebar:
+  order: 2
 ---
-
-# Supported SBOM formats
-
 Aura supports **CycloneDX** SBOM workflows.
 
-For manual SBOM uploads from a project, Aura accepts CycloneDX files in:
+For manual SBOM uploads from a product, Aura accepts CycloneDX files in:
 
 - **JSON**
 - **XML**
@@ -72,11 +71,10 @@ If you are unsure whether an SBOM is valid:
 1. Confirm that the generating tool produced CycloneDX JSON or XML.
 2. Check the SBOM metadata and specification version.
 3. Validate the file with a CycloneDX-compatible validator or generation tool.
-4. Upload the validated file to the appropriate Aura project.
+4. Upload the validated file to the appropriate Aura product.
 
 ## Related articles
 
-- [What is an SBOM?](./what-is-an-sbom.md)
-- [Upload an SBOM](./upload-sbom.md)
-- [Troubleshoot an SBOM](./troubleshoot-sbom.md)
-- [SBOM validation errors](../troubleshooting/sbom-validation-errors.md)
+- [What is an SBOM?](../what-is-an-sbom/)
+- [Upload an SBOM](../upload-sbom/)
+- [Inventory Overview](../../inventory/overview/)

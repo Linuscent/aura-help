@@ -1,22 +1,21 @@
 ---
 title: What is Aura?
 description: Learn what Aura is, what it helps teams do, and where it fits in the product security and compliance workflow.
+sidebar:
+  order: 1
 ---
-
-# What is Aura?
-
 Aura is Linuscent's product security and compliance workspace.
 
-It helps engineering, security, product, and compliance teams work from the same project and release evidence when managing software components, vulnerabilities, security decisions, and compliance activities.
+It helps engineering, security, product, and compliance teams work from the same product and release evidence when managing software components, vulnerabilities, security decisions, and compliance activities.
 
-Aura connects projects and their releases with software inventory, security findings, documented decisions, and supporting evidence.
+Aura connects products and their releases with software inventory, security findings, documented decisions, and supporting evidence.
 
 ## What can you do with Aura?
 
 You can use Aura to:
 
-- create workspaces and projects for product-security work;
-- upload supported SBOMs and create project releases;
+- create workspaces and products for product-security work;
+- upload supported SBOMs and create product releases;
 - maintain software inventory for each release;
 - identify vulnerabilities associated with software components;
 - review vulnerability, license, and policy information;
@@ -33,7 +32,7 @@ Product security information often exists across different tools, teams, and doc
 
 For example, an engineering team may maintain build information in one system, vulnerability findings in another, and compliance evidence in tickets, spreadsheets, or shared folders.
 
-Aura provides a shared workspace that connects this information to the project and release it belongs to.
+Aura provides a shared workspace that connects this information to the product and release it belongs to.
 
 This helps teams answer questions such as:
 
@@ -51,7 +50,7 @@ Aura is designed for teams involved in building, securing, and maintaining produ
 
 Typical users may include:
 
-- **Engineering teams** managing project releases and software dependencies;
+- **Engineering teams** managing product releases and software dependencies;
 - **Product security teams** reviewing vulnerabilities and remediation;
 - **Compliance teams** maintaining evidence for regulatory requirements;
 - **Product teams** coordinating security and compliance work across releases.
@@ -71,12 +70,12 @@ Your organisation remains responsible for determining which requirements apply t
 You will see several important concepts throughout Aura:
 
 - **Workspace** — the top-level area used to organise work in Aura.
-- **Project** — the main unit used to organise releases, SBOMs, and related security data.
-- **Release** — a release created from an SBOM upload to a project.
+- **Product** — the main unit used to organise releases, SBOMs, and related security data.
+- **Release** — a release created from an SBOM upload to a product.
 - **SBOM** — a machine-readable inventory of software components associated with a release.
 - **Component** — a software package, library, framework, module, or other item included in the inventory.
 - **Finding** — information that may require review, such as a vulnerability or policy result.
-- **Vulnerability decision** — a documented assessment of how a vulnerability applies to a project release.
+- **Vulnerability decision** — a documented assessment of how a vulnerability applies to a product release.
 - **Evidence** — records that support security, compliance, and review activities.
 
 You do not need to understand all of these concepts before getting started.
@@ -85,7 +84,12 @@ You do not need to understand all of these concepts before getting started.
 
 Continue with:
 
-- [How Aura works](./how-aura-works.md)
-- [Key concepts](./key-concepts.md)
-- [First steps in Aura](./first-steps.md)
-- [What is an SBOM?](../sbom/what-is-an-sbom.md)
+- [How Aura works](../how-aura-works/)
+- [Key concepts](../key-concepts/)
+- [First steps in Aura](../first-steps/)
+- [What is an SBOM?](../../sbom/what-is-an-sbom/)
+
+## Related articles
+
+- [How Aura works](../how-aura-works/)
+- [Products and releases](../../products-and-releases/overview/)

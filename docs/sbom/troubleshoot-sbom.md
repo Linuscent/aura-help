@@ -1,10 +1,9 @@
 ---
 title: Troubleshoot an SBOM
 description: Diagnose common SBOM upload and validation problems in Aura.
+sidebar:
+  order: 4
 ---
-
-# Troubleshoot an SBOM
-
 If Aura cannot accept or process an SBOM, start by checking the file format, CycloneDX structure, and specification version.
 
 ## Aura says the SBOM is not valid CycloneDX
@@ -86,7 +85,7 @@ When processing completes normally, the release status becomes **READY**.
 
 If the release does not reach the expected state:
 
-1. wait briefly and refresh the project;
+1. wait briefly and refresh the product;
 2. confirm that the uploaded SBOM is valid and complete;
 3. check whether the release shows an error or processing status;
 4. try a newly generated SBOM if the source file may be damaged;
@@ -116,7 +115,7 @@ This behaviour helps preserve the inventory and analysis associated with each up
 
 When reporting an SBOM problem, collect:
 
-- the project name;
+- the product name;
 - the release or upload involved;
 - SBOM format (JSON or XML);
 - CycloneDX specification version;
@@ -128,8 +127,6 @@ Do not share sensitive SBOM contents outside your organisation unless your suppo
 
 ## Related articles
 
-- [What is an SBOM?](./what-is-an-sbom.md)
-- [Supported SBOM formats](./supported-formats.md)
-- [Upload an SBOM](./upload-sbom.md)
-- [SBOM upload errors](../troubleshooting/sbom-upload-errors.md)
-- [SBOM validation errors](../troubleshooting/sbom-validation-errors.md)
+- [Upload an SBOM](../upload-sbom/)
+- [What is an SBOM?](../what-is-an-sbom/)
+- [Inventory Overview](../../inventory/overview/)

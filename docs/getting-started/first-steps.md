@@ -1,10 +1,9 @@
 ---
 title: First steps in Aura
-description: Create your first Aura workspace and project, upload an SBOM, and review your first analysis.
+description: Create your first Aura workspace and product, upload an SBOM, and review your first analysis.
+sidebar:
+  order: 4
 ---
-
-# First steps in Aura
-
 This guide walks you through the basic Aura workflow, from creating an account to reviewing the results of your first SBOM upload.
 
 At a high level:
@@ -18,7 +17,7 @@ Create workspace
   ↓
 Choose workspace plan
   ↓
-Create project
+Create product
   ↓
 Upload SBOM
   ↓
@@ -60,7 +59,7 @@ If you did not receive the message, you can request another verification email f
 
 After signing in for the first time, Aura displays the **Welcome to Aura** page.
 
-A workspace contains your projects, releases, SBOMs, and related security information.
+A workspace contains your products, releases, SBOMs, and related security information.
 
 Select **Create workspace**.
 
@@ -74,25 +73,25 @@ Select **Create workspace**.
 
 Aura creates the workspace and switches you to it automatically.
 
-## 4. Create your first project
+## 4. Create your first product
 
-From the main navigation, select **Projects**.
+From the main navigation, select **Products**.
 
 Select **New**.
 
-In the **New Project** dialog:
+In the **New Product** dialog:
 
-1. Enter a project name.
-2. Optionally enter a project description.
-3. Select **Create Project**.
+1. Enter a product name.
+2. Optionally enter a product description.
+3. Select **Create Product**.
 
-The project appears in the project list.
+The product appears in the product list.
 
-A project is used to organise its releases, SBOMs, and related security data.
+A product is used to organise its releases, SBOMs, and related security data.
 
 ## 5. Upload your first SBOM
 
-Open the project you created.
+Open the product you created.
 
 Select **Upload SBOM**.
 
@@ -103,7 +102,7 @@ Aura accepts supported CycloneDX SBOM files in:
 
 Choose or drag your SBOM file into the upload dialog, then select **Upload SBOM**.
 
-Each successful SBOM upload creates a new release for the project, including when another SBOM is uploaded for the same software version.
+Each successful SBOM upload creates a new release for the product, including when another SBOM is uploaded for the same software version.
 
 ## 6. Wait for the release to be processed
 
@@ -130,10 +129,8 @@ From the release view, you can continue to areas such as:
 
 ### Inventory
 
-- Projects
 - Components
 - Dependency Graph
-- Services
 
 ### Risk
 
@@ -142,13 +139,9 @@ From the release view, you can continue to areas such as:
 ### Compliance
 
 - Licenses
+- Evidence
 
-### Operations
-
-- Trends
-- Portfolio
-
-You can also open **Security Posture** for additional release-related security information.
+You can also review other release-related security information available in your workspace.
 
 ## What happens next?
 
@@ -163,31 +156,30 @@ You can continue by reviewing:
 5. policy findings;
 6. the security posture of the release.
 
-You can upload another SBOM later to create another release and compare how the project changes over time.
+You can upload another SBOM later to create another release and review how the product changes over time.
 
 ## Manual and automated SBOM ingestion
 
-Manual SBOM upload is available from a project and is useful when getting started or testing Aura.
+Manual SBOM upload is available from a product and is useful when getting started or testing Aura.
 
 The **SBOM Ingestion** area is intended for automated ingestion workflows, including API and CI/CD integrations.
 
 See:
 
-- [SBOM ingestion](../integrations/sbom-ingestion.md)
-- [API ingestion](../integrations/api-ingestion.md)
-- [GitHub Actions](../integrations/github-actions.md)
+- [SBOM ingestion](../../integrations/sbom-ingestion/)
+- [API ingestion](../../integrations/api-ingestion/)
+- [GitHub Actions](../../integrations/github-actions/)
 
 ## Troubleshooting
 
 If Aura rejects your SBOM or cannot process it, see:
 
-- [Troubleshoot an SBOM](../sbom/troubleshoot-sbom.md)
-- [SBOM upload errors](../troubleshooting/sbom-upload-errors.md)
-- [SBOM validation errors](../troubleshooting/sbom-validation-errors.md)
+- [Troubleshoot an SBOM](../../sbom/troubleshoot-sbom/)
+- [SBOM upload errors](../../troubleshooting/sbom-upload-errors/)
+- [SBOM validation errors](../../troubleshooting/sbom-validation-errors/)
 
 ## Related articles
 
-- [What is Aura?](./what-is-aura.md)
-- [How Aura works](./how-aura-works.md)
-- [Key concepts](./key-concepts.md)
-- [What is an SBOM?](../sbom/what-is-an-sbom.md)
+- [Key concepts](../key-concepts/)
+- [What is Aura?](../what-is-aura/)
+- [Products and releases](../../products-and-releases/overview/)

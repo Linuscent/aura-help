@@ -1,10 +1,9 @@
 ---
 title: Key concepts
 description: Learn the main terms and concepts used throughout Aura.
+sidebar:
+  order: 3
 ---
-
-# Key concepts
-
 Before working with Aura, it is useful to understand a few terms that appear throughout the product and documentation.
 
 You do not need to learn all of them before getting started. Use this page as a reference whenever you encounter an unfamiliar term.
@@ -13,30 +12,29 @@ You do not need to learn all of them before getting started. Use this page as a 
 
 A **workspace** is the top-level area used to organise work in Aura.
 
-A workspace contains projects, releases, SBOMs, and related security and compliance information.
+A workspace contains products, releases, SBOMs, and related security and compliance information.
 
 Each workspace also has its own plan and configuration.
 
-## Project
+## Product
 
-A **project** is the main unit used to organise software security data inside an Aura workspace.
+A **product** is the main unit used to organise software security data inside an Aura workspace.
 
-A project contains its SBOM releases and related security information.
+A product contains its SBOM releases and related security information.
 
-Projects can be used to review areas such as:
+Products can be used to review areas such as:
 
 - components;
-- services;
 - vulnerabilities;
 - exploit information;
 - policy violations;
 - release history.
 
-Each successful SBOM upload to a project creates a new release.
+Each successful SBOM upload to a product creates a new release.
 
 ## Release
 
-A **release** represents a specific SBOM upload associated with a project.
+A **release** represents a specific SBOM upload associated with a product.
 
 Aura creates a new release each time an SBOM is successfully uploaded, including when another SBOM is uploaded for the same software version.
 
@@ -44,7 +42,7 @@ A release can be used to review the software inventory and security information 
 
 ## SBOM
 
-An **SBOM**, or Software Bill of Materials, is a machine-readable inventory of software components associated with a project release.
+An **SBOM**, or Software Bill of Materials, is a machine-readable inventory of software components associated with a product release.
 
 An SBOM can contain information such as:
 
@@ -56,11 +54,11 @@ An SBOM can contain information such as:
 
 Aura supports CycloneDX SBOM workflows.
 
-For more information, see [What is an SBOM?](../sbom/what-is-an-sbom.md).
+For more information, see [What is an SBOM?](../../sbom/what-is-an-sbom/).
 
 ## Component
 
-A **component** is a software package, library, framework, module, or other software item included in a project inventory.
+A **component** is a software package, library, framework, module, or other software item included in a product inventory.
 
 For example, an application may depend on open-source libraries that appear as components in its SBOM.
 
@@ -82,7 +80,7 @@ A finding is a signal for review. It does not necessarily mean that the product 
 
 A **vulnerability** is a known security weakness that may affect a software component.
 
-Aura can relate known vulnerability information to components in a project release.
+Aura can relate known vulnerability information to components in a product release.
 
 Whether a vulnerability actually affects the product may require additional assessment.
 
@@ -96,7 +94,7 @@ Product context and exploitability may also affect prioritisation.
 
 ## Vulnerability decision
 
-A **vulnerability decision** is a documented conclusion about how a vulnerability applies to a specific project release.
+A **vulnerability decision** is a documented conclusion about how a vulnerability applies to a specific product release.
 
 A decision may record information such as:
 
@@ -140,7 +138,7 @@ Examples may include:
 - approval records;
 - exported reports.
 
-Evidence is most useful when it remains connected to the project, release, finding, and decision it supports.
+Evidence is most useful when it remains connected to the product, release, finding, and decision it supports.
 
 ## Remediation
 
@@ -157,7 +155,7 @@ Not every finding requires the same remediation.
 
 ## Active release
 
-An **active release** is a project release included in ongoing monitoring.
+An **active release** is a product release included in ongoing monitoring.
 
 Monitoring active releases helps teams identify when new vulnerability or policy information becomes relevant after the original release assessment.
 
@@ -167,7 +165,7 @@ Monitoring active releases helps teams identify when new vulnerability or policy
 
 This can include API-based and CI/CD-based ingestion.
 
-Manual SBOM uploads are performed from a project.
+Manual SBOM uploads are performed from a product.
 
 ## CRA
 
@@ -179,7 +177,7 @@ Aura does not by itself determine whether a product is compliant with the CRA.
 
 ## Related articles
 
-- [What is Aura?](./what-is-aura.md)
-- [How Aura works](./how-aura-works.md)
-- [First steps in Aura](./first-steps.md)
-- [What is an SBOM?](../sbom/what-is-an-sbom.md)
+- [How Aura works](../how-aura-works/)
+- [First steps in Aura](../first-steps/)
+- [What is Aura?](../what-is-aura/)
+- [Products and releases](../../products-and-releases/overview/)

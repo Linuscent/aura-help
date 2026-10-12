@@ -1,10 +1,9 @@
 ---
 title: What is an SBOM?
 description: Learn what a Software Bill of Materials is and how Aura uses SBOMs to build release-level software inventory.
+sidebar:
+  order: 1
 ---
-
-# What is an SBOM?
-
 An **SBOM**, or Software Bill of Materials, is a machine-readable inventory of the software components included in a product or software release.
 
 An SBOM helps teams understand what software they are shipping and provides a structured foundation for vulnerability, license, policy, and compliance work.
@@ -27,9 +26,9 @@ The completeness of an SBOM depends on the tool and process used to generate it.
 
 ## How Aura uses an SBOM
 
-In Aura, an SBOM is uploaded to a **project**.
+In Aura, an SBOM is uploaded to a **product**.
 
-Each successful SBOM upload creates a new **release** for that project.
+Each successful SBOM upload creates a new **release** for that product.
 
 Aura processes the SBOM and uses its component information to build release-level inventory and related security views.
 
@@ -52,7 +51,7 @@ Keeping the SBOM associated with a release helps preserve a record of what softw
 In Aura:
 
 ```text
-Project
+Product
   ↓
 Upload SBOM
   ↓
@@ -96,11 +95,9 @@ Aura can help maintain and analyse this inventory, but your organisation remains
 
 Aura supports CycloneDX SBOM workflows.
 
-See [Supported SBOM formats](./supported-formats.md) for the formats currently accepted by the Aura upload workflow.
+See [Supported SBOM formats](../supported-formats/) for the formats currently accepted by the Aura upload workflow.
 
 ## Related articles
 
-- [Supported SBOM formats](./supported-formats.md)
-- [Upload an SBOM](./upload-sbom.md)
-- [Troubleshoot an SBOM](./troubleshoot-sbom.md)
-- [First steps in Aura](../getting-started/first-steps.md)
+- [Supported SBOM formats](../supported-formats/)
+- [Inventory Overview](../../inventory/overview/)

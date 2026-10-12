@@ -2,27 +2,24 @@
 title: Aura Help
 description: Help and documentation for Linuscent Aura.
 ---
-
-# Aura Help
-
 Welcome to the Aura Help documentation.
 
-Aura helps engineering, security, product, and compliance teams manage software inventory, security findings, decisions, and compliance evidence across projects and releases.
+Aura helps engineering, security, product, and compliance teams manage software inventory, security findings, decisions, and compliance evidence across products and releases.
 
 ## New to Aura?
 
 Start with:
 
-- [What is Aura?](./getting-started/what-is-aura.md)
-- [How Aura works](./getting-started/how-aura-works.md)
-- [Key concepts](./getting-started/key-concepts.md)
-- [First steps in Aura](./getting-started/first-steps.md)
+- [What is Aura?](./getting-started/what-is-aura/)
+- [How Aura works](./getting-started/how-aura-works/)
+- [Key concepts](./getting-started/key-concepts/)
+- [First steps in Aura](./getting-started/first-steps/)
 
 ## Help topics
 
-### Projects and releases
+### Products and releases
 
-Learn how to create and manage projects, upload SBOMs, and work with releases created from SBOM uploads.
+Learn how to create and manage products, upload SBOMs, and work with releases created from SBOM uploads.
 
 ### SBOM
 
@@ -30,7 +27,7 @@ Learn what an SBOM is, which formats Aura supports, and how to upload and troubl
 
 ### Inventory
 
-Explore components, services, and dependency relationships identified from project releases.
+Explore components and dependency relationships identified from product releases.
 
 ### Risks
 
@@ -55,3 +52,10 @@ Learn how to work with workspaces, account settings, access, and permissions.
 ### Troubleshooting
 
 Find solutions for common SBOM, integration, access, and analysis issues.
+
+## Related articles
+
+- [What is Aura?](./getting-started/what-is-aura/)
+- [First steps in Aura](./getting-started/first-steps/)
+- [Products and releases](./products-and-releases/overview/)
+- [Upload an SBOM](./sbom/upload-sbom/)
