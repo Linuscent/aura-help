@@ -33,6 +33,6 @@ organizational security decisions.
 
 ## Related articles
 
-- [Licenses](/licenses-and-policies/licenses/)
-- [Reviewing Policy Findings](/licenses-and-policies/reviewing-policy-findings/)
-- [Understanding Findings](/risks/understanding-findings/)
+- [Licenses](licenses.md)
+- [Reviewing Policy Findings](reviewing-policy-findings.md)
+- [Understanding Findings](../risks/understanding-findings.md)

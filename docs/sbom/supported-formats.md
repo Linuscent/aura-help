@@ -75,6 +75,6 @@ If you are unsure whether an SBOM is valid:
 
 ## Related articles
 
-- [What is an SBOM?](/sbom/what-is-an-sbom/)
-- [Upload an SBOM](/sbom/upload-sbom/)
-- [Inventory Overview](/compliance/overview/)
+- [What is an SBOM?](what-is-an-sbom.md)
+- [Upload an SBOM](upload-sbom.md)
+- [Inventory Overview](../compliance/overview.md)

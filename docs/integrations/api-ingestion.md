@@ -25,6 +25,6 @@ environment and integrations.
 
 ## Related articles
 
-- [SBOM Ingestion](/integrations/sbom-ingestion/)
-- [GitHub Actions Integration](/integrations/github-actions/)
-- [Upload an SBOM](/sbom/upload-sbom/)
+- [SBOM Ingestion](sbom-ingestion.md)
+- [GitHub Actions Integration](github-actions.md)
+- [Upload an SBOM](../sbom/upload-sbom.md)

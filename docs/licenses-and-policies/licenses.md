@@ -33,5 +33,5 @@ SBOM and connected analysis capabilities.
 
 ## Related articles
 
-- [Policy Results](/licenses-and-policies/policy-results/)
-- [Understanding Findings](/risks/understanding-findings/)
+- [Policy Results](policy-results.md)
+- [Understanding Findings](../risks/understanding-findings.md)

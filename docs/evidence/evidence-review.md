@@ -25,6 +25,6 @@ in Aura and connected workflows.
 
 ## Related articles
 
-- [Evidence Workflow](/evidence/evidence-workflow/)
-- [Evidence Overview](/compliance/overview/)
-- [Compliance Overview](/compliance/overview/)
+- [Evidence Workflow](evidence-workflow.md)
+- [Evidence Overview](../compliance/overview.md)
+- [Compliance Overview](../compliance/overview.md)

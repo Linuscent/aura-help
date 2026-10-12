@@ -38,5 +38,5 @@ available results depend on the ingested data and Aura capabilities.
 
 ## Related articles
 
-- [API Ingestion](/integrations/api-ingestion/)
-- [Upload an SBOM](/sbom/upload-sbom/)
+- [API Ingestion](api-ingestion.md)
+- [Upload an SBOM](../sbom/upload-sbom.md)

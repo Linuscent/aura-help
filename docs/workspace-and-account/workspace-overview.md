@@ -28,5 +28,5 @@ configuration.
 
 ## Related articles
 
-- [Working With Your Team](/workspace-and-account/working-with-your-team/)
-- [First steps in Aura](/getting-started/first-steps/)
+- [Working With Your Team](working-with-your-team.md)
+- [First steps in Aura](../getting-started/first-steps.md)

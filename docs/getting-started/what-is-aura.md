@@ -84,12 +84,12 @@ You do not need to understand all of these concepts before getting started.
 
 Continue with:
 
-- [How Aura works](/getting-started/how-aura-works/)
-- [Key concepts](/getting-started/key-concepts/)
-- [First steps in Aura](/getting-started/first-steps/)
-- [What is an SBOM?](/sbom/what-is-an-sbom/)
+- [How Aura works](how-aura-works.md)
+- [Key concepts](key-concepts.md)
+- [First steps in Aura](first-steps.md)
+- [What is an SBOM?](../sbom/what-is-an-sbom.md)
 
 ## Related articles
 
-- [How Aura works](/getting-started/how-aura-works/)
-- [Products and releases](/compliance/overview/)
+- [How Aura works](how-aura-works.md)
+- [Products and releases](../compliance/overview.md)

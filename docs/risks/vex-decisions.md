@@ -24,7 +24,7 @@ VEX workflows depend on available product and vulnerability data.
 
 ## Related articles
 
-- [Prioritizing Findings](/risks/prioritizing-findings/)
-- [Remediation](/risks/remediation/)
-- [Understanding Findings](/risks/understanding-findings/)
-- [Evidence Overview](/compliance/overview/)
+- [Prioritizing Findings](prioritizing-findings.md)
+- [Remediation](remediation.md)
+- [Understanding Findings](understanding-findings.md)
+- [Evidence Overview](../compliance/overview.md)

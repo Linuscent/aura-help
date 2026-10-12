@@ -21,6 +21,6 @@ capabilities.
 
 ## Related articles
 
-- [Vulnerability Evidence](/compliance/vulnerability-evidence/)
-- [Compliance Overview](/compliance/overview/)
-- [Evidence Overview](/compliance/overview/)
+- [Vulnerability Evidence](vulnerability-evidence.md)
+- [Compliance Overview](overview.md)
+- [Evidence Overview](overview.md)

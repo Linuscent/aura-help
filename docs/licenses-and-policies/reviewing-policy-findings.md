@@ -31,6 +31,6 @@ Available policy capabilities depend on the configured Aura environment.
 
 ## Related articles
 
-- [Policy Results](/licenses-and-policies/policy-results/)
-- [Licenses](/licenses-and-policies/licenses/)
-- [Understanding Findings](/risks/understanding-findings/)
+- [Policy Results](policy-results.md)
+- [Licenses](licenses.md)
+- [Understanding Findings](../risks/understanding-findings.md)

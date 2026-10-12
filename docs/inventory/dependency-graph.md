@@ -27,6 +27,6 @@ dependencies were found for the selected product or release.
 
 ## Related articles
 
-- [Components](/inventory/components/)
-- [Inventory Overview](/compliance/overview/)
-- [Understanding Findings](/risks/understanding-findings/)
+- [Components](components.md)
+- [Inventory Overview](../compliance/overview.md)
+- [Understanding Findings](../risks/understanding-findings.md)

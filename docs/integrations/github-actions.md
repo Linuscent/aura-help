@@ -39,7 +39,7 @@ integration settings.
 
 ## Related articles
 
-- [API Ingestion](/integrations/api-ingestion/)
-- [Notifications and Routing](/integrations/notifications-and-routing/)
-- [SBOM Ingestion](/integrations/sbom-ingestion/)
-- [Upload an SBOM](/sbom/upload-sbom/)
+- [API Ingestion](api-ingestion.md)
+- [Notifications and Routing](notifications-and-routing.md)
+- [SBOM Ingestion](sbom-ingestion.md)
+- [Upload an SBOM](../sbom/upload-sbom.md)

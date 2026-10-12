@@ -30,6 +30,6 @@ available assessment information.
 
 ## Related articles
 
-- [Integration Issues](/troubleshooting/integration-issues/)
+- [Integration Issues](integration-issues.md)
 - [Troubleshooting Overview](../)
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/)
+- [Troubleshoot an SBOM](../sbom/troubleshoot-sbom.md)

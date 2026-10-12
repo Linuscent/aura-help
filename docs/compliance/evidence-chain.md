@@ -23,7 +23,7 @@ preparation.
 
 ## Related articles
 
-- [Regulations](/compliance/regulations/)
-- [Vulnerability Evidence](/compliance/vulnerability-evidence/)
-- [Compliance Overview](/compliance/overview/)
-- [Evidence Overview](/compliance/overview/)
+- [Regulations](regulations.md)
+- [Vulnerability Evidence](vulnerability-evidence.md)
+- [Compliance Overview](overview.md)
+- [Evidence Overview](overview.md)

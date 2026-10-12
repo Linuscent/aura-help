@@ -28,6 +28,6 @@ regulatory requirements.
 
 ## Related articles
 
-- [Compliance Overview](/compliance/overview/)
-- [How Aura Supports CRA](/compliance/how-aura-supports-cra/)
-- [Evidence Overview](/compliance/overview/)
+- [Compliance Overview](overview.md)
+- [How Aura Supports CRA](how-aura-supports-cra.md)
+- [Evidence Overview](overview.md)

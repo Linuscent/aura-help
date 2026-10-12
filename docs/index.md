@@ -10,10 +10,10 @@ Aura helps engineering, security, product, and compliance teams manage software 
 
 Start with:
 
-- [What is Aura?](/getting-started/what-is-aura/)
-- [How Aura works](/getting-started/how-aura-works/)
-- [Key concepts](/getting-started/key-concepts/)
-- [First steps in Aura](/getting-started/first-steps/)
+- [What is Aura?](getting-started/what-is-aura.md)
+- [How Aura works](getting-started/how-aura-works.md)
+- [Key concepts](getting-started/key-concepts.md)
+- [First steps in Aura](getting-started/first-steps.md)
 
 ## Help topics
 
@@ -55,7 +55,7 @@ Find solutions for common SBOM, integration, access, and analysis issues.
 
 ## Related articles
 
-- [What is Aura?](/getting-started/what-is-aura/)
-- [First steps in Aura](/getting-started/first-steps/)
-- [Products and releases](/products-and-releases/overview/)
-- [Upload an SBOM](/sbom/upload-sbom/)
+- [What is Aura?](getting-started/what-is-aura.md)
+- [First steps in Aura](getting-started/first-steps.md)
+- [Products and releases](products-and-releases/overview.md)
+- [Upload an SBOM](sbom/upload-sbom.md)

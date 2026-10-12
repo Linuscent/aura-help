@@ -30,7 +30,7 @@ context when requesting support.
 
 ## Related articles
 
-- [SBOM Validation Errors](/troubleshooting/sbom-validation-errors/)
-- [Missing or Unexpected Findings](/troubleshooting/missing-or-unexpected-findings/)
+- [SBOM Validation Errors](sbom-validation-errors.md)
+- [Missing or Unexpected Findings](missing-or-unexpected-findings.md)
 - [Troubleshooting Overview](../)
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/)
+- [Troubleshoot an SBOM](../sbom/troubleshoot-sbom.md)

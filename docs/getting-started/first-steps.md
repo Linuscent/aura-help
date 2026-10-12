@@ -166,20 +166,20 @@ The **SBOM Ingestion** area is intended for automated ingestion workflows, inclu
 
 See:
 
-- [SBOM ingestion](/integrations/sbom-ingestion/)
-- [API ingestion](/integrations/api-ingestion/)
-- [GitHub Actions](/integrations/github-actions/)
+- [SBOM ingestion](../integrations/sbom-ingestion.md)
+- [API ingestion](../integrations/api-ingestion.md)
+- [GitHub Actions](../integrations/github-actions.md)
 
 ## Troubleshooting
 
 If Aura rejects your SBOM or cannot process it, see:
 
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/)
-- [SBOM upload errors](/troubleshooting/sbom-upload-errors/)
-- [SBOM validation errors](/troubleshooting/sbom-validation-errors/)
+- [Troubleshoot an SBOM](../sbom/troubleshoot-sbom.md)
+- [SBOM upload errors](../troubleshooting/sbom-upload-errors.md)
+- [SBOM validation errors](../troubleshooting/sbom-validation-errors.md)
 
 ## Related articles
 
-- [Key concepts](/getting-started/key-concepts/)
-- [What is Aura?](/getting-started/what-is-aura/)
-- [Products and releases](/compliance/overview/)
+- [Key concepts](key-concepts.md)
+- [What is Aura?](what-is-aura.md)
+- [Products and releases](../compliance/overview.md)
