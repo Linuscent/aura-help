@@ -141,13 +141,13 @@ Your organisation remains responsible for regulatory interpretation, product dec
 
 Continue with:
 
-- [Key concepts](../key-concepts/)
-- [First steps in Aura](../first-steps/)
-- [What is an SBOM?](../../sbom/what-is-an-sbom/)
-- [Products and releases](../../products-and-releases/overview/)
+- [Key concepts](/getting-started/key-concepts/)
+- [First steps in Aura](/getting-started/first-steps/)
+- [What is an SBOM?](/sbom/what-is-an-sbom/)
+- [Products and releases](/compliance/overview/)
 
 ## Related articles
 
-- [What is Aura?](../what-is-aura/)
-- [Key concepts](../key-concepts/)
-- [Products and releases](../../products-and-releases/overview/)
+- [What is Aura?](/getting-started/what-is-aura/)
+- [Key concepts](/getting-started/key-concepts/)
+- [Products and releases](/compliance/overview/)

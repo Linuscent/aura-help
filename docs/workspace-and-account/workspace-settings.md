@@ -20,7 +20,7 @@ Available settings depend on the Aura workspace configuration.
 
 ## Related articles
 
-- [Access and Permissions](../access-and-permissions/)
-- [Account](../account/)
-- [Workspace Overview](../workspace-overview/)
-- [First steps in Aura](../../getting-started/first-steps/)
+- [Access and Permissions](/workspace-and-account/access-and-permissions/)
+- [Account](/workspace-and-account/account/)
+- [Workspace Overview](/workspace-and-account/workspace-overview/)
+- [First steps in Aura](/getting-started/first-steps/)

@@ -19,6 +19,6 @@ permissions.
 
 ## Related articles
 
-- [Workspace Settings](../workspace-settings/)
-- [Workspace Overview](../workspace-overview/)
-- [First steps in Aura](../../getting-started/first-steps/)
+- [Workspace Settings](/workspace-and-account/workspace-settings/)
+- [Workspace Overview](/workspace-and-account/workspace-overview/)
+- [First steps in Aura](/getting-started/first-steps/)

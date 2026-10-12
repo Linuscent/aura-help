@@ -30,7 +30,7 @@ uploaded SBOM.
 
 ## Related articles
 
-- [SBOM Upload Errors](../sbom-upload-errors/)
-- [Integration Issues](../integration-issues/)
+- [SBOM Upload Errors](/troubleshooting/sbom-upload-errors/)
+- [Integration Issues](/troubleshooting/integration-issues/)
 - [Troubleshooting Overview](../)
-- [Troubleshoot an SBOM](../../sbom/troubleshoot-sbom/)
+- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/)

@@ -36,5 +36,5 @@ dependencies, and related security context.
 
 ## Related articles
 
-- [Components](../components/)
-- [Understanding Findings](../../risks/understanding-findings/)
+- [Components](/inventory/components/)
+- [Understanding Findings](/risks/understanding-findings/)

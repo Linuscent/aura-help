@@ -23,6 +23,6 @@ snapshot for analysis.
 
 ## Related articles
 
-- [VEX Decisions](../vex-decisions/)
-- [Understanding Findings](../understanding-findings/)
-- [Evidence Overview](../../evidence/overview/)
+- [VEX Decisions](/risks/vex-decisions/)
+- [Understanding Findings](/risks/understanding-findings/)
+- [Evidence Overview](/compliance/overview/)

@@ -68,5 +68,5 @@ A common workflow is:
 
 ## Related articles
 
-- [Create a product](../create-product/)
-- [Upload an SBOM](../../sbom/upload-sbom/)
+- [Create a product](/products-and-releases/create-product/)
+- [Upload an SBOM](/sbom/upload-sbom/)

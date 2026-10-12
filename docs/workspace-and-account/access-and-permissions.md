@@ -28,7 +28,7 @@ environment.
 
 ## Related articles
 
-- [Working With Your Team](../working-with-your-team/)
-- [Workspace Settings](../workspace-settings/)
-- [Workspace Overview](../workspace-overview/)
-- [First steps in Aura](../../getting-started/first-steps/)
+- [Working With Your Team](/workspace-and-account/working-with-your-team/)
+- [Workspace Settings](/workspace-and-account/workspace-settings/)
+- [Workspace Overview](/workspace-and-account/workspace-overview/)
+- [First steps in Aura](/getting-started/first-steps/)
