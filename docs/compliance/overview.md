@@ -39,4 +39,4 @@ assessments.
 ## Related articles
 
 - [Cyber Resilience Act (CRA) Overview](cra-overview.md)
-- [Evidence Overview](overview.md)
+- [Evidence Overview](../evidence/overview.md)

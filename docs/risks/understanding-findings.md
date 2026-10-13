@@ -37,4 +37,4 @@ acceptance status.
 ## Related articles
 
 - [Vulnerability Severity](vulnerability-severity.md)
-- [Evidence Overview](../compliance/overview.md)
+- [Evidence Overview](../evidence/overview.md)

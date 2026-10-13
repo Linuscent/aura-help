@@ -73,5 +73,5 @@ Release-level records help teams answer questions such as:
 
 - [Product overview](product-overview.md)
 - [Active release monitoring](active-release-monitoring.md)
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](./overview.md)
 - [Upload an SBOM](../sbom/upload-sbom.md)

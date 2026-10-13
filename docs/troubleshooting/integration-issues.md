@@ -32,5 +32,5 @@ context when requesting support.
 
 - [SBOM Validation Errors](sbom-validation-errors.md)
 - [Missing or Unexpected Findings](missing-or-unexpected-findings.md)
-- [Troubleshooting Overview](../)
+- [Troubleshooting Overview](./index.md)
 - [Troubleshoot an SBOM](../sbom/troubleshoot-sbom.md)

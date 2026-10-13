@@ -92,4 +92,4 @@ Continue with:
 ## Related articles
 
 - [How Aura works](how-aura-works.md)
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](../products-and-releases/overview.md)

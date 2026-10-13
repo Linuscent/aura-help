@@ -144,10 +144,10 @@ Continue with:
 - [Key concepts](key-concepts.md)
 - [First steps in Aura](first-steps.md)
 - [What is an SBOM?](../sbom/what-is-an-sbom.md)
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](../products-and-releases/overview.md)
 
 ## Related articles
 
 - [What is Aura?](what-is-aura.md)
 - [Key concepts](key-concepts.md)
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](../products-and-releases/overview.md)

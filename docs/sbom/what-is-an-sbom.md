@@ -100,4 +100,4 @@ See [Supported SBOM formats](supported-formats.md) for the formats currently acc
 ## Related articles
 
 - [Supported SBOM formats](supported-formats.md)
-- [Inventory Overview](../compliance/overview.md)
+- [Inventory Overview](../inventory/overview.md)

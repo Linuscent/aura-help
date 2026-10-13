@@ -25,4 +25,4 @@ snapshot for analysis.
 
 - [VEX Decisions](vex-decisions.md)
 - [Understanding Findings](understanding-findings.md)
-- [Evidence Overview](../compliance/overview.md)
+- [Evidence Overview](../evidence/overview.md)

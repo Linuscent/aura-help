@@ -25,4 +25,4 @@ organization using Aura.
 - [How Aura Supports CRA](how-aura-supports-cra.md)
 - [Evidence Chain](evidence-chain.md)
 - [Compliance Overview](overview.md)
-- [Evidence Overview](overview.md)
+- [Evidence Overview](../evidence/overview.md)

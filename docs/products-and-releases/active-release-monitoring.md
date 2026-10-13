@@ -68,5 +68,5 @@ Aura preserves uploads as separate releases so previous release data remains ava
 ## Related articles
 
 - [Releases](releases.md)
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](./overview.md)
 - [Upload an SBOM](../sbom/upload-sbom.md)

@@ -48,6 +48,6 @@ Use naming that remains understandable across engineering, security, product, an
 
 ## Related articles
 
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](./overview.md)
 - [Product overview](product-overview.md)
 - [Upload an SBOM](../sbom/upload-sbom.md)

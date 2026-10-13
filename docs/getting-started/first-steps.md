@@ -182,4 +182,4 @@ If Aura rejects your SBOM or cannot process it, see:
 
 - [Key concepts](key-concepts.md)
 - [What is Aura?](what-is-aura.md)
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](../products-and-releases/overview.md)

@@ -129,4 +129,4 @@ Do not share sensitive SBOM contents outside your organisation unless your suppo
 
 - [Upload an SBOM](upload-sbom.md)
 - [What is an SBOM?](what-is-an-sbom.md)
-- [Inventory Overview](../compliance/overview.md)
+- [Inventory Overview](../inventory/overview.md)

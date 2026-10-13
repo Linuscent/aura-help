@@ -35,6 +35,6 @@ appropriate decisions.
 
 ## Related articles
 
-- [Evidence Overview](../compliance/overview.md)
+- [Evidence Overview](./overview.md)
 - [Evidence Review](evidence-review.md)
 - [Compliance Overview](../compliance/overview.md)

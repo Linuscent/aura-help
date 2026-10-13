@@ -59,5 +59,5 @@ Because every successful SBOM upload creates a new release, the product can pres
 
 - [Create a product](create-product.md)
 - [Releases](releases.md)
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](./overview.md)
 - [Upload an SBOM](../sbom/upload-sbom.md)

@@ -48,6 +48,6 @@ the information available in the source SBOM.
 
 ## Related articles
 
-- [Inventory Overview](../compliance/overview.md)
+- [Inventory Overview](./overview.md)
 - [Dependency Graph](dependency-graph.md)
 - [Understanding Findings](../risks/understanding-findings.md)

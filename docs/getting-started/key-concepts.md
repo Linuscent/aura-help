@@ -180,4 +180,4 @@ Aura does not by itself determine whether a product is compliant with the CRA.
 - [How Aura works](how-aura-works.md)
 - [First steps in Aura](first-steps.md)
 - [What is Aura?](what-is-aura.md)
-- [Products and releases](../compliance/overview.md)
+- [Products and releases](../products-and-releases/overview.md)

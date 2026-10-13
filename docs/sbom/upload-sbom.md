@@ -91,4 +91,4 @@ See [Troubleshoot an SBOM](troubleshoot-sbom.md).
 - [Supported SBOM formats](supported-formats.md)
 - [Troubleshoot an SBOM](troubleshoot-sbom.md)
 - [What is an SBOM?](what-is-an-sbom.md)
-- [Inventory Overview](../compliance/overview.md)
+- [Inventory Overview](../inventory/overview.md)
