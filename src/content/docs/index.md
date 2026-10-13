@@ -1,5 +1,5 @@
 ---
-title: Aura Help
+title: Documentation
 description: Help and documentation for Linuscent Aura.
 ---
 Welcome to the Aura Help documentation.
