@@ -51,7 +51,7 @@ When processing completes successfully, the release status changes to:
 
 **READY**
 
-If a release does not reach the expected state, see [Troubleshoot an SBOM](/sbom/troubleshoot-sbom).
+If a release does not reach the expected state, see [Troubleshoot an SBOM](/aura-help/sbom/troubleshoot-sbom).
 
 ## Multiple releases for the same version
 
@@ -71,7 +71,7 @@ Release-level records help teams answer questions such as:
 
 ## Related articles
 
-- [Product overview](/products-and-releases/product-overview)
-- [Active release monitoring](/products-and-releases/active-release-monitoring)
-- [Products and releases](/products-and-releases/overview)
-- [Upload an SBOM](/sbom/upload-sbom)
+- [Product overview](/aura-help/products-and-releases/product-overview)
+- [Active release monitoring](/aura-help/products-and-releases/active-release-monitoring)
+- [Products and releases](/aura-help/products-and-releases/overview)
+- [Upload an SBOM](/aura-help/sbom/upload-sbom)

@@ -1,0 +1,59 @@
+---
+title: Aura Help Center
+description: Understand, manage, and secure your software supply chain with Aura.
+template: splash
+head:
+  - tag: title
+    content: Aura Help Center
+hero:
+  title: Aura Help Center
+  tagline: Understand, manage, and secure your software supply chain with Aura.
+  actions:
+    - text: Get Started
+      link: /aura-help/getting-started/what-is-aura/
+      icon: right-arrow
+      variant: primary
+    - text: Explore Documentation
+      link: /aura-help/products-and-releases/overview/
+      icon: right-arrow
+      variant: secondary
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Popular Topics
+
+Aura helps engineering, security, product, and compliance teams manage software inventory, security findings, decisions, and compliance evidence across products and releases.
+
+<CardGrid>
+  <LinkCard
+    title="Products and Releases"
+    href="/aura-help/products-and-releases/overview/"
+    description="Create products, upload SBOMs, and manage releases."
+  />
+  <LinkCard
+    title="SBOM"
+    href="/aura-help/sbom/what-is-an-sbom/"
+    description="Understand SBOMs, supported formats, uploads, and troubleshooting."
+  />
+  <LinkCard
+    title="Inventory"
+    href="/aura-help/inventory/overview/"
+    description="Explore components and dependency relationships identified from releases."
+  />
+  <LinkCard
+    title="Risk Management"
+    href="/aura-help/risks/understanding-findings/"
+    description="Understand findings and severity, prioritize risks, record decisions, and track remediation."
+  />
+  <LinkCard
+    title="Compliance"
+    href="/aura-help/compliance/overview/"
+    description="Regulations, evidence, compliance workflows, and CRA-related activities."
+  />
+  <LinkCard
+    title="Integrations"
+    href="/aura-help/integrations/sbom-ingestion/"
+    description="Automate SBOM ingestion with the Aura API and supported CI/CD workflows."
+  />
+</CardGrid>

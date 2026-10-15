@@ -75,6 +75,6 @@ If you are unsure whether an SBOM is valid:
 
 ## Related articles
 
-- [What is an SBOM?](/sbom/what-is-an-sbom)
-- [Upload an SBOM](/sbom/upload-sbom)
-- [Inventory Overview](/inventory/overview)
+- [What is an SBOM?](/aura-help/sbom/what-is-an-sbom)
+- [Upload an SBOM](/aura-help/sbom/upload-sbom)
+- [Inventory Overview](/aura-help/inventory/overview)

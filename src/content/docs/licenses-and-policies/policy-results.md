@@ -33,6 +33,6 @@ organizational security decisions.
 
 ## Related articles
 
-- [Licenses](/licenses-and-policies/licenses)
-- [Reviewing Policy Findings](/licenses-and-policies/reviewing-policy-findings)
-- [Understanding Findings](/risks/understanding-findings)
+- [Licenses](/aura-help/licenses-and-policies/licenses)
+- [Reviewing Policy Findings](/aura-help/licenses-and-policies/reviewing-policy-findings)
+- [Understanding Findings](/aura-help/risks/understanding-findings)

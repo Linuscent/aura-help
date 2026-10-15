@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Deploy on every push to the main branch.
+  push:
+    branches: [main]
+  # Allow running this workflow manually from the Actions tab.
+  workflow_dispatch:
+
+# Grants the GITHUB_TOKEN the minimum scopes needed to publish a Pages site.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel an in-progress production run.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install dependencies, build, and upload the site
+        uses: withastro/action@v6
+        with:
+          node-version: 24
+          package-manager: npm
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

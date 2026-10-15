@@ -39,7 +39,7 @@ integration settings.
 
 ## Related articles
 
-- [API Ingestion](/integrations/api-ingestion)
-- [Notifications and Routing](/integrations/notifications-and-routing)
-- [SBOM Ingestion](/integrations/sbom-ingestion)
-- [Upload an SBOM](/sbom/upload-sbom)
+- [API Ingestion](/aura-help/integrations/api-ingestion)
+- [Notifications and Routing](/aura-help/integrations/notifications-and-routing)
+- [SBOM Ingestion](/aura-help/integrations/sbom-ingestion)
+- [Upload an SBOM](/aura-help/sbom/upload-sbom)

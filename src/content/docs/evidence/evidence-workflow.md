@@ -35,6 +35,6 @@ appropriate decisions.
 
 ## Related articles
 
-- [Evidence Overview](/evidence/overview)
-- [Evidence Review](/evidence/evidence-review)
-- [Compliance Overview](/compliance/overview)
+- [Evidence Overview](/aura-help/evidence/overview)
+- [Evidence Review](/aura-help/evidence/evidence-review)
+- [Compliance Overview](/aura-help/compliance/overview)

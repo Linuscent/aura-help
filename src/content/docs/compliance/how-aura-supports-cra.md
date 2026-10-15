@@ -28,7 +28,7 @@ but does not provide legal certification.
 
 ## Related articles
 
-- [Cyber Resilience Act (CRA) Overview](/compliance/cra-overview)
-- [Regulations](/compliance/regulations)
-- [Compliance Overview](/compliance/overview)
-- [Evidence Overview](/evidence/overview)
+- [Cyber Resilience Act (CRA) Overview](/aura-help/compliance/cra-overview)
+- [Regulations](/aura-help/compliance/regulations)
+- [Compliance Overview](/aura-help/compliance/overview)
+- [Evidence Overview](/aura-help/evidence/overview)

@@ -29,6 +29,6 @@ Supported SBOM formats depend on the configured Aura capabilities.
 
 ## Related articles
 
-- [Troubleshooting Overview](/troubleshooting)
-- [SBOM Validation Errors](/troubleshooting/sbom-validation-errors)
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom)
+- [Troubleshooting Overview](/aura-help/troubleshooting)
+- [SBOM Validation Errors](/aura-help/troubleshooting/sbom-validation-errors)
+- [Troubleshoot an SBOM](/aura-help/sbom/troubleshoot-sbom)

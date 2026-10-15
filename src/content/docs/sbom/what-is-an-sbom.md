@@ -95,9 +95,9 @@ Aura can help maintain and analyse this inventory, but your organisation remains
 
 Aura supports CycloneDX SBOM workflows.
 
-See [Supported SBOM formats](/sbom/supported-formats) for the formats currently accepted by the Aura upload workflow.
+See [Supported SBOM formats](/aura-help/sbom/supported-formats) for the formats currently accepted by the Aura upload workflow.
 
 ## Related articles
 
-- [Supported SBOM formats](/sbom/supported-formats)
-- [Inventory Overview](/inventory/overview)
+- [Supported SBOM formats](/aura-help/sbom/supported-formats)
+- [Inventory Overview](/aura-help/inventory/overview)

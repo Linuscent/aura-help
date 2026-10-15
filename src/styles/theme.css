@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Aura Help — design tokens
+   Overrides Starlight CSS custom properties. Loaded via `customCss`.
+   Brand: deep SaaS surfaces · violet primary accent · cyan secondary accent.
+   Hues live in one place so both themes stay in sync.
+   ========================================================================== */
+
+:root {
+  /* Brand hues */
+  --aura-hue-slate: 245;
+  --aura-hue-violet: 262;
+  --aura-hue-cyan: 190;
+
+  /* Neutral scale (dark surfaces) */
+  --sl-color-white: hsl(0, 0%, 100%);
+  --sl-color-gray-1: hsl(var(--aura-hue-slate), 22%, 95%);
+  --sl-color-gray-2: hsl(var(--aura-hue-slate), 14%, 81%);
+  --sl-color-gray-3: hsl(var(--aura-hue-slate), 10%, 58%);
+  --sl-color-gray-4: hsl(var(--aura-hue-slate), 12%, 38%);
+  --sl-color-gray-5: hsl(var(--aura-hue-slate), 16%, 24%);
+  --sl-color-gray-6: hsl(var(--aura-hue-slate), 20%, 15%);
+  --sl-color-black: hsl(var(--aura-hue-slate), 26%, 8%);
+
+  /* Primary accent (violet) */
+  --sl-color-accent-low: hsl(var(--aura-hue-violet), 48%, 22%);
+  --sl-color-accent: hsl(var(--aura-hue-violet), 85%, 68%);
+  --sl-color-accent-high: hsl(var(--aura-hue-violet), 95%, 88%);
+
+  /* Secondary accent (cyan, drives Starlight's "blue" role) */
+  --sl-hue-blue: var(--aura-hue-cyan);
+
+  /* Semantic mappings */
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent-high);
+  --sl-color-text-invert: var(--sl-color-accent-low);
+  --sl-color-bg: var(--sl-color-black);
+  --sl-color-bg-nav: var(--sl-color-gray-6);
+  --sl-color-bg-sidebar: var(--sl-color-gray-6);
+  --sl-color-bg-inline-code: var(--sl-color-gray-5);
+  --sl-color-bg-accent: var(--sl-color-accent-high);
+  --sl-color-hairline-light: var(--sl-color-gray-5);
+  --sl-color-hairline: var(--sl-color-gray-6);
+  --sl-color-hairline-shade: var(--sl-color-black);
+
+  --sl-color-backdrop-overlay: hsla(var(--aura-hue-slate), 26%, 5%, 0.7);
+}
+
+:root[data-theme='light'] {
+  /* Neutral scale (light surfaces) */
+  --sl-color-white: hsl(var(--aura-hue-slate), 30%, 10%);
+  --sl-color-gray-1: hsl(var(--aura-hue-slate), 24%, 16%);
+  --sl-color-gray-2: hsl(var(--aura-hue-slate), 16%, 25%);
+  --sl-color-gray-3: hsl(var(--aura-hue-slate), 10%, 40%);
+  --sl-color-gray-4: hsl(var(--aura-hue-slate), 8%, 52%);
+  --sl-color-gray-5: hsl(var(--aura-hue-slate), 10%, 78%);
+  --sl-color-gray-6: hsl(var(--aura-hue-slate), 22%, 94%);
+  --sl-color-gray-7: hsl(var(--aura-hue-slate), 34%, 97%);
+  --sl-color-black: hsl(0, 0%, 100%);
+
+  /* Primary accent (violet, dark enough for text contrast) */
+  --sl-color-accent-low: hsl(var(--aura-hue-violet), 85%, 95%);
+  --sl-color-accent: hsl(var(--aura-hue-violet), 78%, 52%);
+  --sl-color-accent-high: hsl(var(--aura-hue-violet), 62%, 32%);
+
+  /* Secondary accent (cyan) */
+  --sl-hue-blue: var(--aura-hue-cyan);
+
+  /* Semantic mappings */
+  --sl-color-text-accent: var(--sl-color-accent);
+  --sl-color-text-invert: var(--sl-color-black);
+  --sl-color-bg-nav: var(--sl-color-gray-7);
+  --sl-color-bg-sidebar: var(--sl-color-bg);
+  --sl-color-bg-inline-code: var(--sl-color-gray-6);
+  --sl-color-bg-accent: var(--sl-color-accent);
+  --sl-color-hairline-light: var(--sl-color-gray-6);
+  --sl-color-hairline-shade: var(--sl-color-gray-6);
+
+  --sl-color-backdrop-overlay: hsla(var(--aura-hue-slate), 20%, 30%, 0.66);
+}

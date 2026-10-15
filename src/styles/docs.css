@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Aura Help Center — documentation reading experience
+   Scoped to non-splash pages, so the splash homepage is left untouched.
+   Only spacing/typography/layout values are changed; structure, navigation
+   behaviour, search, and the theme switcher are unaffected.
+   ========================================================================== */
+
+html:not([data-has-hero]) {
+  --sl-line-height: 1.8;
+  --sl-content-gap-y: 1.25rem;
+  --sl-text-code: 0.875rem;
+  --sl-text-code-sm: 0.875rem;
+  --sl-sidebar-width: 19.5rem;
+}
+
+html:not([data-has-hero])[data-has-sidebar][data-has-toc] {
+  --sl-content-width: 48rem;
+}
+
+/* Desktop layout: tighten the right TOC rail and give the space to content. */
+@media (min-width: 72rem) {
+  html:not([data-has-hero])[data-has-sidebar][data-has-toc] .main-pane {
+    --sl-content-margin-inline: auto;
+    width: calc(100% - 16.5rem);
+  }
+
+  html:not([data-has-hero])[data-has-sidebar][data-has-toc] .right-sidebar-container {
+    width: 16.5rem;
+  }
+
+  html:not([data-has-hero])[data-has-sidebar][data-has-toc] .right-sidebar-panel .sl-container {
+    width: calc(16.5rem - 2 * var(--sl-sidebar-pad-x));
+    max-width: none;
+  }
+}
+
+/* Article typography */
+html:not([data-has-hero]) .sl-markdown-content {
+  font-size: 1.0625rem;
+}
+
+html:not([data-has-hero]) .sl-markdown-content :is(h2, h3, h4) {
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+html:not([data-has-hero]) .sl-markdown-content h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+html:not([data-has-hero]) .sl-markdown-content li + li {
+  margin-top: 0.35rem;
+}
+
+html:not([data-has-hero]) .sl-markdown-content pre {
+  padding: 1rem 1.25rem;
+  line-height: 1.7;
+}
+
+html:not([data-has-hero]) .sl-markdown-content :not(pre) > code {
+  padding: 0.15rem 0.4rem;
+}
+
+/* Sidebar: roomier spacing and slightly larger labels (structure unchanged). */
+html:not([data-has-hero]) #starlight__sidebar ul {
+  --sl-sidebar-item-padding-inline: 0.85rem;
+}
+
+html:not([data-has-hero]) #starlight__sidebar a,
+html:not([data-has-hero]) #starlight__sidebar summary {
+  padding-block: 0.45em;
+}
+
+html:not([data-has-hero]) #starlight__sidebar .top-level > li + li {
+  margin-top: 0.85rem;
+}
+
+html:not([data-has-hero]) #starlight__sidebar ul ul li + li {
+  margin-top: 0.15rem;
+}
+
+html:not([data-has-hero]) #starlight__sidebar a {
+  font-size: 0.9375rem;
+}
+
+html:not([data-has-hero]) #starlight__sidebar .large {
+  font-size: 1.0625rem;
+}

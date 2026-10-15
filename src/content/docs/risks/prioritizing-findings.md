@@ -25,7 +25,7 @@ requirements.
 
 ## Related articles
 
-- [Vulnerability Severity](/risks/vulnerability-severity)
-- [VEX Decisions](/risks/vex-decisions)
-- [Understanding Findings](/risks/understanding-findings)
-- [Evidence Overview](/evidence/overview)
+- [Vulnerability Severity](/aura-help/risks/vulnerability-severity)
+- [VEX Decisions](/aura-help/risks/vex-decisions)
+- [Understanding Findings](/aura-help/risks/understanding-findings)
+- [Evidence Overview](/aura-help/evidence/overview)

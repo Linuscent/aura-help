@@ -30,7 +30,7 @@ uploaded SBOM.
 
 ## Related articles
 
-- [SBOM Upload Errors](/troubleshooting/sbom-upload-errors)
-- [Integration Issues](/troubleshooting/integration-issues)
-- [Troubleshooting Overview](/troubleshooting)
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom)
+- [SBOM Upload Errors](/aura-help/troubleshooting/sbom-upload-errors)
+- [Integration Issues](/aura-help/troubleshooting/integration-issues)
+- [Troubleshooting Overview](/aura-help/troubleshooting)
+- [Troubleshoot an SBOM](/aura-help/sbom/troubleshoot-sbom)

@@ -4,19 +4,19 @@ User-facing help and documentation for Linuscent Aura.
 
 ## Documentation stack
 
-The content is maintained in Markdown and prepared for an Astro + Starlight documentation site.
-
-The Markdown source currently lives in `docs/`. When the Starlight application is initialized, these files can be moved or copied into Starlight's documentation content directory:
+The site is built with **Astro + Starlight**. All documentation content lives in a single source of truth:
 
 ```text
 src/content/docs/
 ```
 
+Edit the Markdown/MDX files in `src/content/docs/` directly. There is no separate documentation source directory.
+
 ## Documentation structure
 
 ```text
-docs/
-├── index.md
+src/content/docs/
+├── index.mdx
 ├── getting-started/
 ├── products-and-releases/
 ├── inventory/
@@ -28,6 +28,15 @@ docs/
 ├── licenses-and-policies/
 ├── workspace-and-account/
 └── troubleshooting/
+```
+
+## Local development
+
+```bash
+npm install
+npm run dev      # start the local dev server
+npm run build    # production build
+npm run check    # run astro check
 ```
 
 ## Content conventions
@@ -53,7 +62,3 @@ Documentation should:
 - avoid claiming that Aura itself certifies CRA compliance;
 - avoid documenting unfinished functionality until it is available;
 - preserve traceable links between products, releases, SBOMs, findings, evidence, and compliance workflows.
-
-## Next step
-
-Initialize Astro + Starlight, place the content under `src/content/docs/`, configure the sidebar, branding, search, and deployment, then run a local documentation build.

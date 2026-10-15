@@ -22,6 +22,6 @@ Team collaboration depends on workspace membership and user permissions.
 
 ## Related articles
 
-- [Workspace Overview](/workspace-and-account/workspace-overview)
-- [Access and Permissions](/workspace-and-account/access-and-permissions)
-- [First steps in Aura](/getting-started/first-steps)
+- [Workspace Overview](/aura-help/workspace-and-account/workspace-overview)
+- [Access and Permissions](/aura-help/workspace-and-account/access-and-permissions)
+- [First steps in Aura](/aura-help/getting-started/first-steps)

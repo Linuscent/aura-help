@@ -31,5 +31,5 @@ available Aura capabilities and configured data.
 
 ## Related articles
 
-- [Evidence Workflow](/evidence/evidence-workflow)
-- [Compliance Overview](/compliance/overview)
+- [Evidence Workflow](/aura-help/evidence/evidence-workflow)
+- [Compliance Overview](/aura-help/compliance/overview)

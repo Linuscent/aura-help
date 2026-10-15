@@ -30,7 +30,7 @@ context when requesting support.
 
 ## Related articles
 
-- [SBOM Validation Errors](/troubleshooting/sbom-validation-errors)
-- [Missing or Unexpected Findings](/troubleshooting/missing-or-unexpected-findings)
-- [Troubleshooting Overview](/troubleshooting)
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom)
+- [SBOM Validation Errors](/aura-help/troubleshooting/sbom-validation-errors)
+- [Missing or Unexpected Findings](/aura-help/troubleshooting/missing-or-unexpected-findings)
+- [Troubleshooting Overview](/aura-help/troubleshooting)
+- [Troubleshoot an SBOM](/aura-help/sbom/troubleshoot-sbom)

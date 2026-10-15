@@ -23,6 +23,6 @@ snapshot for analysis.
 
 ## Related articles
 
-- [VEX Decisions](/risks/vex-decisions)
-- [Understanding Findings](/risks/understanding-findings)
-- [Evidence Overview](/evidence/overview)
+- [VEX Decisions](/aura-help/risks/vex-decisions)
+- [Understanding Findings](/aura-help/risks/understanding-findings)
+- [Evidence Overview](/aura-help/evidence/overview)

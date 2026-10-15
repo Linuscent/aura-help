@@ -16,7 +16,7 @@ You need:
 - an existing product;
 - a valid CycloneDX SBOM in JSON or XML format.
 
-If you do not have a product yet, see [First steps in Aura](/getting-started/first-steps).
+If you do not have a product yet, see [First steps in Aura](/aura-help/getting-started/first-steps).
 
 ## Upload an SBOM
 
@@ -70,9 +70,9 @@ For recurring engineering workflows, use the **SBOM Ingestion** area for automat
 
 See:
 
-- [SBOM ingestion](/integrations/sbom-ingestion)
-- [API ingestion](/integrations/api-ingestion)
-- [GitHub Actions](/integrations/github-actions)
+- [SBOM ingestion](/aura-help/integrations/sbom-ingestion)
+- [API ingestion](/aura-help/integrations/api-ingestion)
+- [GitHub Actions](/aura-help/integrations/github-actions)
 
 ## If the upload fails
 
@@ -84,11 +84,11 @@ If Aura rejects the file or cannot process it, check:
 - that its CycloneDX specification version is supported;
 - that the file was generated correctly.
 
-See [Troubleshoot an SBOM](/sbom/troubleshoot-sbom).
+See [Troubleshoot an SBOM](/aura-help/sbom/troubleshoot-sbom).
 
 ## Related articles
 
-- [Supported SBOM formats](/sbom/supported-formats)
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom)
-- [What is an SBOM?](/sbom/what-is-an-sbom)
-- [Inventory Overview](/inventory/overview)
+- [Supported SBOM formats](/aura-help/sbom/supported-formats)
+- [Troubleshoot an SBOM](/aura-help/sbom/troubleshoot-sbom)
+- [What is an SBOM?](/aura-help/sbom/what-is-an-sbom)
+- [Inventory Overview](/aura-help/inventory/overview)

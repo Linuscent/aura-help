@@ -4,10 +4,14 @@ import starlight from '@astrojs/starlight';
 
 // https://starlight.astro.build/reference/configuration/
 export default defineConfig({
+  site: 'https://linuscent.github.io',
+  base: '/aura-help',
   integrations: [
     starlight({
-      title: 'Aura Help',
+      title: 'Aura Help Center',
       description: 'Help and documentation for Linuscent Aura.',
+      logo: { src: './public/logo-linuscent.png', alt: 'Aura Help Center' },
+      customCss: ['./src/styles/theme.css', './src/styles/docs.css'],
       sidebar: [
         {
           label: 'Getting Started',

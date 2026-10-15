@@ -48,6 +48,6 @@ Use naming that remains understandable across engineering, security, product, an
 
 ## Related articles
 
-- [Products and releases](/products-and-releases/overview)
-- [Product overview](/products-and-releases/product-overview)
-- [Upload an SBOM](/sbom/upload-sbom)
+- [Products and releases](/aura-help/products-and-releases/overview)
+- [Product overview](/aura-help/products-and-releases/product-overview)
+- [Upload an SBOM](/aura-help/sbom/upload-sbom)
