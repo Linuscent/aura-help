@@ -118,6 +118,46 @@ codes, field Core Web Vitals, indexing, and rankings need live monitoring; a loc
 build cannot establish them. New `noindex` pages must also be excluded from the
 sitemap—the checker intentionally rejects mismatches.
 
+## Documentation MCP server
+
+[`@stellayazilim/mcp-starlight`](https://github.com/stellayazilim/mcp-starlight)
+generates `dist/mcp-catalog.json` and `dist/mcp-catalog.version.json` during
+`npm run build`. GitHub Pages publishes both files with the site; no hosted
+MCP process or deployment changes are needed. The catalog contains documentation
+from `src/content/docs/`, not live Aura workspace data.
+
+After deploying, add this configuration to an MCP client that supports local
+stdio servers (Node.js and npm are required):
+
+```json
+{
+  "mcpServers": {
+    "aura-help": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@stellayazilim/mcp-starlight@0.2.1",
+        "https://aura.docs.linuscent.com"
+      ]
+    }
+  }
+}
+```
+
+The client runs the server locally, which fetches the published catalog and
+provides `search_docs`, `get_doc`, and `list_docs`. The version file lets it
+detect updated documentation. CI builds use `GITHUB_SHA` as the revision;
+local builds use a content hash.
+
+To test a local build without deploying, configure the client to run
+`npx -y @stellayazilim/mcp-starlight@0.2.1 ./dist/mcp-catalog.json` from the
+repository root (or pass an absolute catalog path).
+
+The extension currently declares an Astro 5 peer dependency. `package.json`
+scopes an override to this package to use the site's Astro 7 dependency,
+without relaxing peer checks globally. A local declaration file supplies its
+missing integration types. Recheck both workarounds when upgrading the extension.
+
 ## AI-assisted development
 
 Repository guidance lives in [`AGENTS.md`](AGENTS.md). [`opencode.json`](opencode.json)

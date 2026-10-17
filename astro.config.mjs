@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightMcp from '@stellayazilim/mcp-starlight';
 
 // https://starlight.astro.build/reference/configuration/
 export default defineConfig({
@@ -71,6 +72,10 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'troubleshooting' } }],
         },
       ],
+    }),
+    starlightMcp({
+      siteLabel: 'Aura Help Center',
+      revision: process.env.GITHUB_SHA,
     }),
   ],
 });
