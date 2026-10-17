@@ -20,7 +20,7 @@ readers find a relevant guide and understand how to complete their task.
 
 ## Capabilities and Constraints
 
-- Static Astro and Starlight site at `https://aura.docs.linuscent.com/`.
+- Static Astro and Starlight site at `https://docs.aura.linuscent.com/`.
 - Preserve the existing article content, URLs, search, sidebar, table of
   contents, theme selection, and mobile navigation.
 - Keep Product terminology and distinguish findings from risk decisions.

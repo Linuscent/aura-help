@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(fileURLToPath(new URL('../dist/', import.meta.url)));
-const origin = 'https://aura.docs.linuscent.com';
+const origin = 'https://docs.aura.linuscent.com';
 const seenTitles = new Set();
 const seenDescriptions = new Set();
 const indexable = new Set();

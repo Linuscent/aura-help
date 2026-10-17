@@ -3,7 +3,7 @@
 ## Project
 
 Aura Help is a static Astro + Starlight documentation site, deployed to GitHub
-Pages at `https://aura.docs.linuscent.com/`, served from `/`. Use npm and the
+Pages at `https://docs.aura.linuscent.com/`, served from `/`. Use npm and the
 committed `package-lock.json`.
 
 - `src/content/docs/`: canonical Markdown/MDX documentation.

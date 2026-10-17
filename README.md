@@ -41,7 +41,7 @@ npm run check    # run astro check
 
 Use Node.js 24 (also used in CI). Open the local site at
 <http://localhost:4321/>. The production site is deployed to
-<https://aura.docs.linuscent.com/> by `.github/workflows/deploy.yml`.
+<https://docs.aura.linuscent.com/> by `.github/workflows/deploy.yml`.
 The site is served from `/`, with the GitHub Pages custom domain recorded in
 `public/CNAME`. Configure the same domain in the repository's Pages settings
 and point its DNS record at `linuscent.github.io`.
@@ -111,9 +111,9 @@ dimensions, sitemap coverage, crawl directives, alt attributes, and local links
 and fragments. This also gates PR builds and deployment builds. Run the checker
 separately only after building `dist/`.
 
-After deployment, the site owner must verify `aura.docs.linuscent.com` in Google
+After deployment, the site owner must verify `docs.aura.linuscent.com` in Google
 Search Console and Bing Webmaster Tools and submit
-`https://aura.docs.linuscent.com/sitemap-index.xml`. DNS, HTTPS, production status
+`https://docs.aura.linuscent.com/sitemap-index.xml`. DNS, HTTPS, production status
 codes, field Core Web Vitals, indexing, and rankings need live monitoring; a local
 build cannot establish them. New `noindex` pages must also be excluded from the
 sitemap—the checker intentionally rejects mismatches.
@@ -137,7 +137,7 @@ stdio servers (Node.js and npm are required):
       "args": [
         "-y",
         "@stellayazilim/mcp-starlight@0.2.1",
-        "https://aura.docs.linuscent.com"
+        "https://docs.aura.linuscent.com"
       ]
     }
   }

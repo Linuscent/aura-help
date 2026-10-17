@@ -5,7 +5,7 @@ import starlightMcp from '@stellayazilim/mcp-starlight';
 
 // https://starlight.astro.build/reference/configuration/
 export default defineConfig({
-  site: 'https://aura.docs.linuscent.com',
+  site: 'https://docs.aura.linuscent.com',
   trailingSlash: 'always',
   integrations: [
     starlight({

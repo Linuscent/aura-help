@@ -27,7 +27,7 @@ try {
     <img src="data:image/png;base64,${logo}" alt="Linuscent" />
     <h1>Aura Help Center</h1>
     <p>Understand, manage, and secure your<br>software supply chain with Aura.</p>
-    <footer>aura.docs.linuscent.com</footer>
+    <footer>docs.aura.linuscent.com</footer>
   </body></html>`);
   await page.evaluate(() => document.fonts.ready);
   await page.locator('img').evaluate((img) => img.decode());
