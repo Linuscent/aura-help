@@ -1,0 +1,87 @@
+---
+// Extend Starlight's generated head without duplicating its canonical or meta tags.
+const route = Astro.locals.starlightRoute;
+const { entry, head, lang, siteTitle, lastUpdated } = route;
+const isNotFound = route.id === '404';
+const isHome = route.id === '' || Astro.url.pathname === '/';
+const canonical = head.find(({ tag, attrs }) => tag === 'link' && attrs?.rel === 'canonical')?.attrs?.href;
+const url = String(canonical ?? new URL(Astro.url.pathname, Astro.site));
+const siteUrl = new URL('/', Astro.site).href;
+const imageUrl = new URL('/social/aura-docs.png', siteUrl).href;
+const description = String(head.find(({ tag, attrs }) => tag === 'meta' && attrs?.name === 'description')?.attrs?.content ?? '');
+const title = entry.data.title;
+const configuredRobots = head.find(({ tag, attrs }) => tag === 'meta' && attrs?.name === 'robots')?.attrs?.content;
+const noIndex = isNotFound || entry.data.draft || /noindex/i.test(String(configuredRobots ?? ''));
+
+const overrides = [
+  { property: 'og:type', content: isHome ? 'website' : 'article' },
+  { property: 'og:locale', content: lang.replace('-', '_') === 'en' ? 'en_GB' : lang.replace('-', '_') },
+  { property: 'og:image', content: imageUrl },
+  { property: 'og:image:secure_url', content: imageUrl },
+  { property: 'og:image:type', content: 'image/png' },
+  { property: 'og:image:width', content: '1200' },
+  { property: 'og:image:height', content: '630' },
+  { property: 'og:image:alt', content: 'Linuscent Aura Help Center — software supply chain documentation' },
+  { name: 'twitter:card', content: 'summary_large_image' },
+  { name: 'twitter:title', content: title },
+  { name: 'twitter:description', content: description },
+  { name: 'twitter:image', content: imageUrl },
+  { name: 'twitter:image:alt', content: 'Linuscent Aura Help Center — software supply chain documentation' },
+  { name: 'robots', content: isNotFound || entry.data.draft ? 'noindex, follow' : String(configuredRobots ?? 'index, follow, max-image-preview:large') },
+];
+const keys = new Set(overrides.map((attrs) => 'property' in attrs ? attrs.property : attrs.name));
+const mergedHead = head.filter(({ tag, attrs }) => tag !== 'meta' || !keys.has(String(attrs?.property ?? attrs?.name)));
+
+const organization = {
+  '@type': 'Organization',
+  '@id': 'https://linuscent.com/#organization',
+  name: 'Linuscent',
+  url: 'https://linuscent.com/',
+  logo: {
+    '@type': 'ImageObject',
+    url: new URL('/favicon.png', siteUrl).href,
+    width: 192,
+    height: 192,
+  },
+};
+const website = {
+  '@type': 'WebSite',
+  '@id': `${siteUrl}#website`,
+  url: siteUrl,
+  name: siteTitle,
+  description: 'Help and documentation for Linuscent Aura.',
+  inLanguage: lang,
+  publisher: { '@id': organization['@id'] },
+};
+const breadcrumbs = {
+  '@type': 'BreadcrumbList',
+  '@id': `${url}#breadcrumbs`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: siteTitle, item: siteUrl },
+    ...(!isHome ? [{ '@type': 'ListItem', position: 2, name: title, item: url }] : []),
+  ],
+};
+const webpage = {
+  '@type': isHome ? 'WebPage' : 'TechArticle',
+  '@id': `${url}#page`,
+  url,
+  name: title,
+  ...(isHome ? {} : { headline: title }),
+  description,
+  inLanguage: lang,
+  isPartOf: { '@id': website['@id'] },
+  publisher: { '@id': organization['@id'] },
+  image: imageUrl,
+  breadcrumb: { '@id': breadcrumbs['@id'] },
+  ...(lastUpdated ? { dateModified: lastUpdated.toISOString() } : {}),
+};
+// Escape HTML-significant characters so future frontmatter cannot close the script.
+const structuredData = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [organization, website, webpage, breadcrumbs],
+}).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026');
+---
+
+{mergedHead.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
+{overrides.map((attrs) => <meta {...attrs} />)}
+{!noIndex && <script type="application/ld+json" set:html={structuredData} />}

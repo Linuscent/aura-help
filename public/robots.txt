@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aura.docs.linuscent.com/sitemap-index.xml

@@ -122,7 +122,7 @@ components:
 
 This is the established Linuscent Aura identity adapted to documentation, not a new identity. Near-black and navy surfaces, cyan interaction, geometric headings, and quiet reading text carry the parent brand without its cinematic decoration. A matching light theme uses darker cyan for legible interaction.
 
-The implementation authority is `src/styles/theme.css` and `src/styles/docs.css`, with native Starlight components. Brand evidence comes from `../linuscent-website/src/styles/global.css`; it is not a runtime dependency. The official `public/logo-linuscent.png` remains unchanged, including its red color. This document describes implemented styling, not a browser-accessibility certification.
+The implementation authority is `src/styles/theme.css` and `src/styles/docs.css`, with native Starlight components. Brand evidence comes from `../linuscent-website/src/styles/global.css`; it is not a runtime dependency. Official light/dark wordmarks in `public/brand/` and favicon PNGs in `public/` are copied unchanged from the Linuscent website, including the red mark. This document describes implemented styling, not a browser-accessibility certification.
 
 **Key Characteristics:**
 - Cyan interaction with neutral reading surfaces.
@@ -181,7 +181,7 @@ Start article headings at h2. Keep bold emphasis at weight 600; do not turn body
 
 ## Layout
 
-Keep Starlight's responsive grid and navigation model. Shared dimensions are a 4.5rem header, 18rem sidebar, and 47rem content container, with a 70ch article measure. At widths below 50rem, the header becomes 4rem and the mark shrinks from 2rem to 1.75rem. Starlight continues to own sidebar and contents-rail visibility.
+Keep Starlight's responsive grid and navigation model. Shared dimensions are a 4.5rem header, 18rem sidebar, and 47rem content container, with a 70ch article measure. The header uses the white-lettered wordmark in dark mode and the black-lettered wordmark in light mode, with the help-center title beneath it. At widths below 50rem, the header becomes 4rem and the wordmark width shrinks from 8.5rem to 7.5rem, retaining its intrinsic aspect ratio. Starlight continues to own sidebar and contents-rail visibility.
 
 Use the seven spacing steps in frontmatter. Article subheadings have 3rem space before and 0.75rem after; adjacent list items have 0.5rem separation. Table cells use 0.75rem by 1rem padding.
 
@@ -194,6 +194,17 @@ Flat surfaces and fine borders carry the document hierarchy. Topic links, pagina
 ## Shapes
 
 Controls, code, callouts, and pagination use the control radius. The search dialog uses the panel radius. Topic links are square-edged, bottom-divided rows rather than rounded panels. The official mark is neither recolored nor reshaped.
+
+Asset provenance: `public/brand/linuscent-wordmark-dark.png` comes from the
+website's `public/assets/logos/logo_text_white.png`; the light variant comes
+from `public/assets/logos/logo_text.png`. Both favicon files come from the
+same-named files in the website's `public/` directory. Keep these source assets
+unchanged; do not apply CSS filters or substitute a generated logo.
+
+The social preview at `public/social/aura-docs.png` is a 1200×630 composition of
+the official dark-theme wordmark, the existing homepage title/tagline, and the
+canonical domain. Its reproducible source is `scripts/generate-social-card.mjs`;
+run `npm run generate:og` with Playwright Chromium installed to regenerate it.
 
 ## Components
 

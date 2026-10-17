@@ -89,6 +89,35 @@ self-hosted using Fontsource packages, with no third-party font requests.
 The first visit defaults to dark. Reader choices of light, dark, or automatic
 are preserved, including a mobile appearance selector on the homepage.
 
+## Search engines and social previews
+
+- Article frontmatter supplies unique page titles and descriptions. Starlight
+  generates canonical URLs, sitemap links, and the XML sitemap for the custom domain.
+- Routes use trailing-slash canonical URLs. The homepage uses the `website`
+  Open Graph type; guides use `article`.
+- `src/components/Head.astro` adds Open Graph and Twitter image metadata, crawler
+  directives, and a JSON-LD graph for the publisher, website, page, and breadcrumbs.
+  The 404 page and drafts are marked `noindex`; no modification dates are fabricated.
+- `public/robots.txt` permits crawling and advertises the sitemap. The site is
+  statically rendered and uses local fonts and images, so content does not rely
+  on a crawler executing JavaScript.
+- `public/social/aura-docs.png` is a local 1200×630 social card built from the
+  official wordmark and the existing homepage copy. Regenerate it with
+  `npx playwright install chromium`, then `npm run generate:og`.
+
+`npm run build` automatically runs `npm run check:seo`. The checker validates all
+generated pages for unique metadata, canonical URLs, one h1, JSON-LD, social-card
+dimensions, sitemap coverage, crawl directives, alt attributes, and local links
+and fragments. This also gates PR builds and deployment builds. Run the checker
+separately only after building `dist/`.
+
+After deployment, the site owner must verify `aura.docs.linuscent.com` in Google
+Search Console and Bing Webmaster Tools and submit
+`https://aura.docs.linuscent.com/sitemap-index.xml`. DNS, HTTPS, production status
+codes, field Core Web Vitals, indexing, and rankings need live monitoring; a local
+build cannot establish them. New `noindex` pages must also be excluded from the
+sitemap—the checker intentionally rejects mismatches.
+
 ## AI-assisted development
 
 Repository guidance lives in [`AGENTS.md`](AGENTS.md). [`opencode.json`](opencode.json)

@@ -36,7 +36,9 @@ body {
 
 /* The real Linuscent mark stays red. Cyan belongs to interaction, not the logo. */
 .site-title {
-  gap: var(--aura-space-3);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--aura-space-1);
   color: var(--aura-text-heading);
   font-family: var(--aura-font-display);
   font-size: 1.125rem;
@@ -44,9 +46,17 @@ body {
 }
 
 .site-title img {
-  width: 2rem;
-  height: 2rem;
+  width: 8.5rem;
+  height: auto;
   flex: none;
+}
+
+.site-title span {
+  font-family: var(--aura-font-body);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--aura-text-muted);
 }
 
 .site-title:hover {
@@ -400,12 +410,12 @@ html[data-has-hero] .sl-markdown-content > p {
 
   .site-title {
     font-size: 1rem;
-    gap: var(--aura-space-2);
+    gap: var(--aura-space-1);
   }
 
   .site-title img {
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 7.5rem;
+    height: auto;
   }
 
   .sl-link-card {

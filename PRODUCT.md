@@ -40,7 +40,8 @@ website or rewrite product copy.
 - Existing articles: `src/content/docs/`.
 - Brand palette and fonts: `../linuscent-website/src/styles/global.css`.
 - Aura brand application: `../linuscent-website/src/pages/linuscent-aura/index.astro`.
-- Existing official Linuscent mark: `public/logo-linuscent.png`.
+- Official light/dark Linuscent wordmarks: `public/brand/`.
+- Official Linuscent favicon assets: `public/favicon.png` and `public/favicon-32.png`.
 
 ## Product Principles
 

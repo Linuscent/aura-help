@@ -10,6 +10,8 @@ committed `package-lock.json`.
 - `src/content.config.ts`: Starlight content collection.
 - `astro.config.mjs`: site URL, base path, sidebar groups, and integrations.
 - `src/styles/`: shared theme and documentation styles.
+- `src/components/Head.astro`: shared SEO metadata and JSON-LD.
+- `scripts/check-seo.mjs`: post-build SEO and internal-link checks.
 - `public/`: static assets.
 - `.github/workflows/`: validation and Pages deployment.
 
@@ -38,6 +40,9 @@ committed `package-lock.json`.
 - Keep sidebar groups in `astro.config.mjs` aligned with content directories.
 - Keep contributor instructions in the README and this file, not in published
   customer-facing articles.
+- Keep titles and descriptions unique. Preserve canonical URLs and crawl
+  directives; do not invent ratings, authors, or dates for structured data.
+  `npm run build` includes SEO checks against the generated site.
 
 ## Tools and validation
 

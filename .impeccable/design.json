@@ -76,7 +76,7 @@
   ],
   "narrative": {
     "northStar": "Linuscent Aura reference library",
-    "overview": "This is the established Linuscent Aura identity adapted to documentation, not a new identity. Near-black and navy surfaces, cyan interaction, geometric headings, and quiet reading text carry the parent brand without its cinematic decoration. A matching light theme uses darker cyan for legible interaction.\n\nThe implementation authority is `src/styles/theme.css` and `src/styles/docs.css`, with native Starlight components. Brand evidence comes from `../linuscent-website/src/styles/global.css`; it is not a runtime dependency. The official `public/logo-linuscent.png` remains unchanged, including its red color. This document describes implemented styling, not a browser-accessibility certification.",
+    "overview": "This is the established Linuscent Aura identity adapted to documentation, not a new identity. Near-black and navy surfaces, cyan interaction, geometric headings, and quiet reading text carry the parent brand without its cinematic decoration. A matching light theme uses darker cyan for legible interaction.\n\nThe implementation authority is `src/styles/theme.css` and `src/styles/docs.css`, with native Starlight components. Brand evidence comes from `../linuscent-website/src/styles/global.css`; it is not a runtime dependency. Official light/dark wordmarks in `public/brand/` and favicon PNGs in `public/` are copied unchanged from the Linuscent website, including the red mark. This document describes implemented styling, not a browser-accessibility certification.",
     "keyCharacteristics": [
       "Cyan interaction with neutral reading surfaces.",
       "Self-hosted fonts and compact, flat components.",

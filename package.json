@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npm run check:seo",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
+    "check:seo": "node scripts/check-seo.mjs",
+    "generate:og": "node scripts/generate-social-card.mjs",
     "lint:commit": "commitlint"
   },
   "dependencies": {

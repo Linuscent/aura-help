@@ -5,13 +5,23 @@ import starlight from '@astrojs/starlight';
 // https://starlight.astro.build/reference/configuration/
 export default defineConfig({
   site: 'https://aura.docs.linuscent.com',
+  trailingSlash: 'always',
   integrations: [
     starlight({
       title: 'Aura Help Center',
       description: 'Help and documentation for Linuscent Aura.',
-      logo: { src: './public/logo-linuscent.png', alt: 'Aura Help Center' },
+      logo: {
+        dark: './public/brand/linuscent-wordmark-dark.png',
+        light: './public/brand/linuscent-wordmark-light.png',
+        alt: 'Linuscent',
+      },
+      favicon: '/favicon-32.png',
+      head: [
+        { tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/favicon.png' } },
+      ],
       customCss: ['./src/styles/theme.css', './src/styles/docs.css'],
       components: {
+        Head: './src/components/Head.astro',
         Hero: './src/components/Hero.astro',
         ThemeProvider: './src/components/ThemeProvider.astro',
       },
