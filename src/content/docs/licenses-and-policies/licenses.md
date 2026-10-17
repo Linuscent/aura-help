@@ -33,5 +33,5 @@ SBOM and connected analysis capabilities.
 
 ## Related articles
 
-- [Policy Results](/aura-help/licenses-and-policies/policy-results)
-- [Understanding Findings](/aura-help/risks/understanding-findings)
+- [Policy Results](/licenses-and-policies/policy-results)
+- [Understanding Findings](/risks/understanding-findings)

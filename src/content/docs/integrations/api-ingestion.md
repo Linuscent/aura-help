@@ -25,6 +25,6 @@ environment and integrations.
 
 ## Related articles
 
-- [SBOM Ingestion](/aura-help/integrations/sbom-ingestion)
-- [GitHub Actions Integration](/aura-help/integrations/github-actions)
-- [Upload an SBOM](/aura-help/sbom/upload-sbom)
+- [SBOM Ingestion](/integrations/sbom-ingestion)
+- [GitHub Actions Integration](/integrations/github-actions)
+- [Upload an SBOM](/sbom/upload-sbom)

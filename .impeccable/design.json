@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T00:00:00Z",
+  "title": "Design System: Linuscent Aura reference library",
+  "extensions": {
+    "colorMeta": {
+      "dark-action": { "role": "primary", "displayName": "Aura cyan", "canonical": "#22d3ee", "tonalRamp": ["#05060a", "#0a0c14", "#102d38", "#08758a", "#22d3ee", "#67e8f9", "#dff4f7", "#ffffff"] },
+      "light-action": { "role": "primary", "displayName": "Light-theme cyan ink", "canonical": "#08758a", "tonalRamp": ["#05060a", "#0a0c14", "#102d38", "#08758a", "#22d3ee", "#67e8f9", "#dff4f7", "#ffffff"] },
+      "dark-page": { "role": "neutral", "displayName": "Void canvas", "canonical": "#05060a" },
+      "dark-nav": { "role": "neutral", "displayName": "Navy navigation", "canonical": "#0a0c14" },
+      "light-page": { "role": "neutral", "displayName": "Light reading canvas", "canonical": "#ffffff" },
+      "light-nav": { "role": "neutral", "displayName": "Paper navigation", "canonical": "#f4f5f7" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Splash title", "purpose": "Existing homepage heading; maximum measure 18ch." },
+      "headline": { "displayName": "Article title", "purpose": "Starlight-generated page heading." },
+      "title": { "displayName": "Section heading", "purpose": "Article h2." },
+      "body": { "displayName": "Reading text", "purpose": "Article prose capped at 70ch." },
+      "label": { "displayName": "Compact label", "purpose": "Actions and sidebar group labels." },
+      "code": { "displayName": "Code", "purpose": "Inline and block code." }
+    },
+    "shadows": [
+      { "name": "panel-dark", "value": "0 16px 48px rgb(0 0 0 / 28%)", "purpose": "Dark search dialog; --aura-shadow-panel." },
+      { "name": "panel-light", "value": "0 16px 48px rgb(14 12 27 / 14%)", "purpose": "Light search dialog; --aura-shadow-panel." }
+    ],
+    "motion": [
+      { "name": "fast", "value": "160ms", "purpose": "--aura-motion-fast; color and border state changes." },
+      { "name": "ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "--aura-motion-ease; shared state transition easing." },
+      { "name": "reduced-motion", "value": "0s", "purpose": "Animation and transition duration under prefers-reduced-motion: reduce." }
+    ],
+    "breakpoints": [
+      { "name": "desktop-docs-overrides", "value": "50rem" },
+      { "name": "mobile-docs-overrides-max", "value": "49.999rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Starlight primary LinkButton styling; inherits semantic roles in either theme.",
+      "html": "<a class=\"ds-primary\" href=\"/getting-started/what-is-aura/\">Get Started</a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;min-height:2.75rem;padding:.75rem 1.5rem;border:1px solid var(--aura-action);border-radius:var(--aura-radius-control);background:var(--aura-action);color:var(--aura-on-action);font:600 .875rem var(--aura-font-body);text-decoration:none;transition:background-color var(--aura-motion-fast) var(--aura-motion-ease),border-color var(--aura-motion-fast) var(--aura-motion-ease)}.ds-primary:hover{background:var(--aura-action-hover);border-color:var(--aura-action-hover)}.ds-primary:focus-visible{outline:2px solid var(--aura-action);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined companion to the primary action.",
+      "html": "<a class=\"ds-secondary\" href=\"/products-and-releases/overview/\">Explore Documentation</a>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;min-height:2.75rem;padding:.75rem 1.5rem;border:1px solid var(--aura-border-strong);border-radius:var(--aura-radius-control);background:transparent;color:var(--aura-text-heading);font:600 .875rem var(--aura-font-body);text-decoration:none;transition:background-color var(--aura-motion-fast) var(--aura-motion-ease),border-color var(--aura-motion-fast) var(--aura-motion-ease)}.ds-secondary:hover{background:var(--aura-surface-hover);border-color:var(--aura-action)}.ds-secondary:focus-visible{outline:2px solid var(--aura-action);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
+    },
+    {
+      "name": "Topic link",
+      "kind": "card",
+      "refersTo": "topic-link",
+      "description": "Flat LinkCard index row; representative styling, not a replacement Starlight component.",
+      "html": "<a class=\"ds-topic\" href=\"/sbom/what-is-an-sbom/\"><span class=\"ds-title\">SBOM</span><span class=\"ds-description\">Understand SBOMs, supported formats, uploads, and troubleshooting.</span></a>",
+      "css": ".ds-topic{display:block;padding:1.5rem 1rem;border-bottom:1px solid var(--aura-border);border-radius:0;background:transparent;box-shadow:none;text-decoration:none;transition:background-color var(--aura-motion-fast) var(--aura-motion-ease)}.ds-title{display:block;color:var(--aura-text-heading);font:600 1.25rem var(--aura-font-display);letter-spacing:-.02em}.ds-description{display:block;color:var(--aura-text-muted);font:.9375rem var(--aura-font-body)}.ds-topic:hover,.ds-topic:focus-within{background:var(--aura-surface-nav)}.ds-topic:hover .ds-title,.ds-topic:focus-within .ds-title{color:var(--aura-action)}.ds-topic:focus-visible{outline:2px solid var(--aura-action);outline-offset:4px}@media(max-width:49.999rem){.ds-topic{padding-inline:0}}@media(prefers-reduced-motion:reduce){.ds-topic{transition:none}}"
+    },
+    {
+      "name": "Search trigger",
+      "kind": "button",
+      "refersTo": "search-trigger",
+      "description": "Native search trigger appearance, including its disabled loading treatment. Preview does not implement search.",
+      "html": "<button class=\"ds-search\" type=\"button\">Search</button>",
+      "css": ".ds-search{min-height:2.75rem;min-width:2.75rem;border:1px solid var(--aura-border-strong);border-radius:var(--aura-radius-control);background:var(--aura-surface-page);color:var(--aura-text-muted);font:.875rem var(--aura-font-body);transition:border-color var(--aura-motion-fast) var(--aura-motion-ease),background-color var(--aura-motion-fast) var(--aura-motion-ease)}.ds-search:hover{border-color:var(--aura-action);background:var(--aura-surface-raised)}.ds-search:focus-visible{outline:2px solid var(--aura-action);outline-offset:4px}.ds-search:disabled{cursor:wait;opacity:.65}@media(prefers-reduced-motion:reduce){.ds-search{transition:none}}"
+    },
+    {
+      "name": "Current sidebar link",
+      "kind": "nav",
+      "description": "Current-page navigation with a non-color-only inset boundary and weight change.",
+      "html": "<nav aria-label=\"Documentation\"><a class=\"ds-nav\" href=\"/sbom/what-is-an-sbom/\" aria-current=\"page\">What is an SBOM?</a></nav>",
+      "css": ".ds-nav{display:block;padding:.5rem;border-radius:var(--aura-radius-control);font:.875rem/1.5 var(--aura-font-body);color:var(--aura-text-body);text-decoration:none}.ds-nav:not([aria-current=page]):hover{color:var(--aura-text-heading);background:var(--aura-surface-hover)}.ds-nav[aria-current=page]{background:var(--aura-selected-bg);color:var(--aura-action);font-weight:600;box-shadow:inset 0 0 0 1px var(--aura-border)}.ds-nav:focus-visible{outline:2px solid var(--aura-action);outline-offset:4px}@media(forced-colors:active){.ds-nav[aria-current=page]{outline:1px solid Highlight}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Linuscent Aura reference library",
+    "overview": "This is the established Linuscent Aura identity adapted to documentation, not a new identity. Near-black and navy surfaces, cyan interaction, geometric headings, and quiet reading text carry the parent brand without its cinematic decoration. A matching light theme uses darker cyan for legible interaction.\n\nThe implementation authority is `src/styles/theme.css` and `src/styles/docs.css`, with native Starlight components. Brand evidence comes from `../linuscent-website/src/styles/global.css`; it is not a runtime dependency. The official `public/logo-linuscent.png` remains unchanged, including its red color. This document describes implemented styling, not a browser-accessibility certification.",
+    "keyCharacteristics": [
+      "Cyan interaction with neutral reading surfaces.",
+      "Self-hosted fonts and compact, flat components.",
+      "Familiar Starlight navigation and search.",
+      "Equivalent semantic roles in dark and light themes."
+    ],
+    "rules": [
+      { "name": "The Semantic Color Rule", "body": "Consume `--aura-*` roles in shared CSS; never hard-code a theme's color into an article.", "section": "colors" }
+    ],
+    "dos": [
+      "**Do** use semantic Aura roles and test both themes.",
+      "**Do** preserve native Starlight search, navigation, and theme preferences.",
+      "**Do** keep the official Linuscent mark unchanged and fonts self-hosted.",
+      "**Do** preserve product copy, URLs, and heading hierarchy."
+    ],
+    "donts": [
+      "**Don't** use raw brand cyan for light-theme body links.",
+      "**Don't** import marketing glow, glass, decorative motion, or background artwork.",
+      "**Don't** invent product capabilities or compliance certification claims.",
+      "**Don't** claim untested component states or accessibility conformance."
+    ]
+  }
+}

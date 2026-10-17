@@ -25,5 +25,5 @@ When investigating an issue:
 
 ## Related articles
 
-- [SBOM Upload Errors](/aura-help/troubleshooting/sbom-upload-errors)
-- [Troubleshoot an SBOM](/aura-help/sbom/troubleshoot-sbom)
+- [SBOM Upload Errors](/troubleshooting/sbom-upload-errors)
+- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom)

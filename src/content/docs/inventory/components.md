@@ -48,6 +48,6 @@ the information available in the source SBOM.
 
 ## Related articles
 
-- [Inventory Overview](/aura-help/inventory/overview)
-- [Dependency Graph](/aura-help/inventory/dependency-graph)
-- [Understanding Findings](/aura-help/risks/understanding-findings)
+- [Inventory Overview](/inventory/overview)
+- [Dependency Graph](/inventory/dependency-graph)
+- [Understanding Findings](/risks/understanding-findings)

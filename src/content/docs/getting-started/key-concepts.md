@@ -54,7 +54,7 @@ An SBOM can contain information such as:
 
 Aura supports CycloneDX SBOM workflows.
 
-For more information, see [What is an SBOM?](/aura-help/sbom/what-is-an-sbom).
+For more information, see [What is an SBOM?](/sbom/what-is-an-sbom).
 
 ## Component
 
@@ -177,7 +177,7 @@ Aura does not by itself determine whether a product is compliant with the CRA.
 
 ## Related articles
 
-- [How Aura works](/aura-help/getting-started/how-aura-works)
-- [First steps in Aura](/aura-help/getting-started/first-steps)
-- [What is Aura?](/aura-help/getting-started/what-is-aura)
-- [Products and releases](/aura-help/products-and-releases/overview)
+- [How Aura works](/getting-started/how-aura-works)
+- [First steps in Aura](/getting-started/first-steps)
+- [What is Aura?](/getting-started/what-is-aura)
+- [Products and releases](/products-and-releases/overview)

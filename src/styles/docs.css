@@ -1,89 +1,446 @@
-/* ==========================================================================
-   Aura Help Center — documentation reading experience
-   Scoped to non-splash pages, so the splash homepage is left untouched.
-   Only spacing/typography/layout values are changed; structure, navigation
-   behaviour, search, and the theme switcher are unaffected.
-   ========================================================================== */
-
-html:not([data-has-hero]) {
-  --sl-line-height: 1.8;
-  --sl-content-gap-y: 1.25rem;
-  --sl-text-code: 0.875rem;
-  --sl-text-code-sm: 0.875rem;
-  --sl-sidebar-width: 19.5rem;
+/* Shared documentation components. Colors and dimensions come from theme.css. */
+html {
+  scrollbar-color: var(--aura-border-strong) var(--aura-surface-page);
+  scrollbar-gutter: stable;
+  accent-color: var(--aura-action);
 }
 
-html:not([data-has-hero])[data-has-sidebar][data-has-toc] {
-  --sl-content-width: 48rem;
+body {
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Desktop layout: tighten the right TOC rail and give the space to content. */
-@media (min-width: 72rem) {
-  html:not([data-has-hero])[data-has-sidebar][data-has-toc] .main-pane {
-    --sl-content-margin-inline: auto;
-    width: calc(100% - 16.5rem);
-  }
-
-  html:not([data-has-hero])[data-has-sidebar][data-has-toc] .right-sidebar-container {
-    width: 16.5rem;
-  }
-
-  html:not([data-has-hero])[data-has-sidebar][data-has-toc] .right-sidebar-panel .sl-container {
-    width: calc(16.5rem - 2 * var(--sl-sidebar-pad-x));
-    max-width: none;
-  }
+::selection {
+  background: var(--aura-action);
+  color: var(--aura-on-action);
 }
 
-/* Article typography */
+:where(input, textarea) {
+  caret-color: var(--aura-action);
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--aura-action);
+  outline-offset: 4px;
+}
+
+:where(a, button, input, select, textarea, summary) {
+  touch-action: manipulation;
+}
+
+:where(h1, h2, h3, h4) {
+  font-family: var(--aura-font-display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+/* The real Linuscent mark stays red. Cyan belongs to interaction, not the logo. */
+.site-title {
+  gap: var(--aura-space-3);
+  color: var(--aura-text-heading);
+  font-family: var(--aura-font-display);
+  font-size: 1.125rem;
+  letter-spacing: -0.025em;
+}
+
+.site-title img {
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+}
+
+.site-title:hover {
+  color: var(--aura-action);
+}
+
+starlight-theme-select select {
+  min-height: 2.75rem;
+}
+
+/* Search keeps Starlight's native dialog, focus handling, and keyboard shortcut. */
+site-search button[data-open-modal] {
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  justify-content: center;
+  border: 1px solid var(--aura-border-strong);
+  border-radius: var(--aura-radius-control);
+  background: var(--aura-surface-page);
+  color: var(--aura-text-muted);
+  box-shadow: none;
+  transition: border-color var(--aura-motion-fast) var(--aura-motion-ease),
+    background-color var(--aura-motion-fast) var(--aura-motion-ease);
+}
+
+site-search button[data-open-modal]:hover {
+  border-color: var(--aura-action);
+  background: var(--aura-surface-raised);
+}
+
+site-search button[data-open-modal]:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+site-search kbd {
+  color: var(--aura-text-muted);
+  background: var(--aura-surface-raised);
+  border-radius: var(--aura-radius-control);
+}
+
+site-search dialog {
+  border: 1px solid var(--aura-border-strong);
+  border-radius: var(--aura-radius-panel);
+  box-shadow: var(--aura-shadow-panel);
+}
+
+.sl-menu-button,
+.sl-menu-button:has(~ :popover-open) {
+  border: 1px solid var(--aura-border-strong);
+  border-radius: var(--aura-radius-control);
+  background: var(--aura-surface-page);
+  color: var(--aura-text-heading);
+  box-shadow: none;
+}
+
+.sl-menu-button:hover {
+  border-color: var(--aura-action);
+  background: var(--aura-surface-hover);
+}
+
+#starlight__search {
+  --pagefind-ui-primary: var(--aura-action);
+  --pagefind-ui-text: var(--aura-text-body);
+  --pagefind-ui-background: var(--aura-surface-page);
+  --pagefind-ui-border: var(--aura-border-strong);
+  --pagefind-ui-tag: var(--aura-surface-raised);
+  --pagefind-ui-border-radius: var(--aura-radius-control);
+  --pagefind-ui-font: var(--aura-font-body);
+}
+
+/* One navigation language for the tree and the reading-position rail. */
+#starlight__sidebar {
+  scrollbar-width: thin;
+}
+
+#starlight__sidebar a,
+#starlight__sidebar summary {
+  padding-block: var(--aura-space-2);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: var(--aura-radius-control);
+}
+
+#starlight__sidebar .large {
+  color: var(--aura-text-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+#starlight__sidebar .top-level > li + li {
+  margin-top: var(--aura-space-6);
+}
+
+#starlight__sidebar a:not([aria-current='page']):hover {
+  color: var(--aura-text-heading);
+  background: var(--aura-surface-hover);
+}
+
+#starlight__sidebar a[aria-current='page'] {
+  background: var(--aura-selected-bg);
+  color: var(--aura-action);
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px var(--aura-border);
+}
+
+starlight-toc #starlight__on-this-page {
+  color: var(--aura-text-heading);
+  font-family: var(--aura-font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+starlight-toc a {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+starlight-toc a[aria-current='true'] {
+  color: var(--aura-action);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+/* Keep a stable, readable line length without changing Starlight's grid logic. */
 html:not([data-has-hero]) .sl-markdown-content {
-  font-size: 1.0625rem;
+  max-width: var(--aura-reading-width);
+  font-size: 1rem;
 }
 
-html:not([data-has-hero]) .sl-markdown-content :is(h2, h3, h4) {
-  margin-top: 1.8em;
-  margin-bottom: 0.6em;
+.sl-markdown-content :is(h2, h3, h4) {
+  margin-block: var(--aura-space-12) var(--aura-space-3);
 }
 
-html:not([data-has-hero]) .sl-markdown-content h2 {
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid var(--sl-color-hairline);
+.sl-markdown-content h2 {
+  font-size: var(--sl-text-h2);
 }
 
-html:not([data-has-hero]) .sl-markdown-content li + li {
-  margin-top: 0.35rem;
+.sl-markdown-content :is(p, li) {
+  text-wrap: pretty;
 }
 
-html:not([data-has-hero]) .sl-markdown-content pre {
-  padding: 1rem 1.25rem;
+.sl-markdown-content li + li {
+  margin-top: var(--aura-space-2);
+}
+
+.sl-markdown-content a:not(:where(.not-content *)) {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.sl-markdown-content strong {
+  color: var(--aura-text-heading);
+  font-weight: 600;
+}
+
+.sl-markdown-content :not(pre) > code {
+  color: var(--aura-action);
+  padding: 0.125em 0.375em;
+  border-radius: var(--aura-radius-control);
+  overflow-wrap: anywhere;
+}
+
+.sl-markdown-content pre {
+  background: var(--aura-surface-nav);
+  border: 1px solid var(--aura-border);
+  border-radius: var(--aura-radius-control);
+  padding: var(--aura-space-6);
   line-height: 1.7;
+  overflow-x: auto;
 }
 
-html:not([data-has-hero]) .sl-markdown-content :not(pre) > code {
-  padding: 0.15rem 0.4rem;
+.expressive-code {
+  --ec-brdCol: var(--aura-border);
+  --ec-brdRad: var(--aura-radius-control);
+  --ec-codeFontFml: var(--aura-font-code);
+  --ec-codeBg: var(--aura-surface-nav);
 }
 
-/* Sidebar: roomier spacing and slightly larger labels (structure unchanged). */
-html:not([data-has-hero]) #starlight__sidebar ul {
-  --sl-sidebar-item-padding-inline: 0.85rem;
+.sl-markdown-content table {
+  width: 100%;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
 }
 
-html:not([data-has-hero]) #starlight__sidebar a,
-html:not([data-has-hero]) #starlight__sidebar summary {
-  padding-block: 0.45em;
+.sl-markdown-content th {
+  background: var(--aura-surface-nav);
+  font-size: 0.8125rem;
 }
 
-html:not([data-has-hero]) #starlight__sidebar .top-level > li + li {
-  margin-top: 0.85rem;
+.sl-markdown-content :is(th, td) {
+  padding: var(--aura-space-3) var(--aura-space-4);
 }
 
-html:not([data-has-hero]) #starlight__sidebar ul ul li + li {
-  margin-top: 0.15rem;
+.sl-markdown-content tbody tr:hover {
+  background: var(--aura-surface-nav);
 }
 
-html:not([data-has-hero]) #starlight__sidebar a {
+.sl-markdown-content blockquote {
+  border-inline-start: 1px solid var(--aura-action);
+  color: var(--aura-text-heading);
+  padding-inline-start: var(--aura-space-6);
+}
+
+.starlight-aside {
+  border-width: 1px;
+  border-radius: var(--aura-radius-control);
+}
+
+.starlight-aside .starlight-aside__title {
+  font-family: var(--aura-font-body);
+  letter-spacing: 0;
+}
+
+/* Buttons use the website's compact corners instead of Starlight's pills. */
+.sl-link-button {
+  min-height: 2.75rem;
+  border-radius: var(--aura-radius-control);
+  padding: var(--aura-space-3) var(--aura-space-6);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color var(--aura-motion-fast) var(--aura-motion-ease),
+    border-color var(--aura-motion-fast) var(--aura-motion-ease);
+}
+
+.sl-link-button.primary {
+  color: var(--aura-on-action);
+  background: var(--aura-action);
+  border-color: var(--aura-action);
+}
+
+.sl-link-button.primary:hover {
+  color: var(--aura-on-action);
+  background: var(--aura-action-hover);
+  border-color: var(--aura-action-hover);
+}
+
+.sl-link-button.secondary {
+  color: var(--aura-text-heading);
+  border-color: var(--aura-border-strong);
+}
+
+.sl-link-button.secondary:hover {
+  background: var(--aura-surface-hover);
+  border-color: var(--aura-action);
+}
+
+/* Topic links are an index, not six floating marketing panels. */
+.sl-link-card {
+  border: 0;
+  border-bottom: 1px solid var(--aura-border);
+  border-radius: 0;
+  padding: var(--aura-space-6) var(--aura-space-4);
+  background: transparent;
+  box-shadow: none;
+  transition: background-color var(--aura-motion-fast) var(--aura-motion-ease);
+}
+
+.sl-link-card .title {
+  font-family: var(--aura-font-display);
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.sl-link-card .description {
+  color: var(--aura-text-muted);
   font-size: 0.9375rem;
 }
 
-html:not([data-has-hero]) #starlight__sidebar .large {
-  font-size: 1.0625rem;
+.sl-link-card .icon {
+  color: var(--aura-action);
+}
+
+.sl-link-card:is(:hover, :focus-within) {
+  background: var(--aura-surface-nav);
+  border-color: var(--aura-border);
+}
+
+.sl-link-card:is(:hover, :focus-within) .title,
+.sl-link-card:hover .icon {
+  color: var(--aura-action);
+}
+
+.pagination-links a {
+  border-radius: var(--aura-radius-control);
+  box-shadow: none;
+}
+
+/* The homepage retains its content, with a compact, left-aligned reading entry. */
+html[data-has-hero] .hero {
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding-block: var(--aura-space-12);
+  border-bottom: 1px solid var(--aura-border);
+}
+
+html[data-has-hero] .hero .stack {
+  text-align: start;
+  gap: var(--aura-space-6);
+}
+
+html[data-has-hero] .hero .copy {
+  align-items: flex-start;
+}
+
+html[data-has-hero] .hero h1 {
+  max-width: 18ch;
+  font-size: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+html[data-has-hero] .hero .tagline {
+  max-width: 46ch;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+html[data-has-hero] .hero .actions {
+  justify-content: flex-start;
+  gap: var(--aura-space-3);
+}
+
+html[data-has-hero] .card-grid {
+  gap: 0 var(--aura-space-8);
+}
+
+html[data-has-hero] .sl-markdown-content > p {
+  max-width: var(--aura-reading-width);
+}
+
+.home-theme-control {
+  display: none;
+}
+
+@media (min-width: 50rem) {
+  html[data-has-hero] .hero {
+    padding-block: 4rem;
+  }
+
+  html[data-has-hero] .sl-container {
+    max-width: 68rem;
+  }
+}
+
+@media (max-width: 49.999rem) {
+  :root {
+    --sl-nav-height: 4rem;
+    --sl-menu-button-size: 2.75rem;
+  }
+
+  .site-title {
+    font-size: 1rem;
+    gap: var(--aura-space-2);
+  }
+
+  .site-title img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .sl-link-card {
+    padding-inline: 0;
+  }
+
+  .home-theme-control {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--aura-space-2);
+    min-height: 2.75rem;
+    font-size: 0.8125rem;
+    color: var(--aura-text-muted);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}
+
+@media (forced-colors: active) {
+  #starlight__sidebar a[aria-current='page'] {
+    outline: 1px solid Highlight;
+  }
+}
+
+@media print {
+  .sl-markdown-content {
+    max-width: none;
+  }
 }

@@ -36,5 +36,5 @@ acceptance status.
 
 ## Related articles
 
-- [Vulnerability Severity](/aura-help/risks/vulnerability-severity)
-- [Evidence Overview](/aura-help/evidence/overview)
+- [Vulnerability Severity](/risks/vulnerability-severity)
+- [Evidence Overview](/evidence/overview)

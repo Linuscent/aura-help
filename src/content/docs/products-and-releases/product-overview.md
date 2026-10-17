@@ -26,7 +26,7 @@ Select **Upload SBOM** to manually add a supported CycloneDX SBOM to the product
 
 Every successful upload creates a new release.
 
-For detailed instructions, see [Upload an SBOM](/aura-help/sbom/upload-sbom).
+For detailed instructions, see [Upload an SBOM](/sbom/upload-sbom).
 
 ## Release status
 
@@ -57,7 +57,7 @@ Because every successful SBOM upload creates a new release, the product can pres
 
 ## Related articles
 
-- [Create a product](/aura-help/products-and-releases/create-product)
-- [Releases](/aura-help/products-and-releases/releases)
-- [Products and releases](/aura-help/products-and-releases/overview)
-- [Upload an SBOM](/aura-help/sbom/upload-sbom)
+- [Create a product](/products-and-releases/create-product)
+- [Releases](/products-and-releases/releases)
+- [Products and releases](/products-and-releases/overview)
+- [Upload an SBOM](/sbom/upload-sbom)

@@ -1,0 +1,11 @@
+---
+import StarlightHero from '@astrojs/starlight/components/Hero.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+---
+
+{/* Splash pages have no mobile sidebar, so keep appearance preferences reachable. */}
+<div class="home-theme-control">
+  <span aria-hidden="true">Appearance</span>
+  <ThemeSelect />
+</div>
+<StarlightHero />

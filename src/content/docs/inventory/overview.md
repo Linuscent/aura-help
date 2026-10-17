@@ -36,5 +36,5 @@ dependencies, and related security context.
 
 ## Related articles
 
-- [Components](/aura-help/inventory/components)
-- [Understanding Findings](/aura-help/risks/understanding-findings)
+- [Components](/inventory/components)
+- [Understanding Findings](/risks/understanding-findings)

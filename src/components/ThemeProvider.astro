@@ -1,0 +1,15 @@
+---
+import StarlightThemeProvider from '@astrojs/starlight/components/ThemeProvider.astro';
+---
+
+{/* Seed only a first visit. Existing light, dark, and auto choices remain intact. */}
+<script is:inline>
+  try {
+    if (localStorage.getItem('starlight-theme') === null) {
+      localStorage.setItem('starlight-theme', 'dark');
+    }
+  } catch {
+    // Starlight can still use the system preference when storage is unavailable.
+  }
+</script>
+<StarlightThemeProvider />

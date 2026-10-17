@@ -30,6 +30,6 @@ available assessment information.
 
 ## Related articles
 
-- [Integration Issues](/aura-help/troubleshooting/integration-issues)
-- [Troubleshooting Overview](/aura-help/troubleshooting)
-- [Troubleshoot an SBOM](/aura-help/sbom/troubleshoot-sbom)
+- [Integration Issues](/troubleshooting/integration-issues)
+- [Troubleshooting Overview](/troubleshooting)
+- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom)

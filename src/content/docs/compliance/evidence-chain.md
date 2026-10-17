@@ -23,7 +23,7 @@ preparation.
 
 ## Related articles
 
-- [Regulations](/aura-help/compliance/regulations)
-- [Vulnerability Evidence](/aura-help/compliance/vulnerability-evidence)
-- [Compliance Overview](/aura-help/compliance/overview)
-- [Evidence Overview](/aura-help/evidence/overview)
+- [Regulations](/compliance/regulations)
+- [Vulnerability Evidence](/compliance/vulnerability-evidence)
+- [Compliance Overview](/compliance/overview)
+- [Evidence Overview](/evidence/overview)

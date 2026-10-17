@@ -27,6 +27,6 @@ dependencies were found for the selected product or release.
 
 ## Related articles
 
-- [Components](/aura-help/inventory/components)
-- [Inventory Overview](/aura-help/inventory/overview)
-- [Understanding Findings](/aura-help/risks/understanding-findings)
+- [Components](/inventory/components)
+- [Inventory Overview](/inventory/overview)
+- [Understanding Findings](/risks/understanding-findings)

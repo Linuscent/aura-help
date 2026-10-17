@@ -127,6 +127,6 @@ Do not share sensitive SBOM contents outside your organisation unless your suppo
 
 ## Related articles
 
-- [Upload an SBOM](/aura-help/sbom/upload-sbom)
-- [What is an SBOM?](/aura-help/sbom/what-is-an-sbom)
-- [Inventory Overview](/aura-help/inventory/overview)
+- [Upload an SBOM](/sbom/upload-sbom)
+- [What is an SBOM?](/sbom/what-is-an-sbom)
+- [Inventory Overview](/inventory/overview)

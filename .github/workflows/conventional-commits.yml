@@ -1,0 +1,65 @@
+name: Conventional Commits
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, ready_for_review]
+  push:
+    branches: ['**']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: conventional-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: PR title and commit messages
+    if: github.event.deleted != true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout commit history
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Validate PR title
+        if: github.event_name == 'pull_request'
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: printf '%s\n' "$PR_TITLE" | npm run lint:commit
+      - name: Validate commits
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          BRANCH_REF: ${{ github.ref }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == 'pull_request' ]]; then
+            # The PR may not contain the current base tip; exclude base history.
+            commits=$(git rev-list --reverse "$BASE_SHA..$HEAD_SHA")
+          elif [[ "$BASE_SHA" =~ ^0+$ ]]; then
+            # New branch: check commits not already on another remote branch.
+            # With no other branches, this checks the entire initial history.
+            mapfile -t other_refs < <(git for-each-ref --format='%(refname)' refs/remotes/origin | \
+              grep -Fxv "refs/remotes/origin/${BRANCH_REF#refs/heads/}" | \
+              grep -Fxv 'refs/remotes/origin/HEAD' || true)
+            commits=$(git rev-list --reverse "$HEAD_SHA" --not "${other_refs[@]}")
+          else
+            # Fail rather than silently skip commits if pre-push history is unavailable.
+            commits=$(git rev-list --reverse "$BASE_SHA..$HEAD_SHA")
+          fi
+          for commit in $commits; do
+            echo "Checking $commit"
+            git show -s --format=%B "$commit" | npm run lint:commit
+          done
