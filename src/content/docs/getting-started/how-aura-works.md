@@ -48,15 +48,15 @@ Open a product and upload a supported SBOM.
 
 Manual upload is available from the product.
 
-Aura accepts supported CycloneDX SBOM files in JSON or XML format.
+Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON. The browser sends the original document text to Aura; CycloneDX is passed through unchanged for analysis, while SPDX is converted server-side and some source details may be lost. When dependency relationships matter, generate native CycloneDX with those relationships included; completeness depends on the source SBOM. An accepted upload creates a release but does not mean analysis is complete. Use **Open release overview** from the acceptance confirmation or inspect the product's releases and refresh later; Aura does not automatically navigate or resubmit.
 
 ## 4. Aura creates a release
 
-Each successful SBOM upload creates a new release for the product.
+Each accepted SBOM upload creates a new release for the product.
 
 This also applies when another SBOM is uploaded for the same software version.
 
-The release is processed by Aura before analysis results become available.
+Aura submits the release for analysis after acceptance. An HTTP 202 acceptance does not mean analysis is complete.
 
 ## 5. Review inventory and analysis
 

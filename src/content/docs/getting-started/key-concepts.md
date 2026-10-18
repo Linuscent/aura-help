@@ -51,7 +51,7 @@ An SBOM can contain information such as:
 - dependency information;
 - license information.
 
-Aura supports CycloneDX SBOM workflows.
+Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON. SPDX conversion can omit source details, so use CycloneDX when complete dependency relationships matter.
 
 For more information, see [What is an SBOM?](/sbom/what-is-an-sbom).
 
