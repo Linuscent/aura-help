@@ -16,6 +16,8 @@ Validation issues may relate to:
 -   Incorrect formatting
 -   Incomplete component information
 
+Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON only. For SPDX, unsupported versions or serialization, invalid content, conversion errors, or converted output exceeding Aura's limit can prevent submission. A source file fitting the request limit does not guarantee its converted output will fit.
+
 ## Troubleshooting Steps
 
 1.  Review the validation message.

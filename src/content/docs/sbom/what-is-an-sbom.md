@@ -93,7 +93,7 @@ Aura can help maintain and analyse this inventory, but your organisation remains
 
 ## Supported formats
 
-Aura supports CycloneDX SBOM workflows.
+Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON. SPDX conversion may omit source details; native CycloneDX is preferred when complete dependency relationships matter.
 
 See [Supported SBOM formats](/sbom/supported-formats) for the formats currently accepted by the Aura upload workflow.
 

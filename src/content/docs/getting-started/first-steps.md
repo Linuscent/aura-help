@@ -34,7 +34,7 @@ To complete this guide, you need:
 
 - an Aura account;
 - access to a verified email address;
-- a CycloneDX SBOM in JSON or XML format.
+- a CycloneDX JSON/XML or SPDX 2.3 JSON SBOM.
 
 ## 1. Create your account
 
@@ -90,16 +90,19 @@ A product is used to organise its releases, SBOMs, and related security data.
 
 ## 5. Upload your first SBOM
 
-After guided product creation, select **Upload an SBOM**. If you do not have a file yet, export a CycloneDX JSON or XML SBOM from your build or security tooling, or request one from your product supplier.
+After guided product creation, select **Upload an SBOM**. If you do not have a file yet, export a CycloneDX JSON/XML or SPDX 2.3 JSON SBOM from your build or security tooling, or request one from your product supplier.
 
 You can select **Open product without SBOM** to open that exact saved product and upload later. This keeps the product; it does not start an upload.
 
-Aura accepts supported CycloneDX SBOM files in:
+Aura accepts these SBOM formats:
 
-- JSON;
-- XML.
+- CycloneDX JSON;
+- CycloneDX XML; or
+- SPDX 2.3 JSON.
 
-Choose or drag your SBOM file into the import dialog, review its local preview, then select **Import SBOM**. The guided preview counts top-level component entries and shows up to five names and versions. It excludes the metadata product and nested components, is not a unique-package count, and is not server analysis. Missing values remain unavailable.
+Choose or drag your SBOM file into the import dialog, review its local preview, then select **Import SBOM**. For CycloneDX, the guided preview counts top-level component entries, excluding the metadata product and nested components. For SPDX, it counts source package entries, not converted or ingested components. It shows up to five names and versions from those entries. Neither count is a unique-package count or server analysis. Missing values remain unavailable. For SPDX, an ambiguous or missing root package leaves the suggested name and version unknown; Aura does not guess a root, and an unknown version is okay.
+
+The browser sends the original document text to Aura. CycloneDX is passed through unchanged; Aura converts SPDX server-side for analysis. Conversion can omit dependency relationships, which are not reconstructed, custom license definitions, and some file or snippet details. When relationships matter, generate native CycloneDX with the relationships included; completeness depends on the source SBOM. Where evidence capture is available, Aura retains the original SPDX document and its digest, not the converted document; this does not mean every upload is retained as downloadable evidence.
 
 Outside guided setup, use **Import SBOM** from Home or Products, or the upload action on the saved product. See [Upload an SBOM](/sbom/upload-sbom/) for limits and recovery guidance.
 
@@ -107,7 +110,7 @@ Outside guided setup, use **Import SBOM** from Home or Products, or the upload a
 
 Every accepted upload creates a distinct release, even for the same file or software version.
 
-**Upload accepted** confirms acceptance, not completed analysis or security clearance. The dialog does not automatically navigate away. Select **Open release overview** to open the exact saved release.
+**Upload accepted** (HTTP **202 Accepted**) confirms acceptance and submission for analysis, not completed analysis or security clearance. The dialog does not automatically navigate away. Select **Open release overview** to open the exact saved release.
 
 Closing the dialog does not undo the product or accepted release. During the current guided session, its acceptance receipt and file summary remain visible after closing. If the outcome is unclear, inspect Products and the product's releases before retrying; another accepted upload creates another release.
 

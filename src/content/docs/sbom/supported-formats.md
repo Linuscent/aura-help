@@ -4,21 +4,19 @@ description: Learn which SBOM formats can be uploaded to Aura and what to check 
 sidebar:
   order: 2
 ---
-Aura supports **CycloneDX** SBOM workflows.
+Aura accepts these SBOM formats:
 
-For manual SBOM uploads from a product, Aura accepts CycloneDX files in:
-
-- **JSON**
-- **XML**
+- **CycloneDX JSON**
+- **CycloneDX XML**
+- **SPDX 2.3 JSON** (`.json` or `.spdx.json`)
 
 ## Before you upload
 
-Before uploading an SBOM, check that:
+Aura detects the SBOM format from its contents, not just its filename. Before uploading, check that:
 
-- the file is a valid CycloneDX document;
-- the document uses JSON or XML;
-- the CycloneDX structure is complete and well-formed;
-- the specification version is supported by Aura;
+- the file's contents match one of the supported formats;
+- the document is well-formed for its format;
+- its format and specification version are supported by Aura;
 - required SBOM fields are present;
 - the file has not been corrupted or truncated.
 
@@ -48,17 +46,19 @@ Aura also accepts supported CycloneDX SBOMs in XML format.
 
 The XML must be valid and follow the CycloneDX specification used by the generated document.
 
-## Other SBOM formats
+## SPDX 2.3 JSON
 
-Aura's standard SBOM workflow is based on CycloneDX.
+For an SPDX 2.3 JSON upload, Aura converts the document for analysis; you do not need to convert it yourself. Conversion is lossy: dependency relationships are not reconstructed, and custom license definitions and some file or snippet details may be absent. The ingested inventory can therefore differ from the source. Use native CycloneDX when you need full dependency relationships.
 
-Supplier inputs or other formats may require validation, conversion, or additional product-workflow configuration before they can be used.
+The source package count shown in preview is not a guaranteed count of ingested components. If Aura cannot identify one unambiguous root package, its name and version remain unknown rather than being guessed from the first package.
 
-Do not assume that a file is supported only because it contains software-component information.
+## Unsupported formats
+
+SPDX 3.x, SPDX 2.2, SPDX tag-value, SPDX RDF/XML, and compressed files are not supported.
 
 ## Specification versions
 
-CycloneDX has multiple specification versions.
+CycloneDX has multiple specification versions. For SPDX JSON, check that `spdxVersion` is `SPDX-2.3`; do not relabel another SPDX version to make it appear supported.
 
 If Aura reports that an SBOM is invalid or asks you to review its specification version, verify the `specVersion` or CycloneDX XML namespace in the source file.
 
@@ -68,10 +68,10 @@ This documentation does not list a specific supported CycloneDX version range be
 
 If you are unsure whether an SBOM is valid:
 
-1. Confirm that the generating tool produced CycloneDX JSON or XML.
-2. Check the SBOM metadata and specification version.
-3. Validate the file with a CycloneDX-compatible validator or generation tool.
-4. Upload the validated file to the appropriate Aura product.
+1. Confirm that the generating tool produced CycloneDX JSON/XML or SPDX 2.3 JSON.
+2. Check the SBOM metadata and version: for SPDX JSON, `spdxVersion` must be `SPDX-2.3`.
+3. Validate the file with a tool that supports its format.
+4. Upload the validated file to the appropriate Aura product. When dependency relationships matter, generate native CycloneDX with those relationships included; inventory completeness depends on the source SBOM.
 
 ## Related articles
 
