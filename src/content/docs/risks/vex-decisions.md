@@ -15,6 +15,11 @@ Distinguish an ordinary saved technical assessment from the richer VEX/VDR workf
 
 All plans, including Free, support the existing technical vulnerability assessment workflow: saved assessment decisions, justification, response information and suppression, subject to workspace and finding access.
 
+To record an assessment, open the finding on the Risks page, select the affected
+component, and choose **Draft assessment**. States use plain names: **Under
+review**, **Exploitable**, **Not affected**, **False positive**, **Resolved** and
+**Not set**. A justification is asked for only when you choose **Not affected**.
+
 Use the available finding facts and product context to justify your decision. EPSS and known-exploited (KEV) information are available on all plans when supplied by the source. Unavailable scores or statuses remain unknown; do not interpret them as zero risk or a negative exploitation result.
 
 Saving a technical assessment or changing suppression does not automatically create or export a VEX document. It also does not determine whether an incident or vulnerability is legally reportable.

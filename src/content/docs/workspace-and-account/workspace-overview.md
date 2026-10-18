@@ -38,7 +38,8 @@ A coloured bar splits the open findings across **Critical**, **High**,
 Red is used for critical findings and for items that need attention; it is not
 used for buttons.
 
-The coverage line underneath shows how many products have results available.
+If some products have no results yet, a short note says how many are missing.
+Select the **About these numbers** info button for what the counts include.
 If results for a product are missing or could not be read, Aura shows them as
 unavailable rather than counting them as zero.
 
