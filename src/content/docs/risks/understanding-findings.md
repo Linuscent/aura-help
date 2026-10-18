@@ -28,6 +28,20 @@ A finding may include:
 -   Available assessment information
 -   Response or justification data when available
 
+## Reading the Risks page
+
+At the top of the Risks page, **Vulnerability groups by severity** shows a
+coloured bar for the vulnerability groups currently loaded. It counts the loaded
+page only, before search or view filters. It is not a release-wide total; the
+release overview shows the release totals.
+
+Use **All**, **Vulnerabilities**, **Policy** and **License** to change the view.
+Each vulnerability group shows its identifier, a short summary and its severity.
+Groups marked **Known exploited** are reported as exploited in the wild.
+
+Select a group to inspect it. Long advisory text is shortened; select **Show
+full advisory** to read all of it, and **Show less** to collapse it again.
+
 ## Important Note
 
 Severity indicates the classified impact level of a finding. Severity
