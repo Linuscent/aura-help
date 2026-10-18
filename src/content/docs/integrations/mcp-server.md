@@ -2,7 +2,7 @@
 title: Connect an MCP client to Aura
 description: Connect an MCP client with a workspace API key to read Aura data, use documentation tools, and safely manage supported workflows.
 sidebar:
-  order: 5
+  order: 6
 ---
 
 ## Before you connect
