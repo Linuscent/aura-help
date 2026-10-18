@@ -40,7 +40,6 @@ Depending on the data available and your Aura configuration, a release can be us
 - dependency relationships;
 - vulnerability findings;
 - license information;
-- policy results;
 - security posture information.
 
 ## Release processing

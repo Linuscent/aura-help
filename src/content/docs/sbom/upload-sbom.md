@@ -52,7 +52,6 @@ Depending on your workspace and plan, these can include:
 - dependency relationships;
 - vulnerability findings;
 - license information;
-- policy results;
 - security posture information.
 
 ## Every upload creates a release

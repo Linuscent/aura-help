@@ -27,7 +27,6 @@ Products can be used to review areas such as:
 - components;
 - vulnerabilities;
 - exploit information;
-- policy violations;
 - release history.
 
 Each successful SBOM upload to a product creates a new release.
@@ -71,8 +70,7 @@ A **finding** is information identified during analysis that may require attenti
 Examples can include:
 
 - a known vulnerability;
-- a license-related issue;
-- a policy result.
+- a license-related issue.
 
 A finding is a signal for review. It does not necessarily mean that the product is exploitable or that a compliance requirement has been violated.
 

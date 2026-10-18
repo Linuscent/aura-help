@@ -18,7 +18,7 @@ You can use Aura to:
 - upload supported SBOMs and create product releases;
 - maintain software inventory for each release;
 - identify vulnerabilities associated with software components;
-- review vulnerability, license, and policy information;
+- review vulnerability and license information;
 - document vulnerability assessments and decisions;
 - monitor active releases for changes in findings;
 - maintain traceable evidence for security and compliance work;
@@ -74,7 +74,7 @@ You will see several important concepts throughout Aura:
 - **Release** — a release created from an SBOM upload to a product.
 - **SBOM** — a machine-readable inventory of software components associated with a release.
 - **Component** — a software package, library, framework, module, or other item included in the inventory.
-- **Finding** — information that may require review, such as a vulnerability or policy result.
+- **Finding** — information that may require review, such as a vulnerability or license issue.
 - **Vulnerability decision** — a documented assessment of how a vulnerability applies to a product release.
 - **Evidence** — records that support security, compliance, and review activities.
 
