@@ -4,7 +4,7 @@ description: Diagnose common SBOM upload and validation problems in Aura.
 sidebar:
   order: 4
 ---
-If Aura cannot accept or process an SBOM, start by checking the file format, CycloneDX structure, and specification version.
+If Aura cannot accept or process an SBOM, check its format and contents first. Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON; it detects formats by document contents.
 
 ## Aura says the SBOM is not valid CycloneDX
 
@@ -12,11 +12,11 @@ You may see an error similar to:
 
 > The SBOM is not valid CycloneDX. Review its format and specification version.
 
-This means Aura could not validate the uploaded document as a supported CycloneDX SBOM.
+This message can indicate invalid or unsupported content. Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON; other SPDX versions and serializations are not supported.
 
 Check the following.
 
-### 1. Confirm the file is CycloneDX
+### 1. Confirm the file format
 
 A JSON file containing component information is not automatically a CycloneDX SBOM.
 
@@ -34,12 +34,13 @@ For XML, confirm that the document follows a CycloneDX XML schema and namespace.
 
 ### 2. Check the file type
 
-For manual uploads, use a supported CycloneDX file in:
+For manual uploads, use one of these formats:
 
-- JSON; or
-- XML.
+- CycloneDX JSON;
+- CycloneDX XML; or
+- SPDX 2.3 JSON.
 
-If the file uses another SBOM format, it may require conversion or another configured workflow.
+SPDX uploads are converted by Aura. You do not need to convert them yourself. Conversion may omit dependency relationships, custom license definitions, and some file or snippet details. When relationships matter, generate native CycloneDX with those relationships included; completeness depends on the source SBOM. SPDX 3.x, 2.2, tag-value, RDF/XML, and compressed files are unsupported.
 
 ### 3. Check the specification version
 
@@ -47,12 +48,13 @@ CycloneDX has multiple specification versions.
 
 If the SBOM was generated using a version that Aura cannot process, validation may fail.
 
-Check:
+Check the format's version metadata:
 
-- `specVersion` in CycloneDX JSON; or
-- the CycloneDX namespace/schema information in XML.
+- `specVersion` in CycloneDX JSON;
+- the CycloneDX namespace/schema information in XML; or
+- `spdxVersion` in SPDX JSON, which must be `SPDX-2.3`.
 
-If possible, regenerate the SBOM with a CycloneDX-compatible tool instead of manually changing version metadata.
+If the version is unsupported, export a supported format instead of manually relabeling version metadata.
 
 ### 4. Check JSON or XML syntax
 
@@ -79,9 +81,7 @@ Regenerate the SBOM from the original source or build process when possible.
 
 ## The upload succeeds but processing does not complete
 
-After a successful upload, Aura creates and processes a release.
-
-When processing completes normally, the release status becomes **READY**.
+After Aura accepts the upload (HTTP 202), it creates a release and submits the SBOM for analysis. Acceptance does not mean analysis is complete. Select **Open release overview** from the acceptance confirmation to view the release, or inspect the product's releases and refresh later for results. Aura does not automatically navigate or submit the upload again.
 
 If the release does not reach the expected state:
 
@@ -90,6 +90,15 @@ If the release does not reach the expected state:
 3. check whether the release shows an error or processing status;
 4. try a newly generated SBOM if the source file may be damaged;
 5. contact your Aura administrator or support channel if the issue continues.
+
+## SPDX conversion errors
+
+- **Unsupported version or serialization:** Aura accepts SPDX 2.3 JSON only. Export SPDX 2.3 JSON; do not change a version field manually to make a document appear supported.
+- **Invalid document or conversion error:** validate the original SPDX document with a compatible tool and regenerate it if needed. Conversion errors are identified as pre-submission refusals; inspect/acknowledge the error, review the corrected file, then deliberately submit again if appropriate.
+- **Converted output too large:** converted output has a separate 10 MiB limit, even if the original fits the upload request limit. Reduce or regenerate the source SBOM.
+- **Conversion busy, unavailable, or timed out:** these identified conversion errors happen before release creation and analysis submission. Review the file and retry deliberately after acknowledging the error. Do not infer this safe state from HTTP 503 or 504 alone; another failure with those statuses may have an uncertain outcome.
+
+For an uncertain upload outcome, inspect the product's releases before submitting again. Each accepted upload creates a separate release; Aura does not automatically retry.
 
 ## The release contains unexpected components
 
@@ -107,7 +116,7 @@ If components are missing or unexpected:
 
 This can be expected.
 
-Each successful SBOM upload creates a new release, including uploads for the same software version.
+Each accepted SBOM upload creates a new release, including uploads for the same software version. Do not blindly retry an upload after an uncertain network/server failure; inspect the product's releases first because the request may have been accepted.
 
 This behaviour helps preserve the inventory and analysis associated with each upload.
 
@@ -117,8 +126,7 @@ When reporting an SBOM problem, collect:
 
 - the product name;
 - the release or upload involved;
-- SBOM format (JSON or XML);
-- CycloneDX specification version;
+- SBOM format and specification version, if applicable;
 - the tool used to generate the SBOM;
 - the exact error message;
 - whether the problem happens with a newly generated SBOM.

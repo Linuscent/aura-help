@@ -36,6 +36,8 @@ SBOM ingestion can provide information about:
 An uploaded SBOM creates the basis for analysis. Processing and
 available results depend on the ingested data and Aura capabilities.
 
+Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON. SPDX is converted for analysis; dependency relationships are not reconstructed, and some source details may be absent. Prefer CycloneDX when a complete dependency graph is important. An accepted upload creates a release but does not mean analysis is complete.
+
 ## Related articles
 
 - [API Ingestion](/integrations/api-ingestion)

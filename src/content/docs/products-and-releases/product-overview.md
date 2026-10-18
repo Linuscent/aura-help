@@ -22,21 +22,15 @@ The exact information available may depend on the product's releases, workspace 
 
 ## Upload an SBOM
 
-Select **Upload SBOM** to manually add a supported CycloneDX SBOM to the product.
+Select **Upload SBOM** to add a supported CycloneDX JSON/XML or SPDX 2.3 JSON SBOM to the product. Review the preview, then select **Import SBOM** to submit. Aura sends the original document text; CycloneDX is passed through unchanged and SPDX is converted server-side. Conversion may omit source details, including dependency relationships. When relationships matter, generate native CycloneDX with those relationships included; completeness depends on the source SBOM.
 
-Every successful upload creates a new release.
+Every accepted upload creates a new release.
 
 For detailed instructions, see [Upload an SBOM](/sbom/upload-sbom).
 
 ## Release status
 
-After an SBOM is uploaded, Aura processes the release.
-
-When processing completes successfully, the release status becomes:
-
-**READY**
-
-A ready release can then be reviewed for inventory and security information.
+After an SBOM upload is accepted (HTTP 202), Aura submits the release for analysis. Acceptance does not mean analysis is complete or that the release is cleared. Select **Open release overview** from the acceptance confirmation, or inspect the product's releases and refresh later for results; Aura does not automatically navigate or resubmit.
 
 ## Release summary
 
@@ -53,7 +47,7 @@ Use the release to continue into more detailed views where available.
 
 A product can contain multiple releases.
 
-Because every successful SBOM upload creates a new release, the product can preserve separate inventory and analysis for different uploads over time.
+Because every accepted SBOM upload creates a new release, the product keeps separate release records for different uploads over time.
 
 ## Related articles
 

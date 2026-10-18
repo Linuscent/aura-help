@@ -32,7 +32,7 @@ To complete this guide, you need:
 
 - an Aura account;
 - access to a verified email address;
-- a CycloneDX SBOM in JSON or XML format.
+- a CycloneDX JSON/XML or SPDX 2.3 JSON SBOM.
 
 ## 1. Create your account
 
@@ -95,28 +95,25 @@ Open the product you created.
 
 Select **Upload SBOM**.
 
-Aura accepts supported CycloneDX SBOM files in:
+Aura accepts these SBOM formats:
 
-- JSON;
-- XML.
+- CycloneDX JSON;
+- CycloneDX XML; or
+- SPDX 2.3 JSON.
 
-Choose or drag your SBOM file into the upload dialog, then select **Upload SBOM**.
+Choose or drag your SBOM file into the upload dialog. Review its preview, then select **Import SBOM** to submit it. For SPDX, an ambiguous or missing root package leaves the suggested name and version unknown; Aura does not guess a root, and an unknown version is okay.
 
-Each successful SBOM upload creates a new release for the product, including when another SBOM is uploaded for the same software version.
+The browser sends the original document text to Aura. CycloneDX is passed through unchanged; Aura converts SPDX server-side for analysis. Conversion can omit dependency relationships, custom license definitions, and some file or snippet details. When relationships matter, generate native CycloneDX with the relationships included; completeness depends on the source SBOM. Where evidence capture is available, Aura retains the original SPDX document and its digest, not the converted document; this does not mean every upload is retained as downloadable evidence.
 
-## 6. Wait for the release to be processed
+Each accepted upload creates a new release, including another upload for the same software version. An accepted upload is not completed analysis or a security clearance.
 
-After the upload, Aura processes the SBOM and creates the corresponding release.
+## 6. Open the accepted release
 
-When processing completes, the release status changes to:
-
-**READY**
-
-The release can then be used throughout Aura for inventory, vulnerability, dependency, license, policy, and reporting views.
+After Aura accepts the upload (HTTP 202), it creates a release and submits the SBOM for analysis. This does not mean analysis is complete. Select **Open release overview** from the acceptance confirmation to view the release, or inspect the product's releases and refresh later for results. Aura does not automatically navigate or submit the upload again.
 
 ## 7. Review your first results
 
-After processing completes, Aura displays a summary of the release.
+When analysis results are available, Aura displays a summary of the release. Acceptance alone does not establish that results are available.
 
 The summary can include metrics such as:
 
