@@ -23,6 +23,9 @@ API-based ingestion can be used to:
 Available ingestion capabilities depend on the configured Aura
 environment and integrations.
 
+To use a compatible MCP client with workspace-scoped tools, see
+[Connect an MCP client to Aura](/integrations/mcp-server/).
+
 ## Related articles
 
 - [SBOM Ingestion](/integrations/sbom-ingestion)
