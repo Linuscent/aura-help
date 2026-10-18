@@ -18,6 +18,10 @@ Depending on available capabilities, workspace settings may include:
 
 Available settings depend on the Aura workspace configuration.
 
+Personal keys created under **Workspace settings → API keys** can authenticate
+an MCP client to that workspace. See
+[Connect an MCP client to Aura](/integrations/mcp-server/) for setup and key safety.
+
 ## Related articles
 
 - [Access and Permissions](/workspace-and-account/access-and-permissions)
