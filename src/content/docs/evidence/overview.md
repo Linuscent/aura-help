@@ -29,6 +29,18 @@ The Evidence area may provide visibility into:
 Compliance readiness indicators and evidence workflows depend on the
 available Aura capabilities and configured data.
 
+## On the Free plan
+
+Evidence workflows are part of Pro and Team. On Free, the Evidence page explains
+what you can already do and links to it:
+
+- review and assess vulnerabilities on the Risks page;
+- prepare reporting cases in **Reporting**.
+
+It also lists what Pro adds, such as evidence collection, approvals, release
+decisions, VEX exports and Trust Center. Workspace owners see an upgrade link;
+other members are asked to contact the owner.
+
 ## Related articles
 
 - [Evidence Workflow](/evidence/evidence-workflow)

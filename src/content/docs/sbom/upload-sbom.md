@@ -44,7 +44,11 @@ Missing names, versions, or component lists remain unavailable rather than being
 
 Select **Open release overview** to open the exact saved release. Acceptance does not automatically close the dialog or navigate. Closing the dialog does not undo the accepted release; in the current guided session, the receipt and file summary remain visible afterward.
 
-Review the available release results and use **Refresh results** to read them again. Refreshing results is not another upload. Missing metrics remain unavailable, not healthy zeroes or proof of completion.
+The release overview shows **Analysing** while Aura processes the SBOM and updates
+on its own when results are ready; this usually takes a few seconds. You can still
+use **Refresh results** to read them again. Refreshing results is not another
+upload. Missing values remain unavailable, never zero. See
+[Releases](/products-and-releases/releases/) for each status.
 
 Depending on your workspace and plan, these can include:
 
