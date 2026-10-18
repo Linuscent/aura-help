@@ -18,7 +18,6 @@ This release is used as the current source for workspace-level metrics such as:
 - vulnerability occurrences;
 - Critical findings;
 - High findings;
-- policy violations;
 - analysis coverage.
 
 ## Latest successful non-archived release

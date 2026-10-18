@@ -42,7 +42,6 @@ Products help keep related:
 - vulnerability findings;
 - dependency information;
 - license information;
-- policy results
 
 grouped together.
 

@@ -128,7 +128,6 @@ The summary can include metrics such as:
 
 - Critical vulnerabilities;
 - High vulnerabilities;
-- Policy violations;
 - Components.
 
 From the release view, you can continue to areas such as:
@@ -159,7 +158,6 @@ You can continue by reviewing:
 2. vulnerability findings;
 3. dependency relationships;
 4. license information;
-5. policy findings;
 6. the security posture of the release.
 
 You can upload another SBOM later to create another release and review how the product changes over time.

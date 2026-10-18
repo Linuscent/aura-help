@@ -39,7 +39,6 @@ Information about the origin and identification of the component.
 Available security information may include:
 
 -   Vulnerabilities
--   Policy violations
 
 ## Understanding Components
 

@@ -17,6 +17,20 @@ When reviewing findings, consider:
 -   Available assessment information
 -   Business impact
 
+## Start from Fix first on Home
+
+**Home** shows a **Fix first** list of up to eight vulnerabilities from your
+products' latest releases. Aura orders them by severity, then known
+exploitation, then exploit likelihood (EPSS) when available for your workspace,
+then the number of affected products. Each vulnerability appears once, with the
+products it affects.
+
+The list is built from a limited set of results for each release, so treat it as
+a starting point rather than a complete ranking. Open a row to review the
+finding on the Risks page, then decide using the considerations above. See
+[Workspace Overview](/workspace-and-account/workspace-overview/) for how the list
+connects to the numbered markers on each product drawing.
+
 ## Risk Review
 
 Aura provides security context to support review decisions. Teams should
@@ -29,3 +43,4 @@ requirements.
 - [VEX Decisions](/risks/vex-decisions)
 - [Understanding Findings](/risks/understanding-findings)
 - [Evidence Overview](/evidence/overview)
+- [Workspace Overview](/workspace-and-account/workspace-overview/)

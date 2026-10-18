@@ -19,7 +19,7 @@ Aura creates a release
   ↓
 Inventory and analysis
   ↓
-Risks, licenses, and policies
+Risks and licenses
   ↓
 Assessment and decisions
   ↓
@@ -65,8 +65,7 @@ After processing completes, the release can be used to review information such a
 - components;
 - dependency relationships;
 - vulnerabilities;
-- license information;
-- policy results.
+- license information.
 
 The exact views available may depend on your plan and workspace configuration.
 

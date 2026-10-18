@@ -38,7 +38,6 @@ A processed release can show summary information such as:
 
 - Critical vulnerabilities;
 - High vulnerabilities;
-- Policy violations;
 - Components.
 
 Use the release to continue into more detailed views where available.

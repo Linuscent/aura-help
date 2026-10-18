@@ -38,7 +38,6 @@ Depending on your Aura plan and workspace configuration, this information can su
 - dependency relationships;
 - vulnerability findings;
 - license information;
-- policy results;
 - evidence and reporting;
 - ongoing monitoring.
 
