@@ -2,7 +2,7 @@
 title: Notifications and Routing
 description: Understand how notifications and routing can support security response workflows.
 sidebar:
-  order: 4
+  order: 5
 ---
 Notifications and routing help teams direct relevant security
 information to the appropriate users or workflows.
