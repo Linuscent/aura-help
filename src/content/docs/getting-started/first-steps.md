@@ -15,7 +15,7 @@ Create account
   ↓
 Verify email
   ↓
-Create workspace
+Create or join workspace
   ↓
 Choose workspace plan
   ↓
@@ -57,9 +57,18 @@ Open the verification message sent to your email address and complete the verifi
 
 If you did not receive the message, you can request another verification email from the verification page.
 
-## 3. Create a workspace
+## 3. Create or join a workspace
 
 After signing in for the first time, Aura displays the **Welcome to Aura** page.
+
+If someone invited your email address to a workspace, the invitation appears on
+this page. Select **Accept** to join that workspace instead of creating your
+own, or **Reject** to decline it. You can also find pending invitations in
+**Account → Profile**. See
+[Respond to an invitation](/workspace-and-account/working-with-your-team/#respond-to-an-invitation).
+Joining a workspace does not create a separate workspace for you.
+
+To create your own workspace instead:
 
 A workspace contains your products, releases, SBOMs, and related security information.
 
