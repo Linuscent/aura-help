@@ -32,6 +32,25 @@ Missing or unexpected findings may occur because:
 
 If an upload outcome is unclear, inspect the release list, including other pages and any active search, before retrying. Every accepted upload creates a distinct release, even for the same file or version; closing the dialog does not undo it.
 
+## Check suppression and component associations
+
+Suppressed findings are excluded from the default active **Risks** list. Review
+**Audit Vulnerabilities** or expand the affected component in **Components** to
+find them. Open the exact assessment there if you need to reverse suppression.
+Suppression is not proof of remediation.
+
+An unavailable or incomplete **Associated vulnerabilities** result is not an
+empty list. Use **Retry findings** and check the selected release. A missing
+Package URL alone does not always prevent assessment, but a finding that cannot
+be identified exactly remains read-only.
+
+## Recover after switching workspaces
+
+A link can retain a product or release that is not available in the newly selected
+workspace. If Aura says the requested product and release are unavailable or do
+not match, choose **Clear unavailable selection**, then select an accessible
+product and release. Aura does not substitute another workspace's finding.
+
 ## Important Note
 
 Finding results should be interpreted using product context and
