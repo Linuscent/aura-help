@@ -61,6 +61,8 @@ If you did not receive the message, you can request another verification email f
 
 After signing in for the first time, Aura displays the **Welcome to Aura** page.
 
+![Aura's Welcome to Aura page in light theme, showing the Create a workspace card and Create workspace button.](../../../assets/screenshots/getting-started/welcome-empty-workspace.png)
+
 A workspace contains your products, releases, SBOMs, and related security information.
 
 Select **Create workspace**.
@@ -70,6 +72,8 @@ Enter:
 - **Workspace name** — a name for the workspace;
 - **Plan** — select one of the available workspace plans;
 - **Description** — an optional description of the workspace.
+
+![Create workspace dialog with a Workspace name field, plan options with Free selected, and an optional description field.](../../../assets/screenshots/getting-started/create-workspace-form.png)
 
 Select **Create workspace**.
 
@@ -83,6 +87,8 @@ In deployments with the current onboarding, **Home** immediately shows the **Cre
 2. Select **Create product**.
 
 This creates a real product before you upload anything. The guided surface is only for an empty active workspace; a workspace that already has products, even without releases, uses the normal Home overview instead. Reloading after creating a product also returns to that overview, not another introduction.
+
+![The Home page showing the Create your first product form with a Product name field and Create product button.](../../../assets/screenshots/getting-started/create-product-form.png)
 
 You can also use **Products** → **New** → **New Product**, enter a name and optional description, and select **Create Product**. See [Create a product](/products-and-releases/create-product/).
 
@@ -102,6 +108,8 @@ Aura accepts these SBOM formats:
 
 Choose or drag your SBOM file into the import dialog, review its local preview, then select **Import SBOM**. For CycloneDX, the guided preview counts top-level component entries, excluding the metadata product and nested components. For SPDX, it counts source package entries, not converted or ingested components. It shows up to five names and versions from those entries. Neither count is a unique-package count or server analysis. Missing values remain unavailable. For SPDX, an ambiguous or missing root package leaves the suggested name and version unknown; Aura does not guess a root, and an unknown version is okay.
 
+![Import an SBOM dialog showing a synthetic CycloneDX preview with five top-level component entries.](../../../assets/screenshots/getting-started/sbom-import-preview.png)
+
 The browser sends the original document text to Aura. CycloneDX is passed through unchanged; Aura converts SPDX server-side for analysis. Conversion can omit dependency relationships, which are not reconstructed, custom license definitions, and some file or snippet details. When relationships matter, generate native CycloneDX with the relationships included; completeness depends on the source SBOM. Where evidence capture is available, Aura retains the original SPDX document and its digest, not the converted document; this does not mean every upload is retained as downloadable evidence.
 
 Outside guided setup, use **Import SBOM** from Home or Products, or the upload action on the saved product. See [Upload an SBOM](/sbom/upload-sbom/) for limits and recovery guidance.
@@ -111,6 +119,8 @@ Outside guided setup, use **Import SBOM** from Home or Products, or the upload a
 Every accepted upload creates a distinct release, even for the same file or software version.
 
 **Upload accepted** (HTTP **202 Accepted**) confirms acceptance and submission for analysis, not completed analysis or security clearance. The dialog does not automatically navigate away. Select **Open release overview** to open the exact saved release.
+
+![Upload accepted receipt showing release 1.0.0 and the Open release overview button.](../../../assets/screenshots/getting-started/accepted-release.png)
 
 Closing the dialog does not undo the product or accepted release. During the current guided session, its acceptance receipt and file summary remain visible after closing. If the outcome is unclear, inspect Products and the product's releases before retrying; another accepted upload creates another release.
 

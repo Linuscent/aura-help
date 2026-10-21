@@ -4,18 +4,22 @@ description: Understand the account area and user-specific settings available in
 sidebar:
   order: 5
 ---
-The account area contains user-specific information and account-related
-settings.
+The **Account Settings** page manages your profile identity, sign-in security,
+and personal API access without leaving the workspace shell.
 
-## Account Management
+## Tabs
 
-Users can manage available account information and personal preferences
-according to the capabilities enabled in Aura.
+Account Settings is organised into tabs:
 
-## Access
+- **Profile** — your display name, shown in navigation, audit surfaces, and
+  team-facing workspace views.
+- **Security** — email and password management, kept separate from profile
+  updates so profile changes do not affect sign-in credentials.
+- **API Keys** — personal API keys for API and MCP access.
+- **Pending invitations** — workspace invitations you can accept or decline.
 
-Account access is connected to workspace membership and assigned
-permissions.
+Profile updates only change the identity Aura shows for you; workspace names,
+members, and invitation settings stay scoped to each workspace.
 
 ## Related articles
 

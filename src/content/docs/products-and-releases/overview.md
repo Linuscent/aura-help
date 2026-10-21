@@ -10,6 +10,8 @@ A product is the main container for SBOM uploads and the security information de
 
 Each successful SBOM upload creates a new release inside the product.
 
+![The Products page showing the workspace product list, the New and Import SBOM actions, and the All/Favourites/Archived filters.](../../../assets/screenshots/products-and-releases/products.png)
+
 ## How products and releases fit together
 
 The basic relationship is:
@@ -61,7 +63,7 @@ A common workflow is:
 2. Open the product.
 3. Upload a supported SBOM.
 4. Wait for Aura to process the upload.
-5. Review the release when its status becomes **READY**.
+5. Review the release when its status becomes **Results ready**.
 6. Review inventory and security information associated with the release.
 7. Upload another SBOM when you want to create another release.
 

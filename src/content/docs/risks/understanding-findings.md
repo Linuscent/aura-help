@@ -34,6 +34,8 @@ coloured bar for the vulnerability groups currently loaded. It counts the loaded
 page only, before search or view filters. It is not a release-wide total; the
 release overview shows the release totals.
 
+![The Risks page showing the severity bar, the Risk Inspection view filters, and the findings list.](../../../assets/screenshots/risks/understanding-findings.png)
+
 Use **All**, **Vulnerabilities** and **License** to change the view.
 Each vulnerability group shows its identifier, a short summary and its severity.
 Groups marked **Known exploited** are reported as exploited in the wild.
