@@ -179,6 +179,16 @@ Follow article links and use **Back** within the panel. **Open in new tab** open
 
 Help is available in the normal workspace dashboard, not the onboarding screen before a workspace exists. It reads published documentation. If it cannot load, use **Retry**; the original dashboard page remains unchanged.
 
+## Ask the Assistant
+
+In deployments that include **Assistant**, select it in the left navigation to
+ask about Aura or your active workspace. Try **“How do I upload an SBOM?”** or
+**“Which releases have critical risks?”** Supported reads can run automatically;
+supported changes require an explicit confirmation card. **Help** remains
+available as an independent article reader. Check answers against the source
+articles and current data. See [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
+for confirmation rules, saved history, privacy, and limits.
+
 ## Manual and automated SBOM ingestion
 
 Manual SBOM upload is available from a product and is useful when getting started or testing Aura.
