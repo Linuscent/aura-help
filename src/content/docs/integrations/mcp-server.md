@@ -17,9 +17,12 @@ help articles, use the separate [help-only connection](#help-only-connection).
 
 ## Set up the connection
 
-1. In Aura, select the workspace you want the client to use.
-2. Open **Workspace settings → API keys** and create a personal API key. Copy
-   the key when it is shown.
+1. Open **Account → API Keys → Create API key** in Aura.
+2. Choose the workspace the client should access, name the key, and choose its
+   expiry. Use **Read only** for inspection, or **Read and write** for supported
+   mutations within your own permissions. Copy the secret when it is shown;
+   it is shown only once. The Workspace Settings shortcut can preselect a
+   workspace, but key management is in Account.
 3. Add a remote MCP server in your client using these settings:
 
    - **URL:** `https://<your-aura-host>/api/mcp`
@@ -43,12 +46,14 @@ screenshot. Revoke it in Aura if it is exposed or no longer needed.
 
 ### Check the workspace and permissions
 
-The key is bound to the workspace where it was created. Switching workspaces
+The key is bound to the workspace selected when it was created. Switching workspaces
 in your browser does **not** retarget the connection. Use a key created for the
 intended workspace instead.
 
-Keys inherit their owner's live role and permissions; there are no MCP-specific
-per-tool key scopes. Every call checks access, including applicable resource,
+Each key has a fixed workspace and an access level. **Read only** keys cannot
+perform mutations, even when their owner can. **Read and write** keys remain
+limited by their owner's live role and permissions. There are no individual
+MCP-tool scopes. Every call checks access, including applicable resource,
 role, and plan restrictions. Revoking the key, removing its owner from the
 workspace, or archiving the workspace prevents further access. A tool appearing
 in discovery does **not** mean your key is authorized to use it.
@@ -147,7 +152,7 @@ as successful. If a failed write is ambiguous, refresh the affected data first.
 | --- | --- |
 | Endpoint missing or connection fails | Confirm the host and `/api/mcp` path with your Aura administrator, and that the deployment includes MCP support. Use Streamable HTTP, not a legacy SSE connection. |
 | Authentication fails (`401`, or `403` when the credential is missing or unrecognized) | Check the Bearer header and key, whether it was revoked, and whether its owner still belongs to an active workspace. Signing in through a browser does not authenticate this connection. |
-| Tool permission or plan error | Check the key owner's current role, the target resource's workspace, and the plan's entitlements. Discovery does not grant access. |
+| Tool permission or plan error | Check the key's access level, its owner's current role, the target resource's workspace, and the plan's entitlements. Read-only keys cannot perform mutations. Discovery does not grant access. |
 | Wrong workspace data | Use a key created in the intended workspace; changing the browser's active workspace is not enough. |
 | Origin rejected (`403`) or browser CORS failure | Clients normally omit `Origin`. If sent, it must exactly match Aura's canonical origin. Cross-origin browser access is not enabled; use a compatible MCP client rather than bypassing browser protections. |
 | Request or result too large | Reduce file size, filters, or page size within the limits above. Base64 increases request size. |
@@ -172,6 +177,8 @@ authenticated connection; use its discovered schemas. The published
 
 ## Related articles
 
+- [Account](/workspace-and-account/account/)
+- [Billing and invoices](/workspace-and-account/billing/)
 - [API ingestion](/integrations/api-ingestion/)
 - [Workspace settings](/workspace-and-account/workspace-settings/)
 - [Access and permissions](/workspace-and-account/access-and-permissions/)
