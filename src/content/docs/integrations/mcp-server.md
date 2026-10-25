@@ -15,6 +15,13 @@ headers**. Do not assume every Aura deployment already offers this endpoint.
 This connection can read and change workspace data. If you only want public
 help articles, use the separate [help-only connection](#help-only-connection).
 
+The [dashboard Assistant](/getting-started/dashboard-assistant/) is a separate
+browser-session feature for deployments that include it; it needs no personal
+API key or external client. It follows the active workspace and requires
+server-enforced confirmation for supported changes. This MCP connection remains
+bound to its API key's workspace, and its confirmation policy remains controlled
+by your client. The Assistant does not change this connection's capabilities.
+
 ## Set up the connection
 
 1. In Aura, select the workspace you want the client to use.
@@ -172,6 +179,7 @@ authenticated connection; use its discovered schemas. The published
 
 ## Related articles
 
+- [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
 - [API ingestion](/integrations/api-ingestion/)
 - [Workspace settings](/workspace-and-account/workspace-settings/)
 - [Access and permissions](/workspace-and-account/access-and-permissions/)
