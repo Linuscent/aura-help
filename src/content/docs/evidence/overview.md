@@ -26,8 +26,26 @@ The Evidence area may provide visibility into:
 -   Requirement review
 -   Internal documentation support
 
+You can explicitly capture a saved technical vulnerability assessment as an
+immutable Evidence record and select it to support an internal release decision.
+The historical snapshot remains separate from the current finding. Saving an
+assessment alone does not create Evidence. See the
+[Evidence Workflow](/evidence/evidence-workflow/) for the steps and permissions.
+
 Compliance readiness indicators and evidence workflows depend on the
 available Aura capabilities and configured data.
+
+## On the Free plan
+
+Evidence workflows are part of Pro and Team. On Free, the Evidence page explains
+what you can already do and links to it:
+
+- review and assess vulnerabilities on the Risks page;
+- prepare reporting cases in **Reporting**.
+
+It also lists what Pro adds, such as evidence collection, approvals, release
+decisions, VEX exports and Trust Center. Workspace owners see an upgrade link;
+other members are asked to contact the owner.
 
 ## Related articles
 

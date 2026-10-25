@@ -40,6 +40,16 @@ Paid Compliance, rich VEX/VDR workflows and Trust Center are separate Pro and Te
 
 See [VEX decisions](/risks/vex-decisions/) and [How Aura supports CRA](/compliance/how-aura-supports-cra/) for these distinctions.
 
+## Use the Assistant with your existing access
+
+In deployments that include the dashboard Assistant, it uses your signed-in
+session and active workspace. Your normal role, resource access, and plan checks
+still apply; asking in chat or confirming a proposal grants no additional rights.
+Only the current authorized workspace's messages are used as conversation context,
+and history from workspaces you can no longer access is excluded when chat is
+revalidated. See [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
+for supported workflows and confirmation rules.
+
 ## Related articles
 
 - [Account](/workspace-and-account/account/)

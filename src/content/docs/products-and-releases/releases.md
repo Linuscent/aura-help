@@ -23,7 +23,9 @@ Aura processes the SBOM
   ↓
 Aura creates a release
   ↓
-Release becomes READY
+Analysing
+  ↓
+Results ready
 ```
 
 Each successful SBOM upload creates a new release.
@@ -40,18 +42,36 @@ Depending on the data available and your Aura configuration, a release can be us
 - dependency relationships;
 - vulnerability findings;
 - license information;
-- policy results;
 - security posture information.
 
 ## Release processing
 
-After upload, Aura processes the SBOM before the release is ready for review.
+After upload, Aura analyses the SBOM. The release overview and Risks show the
+analysis status:
 
-When processing completes successfully, the release status changes to:
+- **Analysing** — results are not available yet. Counts are shown as not yet
+  available, never as zero. The page updates on its own; you do not need to
+  refresh.
+- **Results ready** — analysis has finished and the results are shown. A short
+  notice appears when this happens while you are on the page.
+- **Results may be incomplete** — analysis has not finished after about ten
+  minutes. Select **Refresh** to check again.
+- **Results unavailable** — Aura could not read the results.
 
-**READY**
+**Results ready** means the analysis finished. It is not a security clearance,
+and results can still change as new vulnerability information is published.
+
+In the release list, the **Upload** column shows when the upload was accepted
+(for example **Accepted · 25 Sep 2026**), not the analysis status.
 
 If a release does not reach the expected state, see [Troubleshoot an SBOM](/sbom/troubleshoot-sbom).
+
+## Release names
+
+Aura labels each release by its declared version and upload time, for example
+**1.0.0 · 25 Sep 2026, 12:50**, or **Unversioned · …** when the SBOM has no
+version. Each release also has a longer technical name; use the copy button next
+to the label if you need it, for example for support.
 
 ## Multiple releases for the same version
 

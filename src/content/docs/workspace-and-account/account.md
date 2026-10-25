@@ -15,6 +15,13 @@ Under **Profile**, select the edit icon beside your name, then **Save Name** or
 your current and new passwords. Changing your password does not revoke existing
 API keys.
 
+## Pending invitations
+
+**Account → Profile** lists every pending workspace invitation sent to your
+account, including invitations you hid by closing the Home banner. Accept or
+reject them here. See
+[Respond to an invitation](/workspace-and-account/working-with-your-team/#respond-to-an-invitation).
+
 ## Create an API key
 
 You must belong to an active workspace to create a new key. Without one, you
@@ -66,3 +73,6 @@ workspace membership. See [Billing and invoices](/workspace-and-account/billing/
 - [Connect an MCP client to Aura](/integrations/mcp-server/)
 - [Workspace Settings](/workspace-and-account/workspace-settings/)
 - [Access and Permissions](/workspace-and-account/access-and-permissions/)
+- [Working With Your Team](/workspace-and-account/working-with-your-team/)
+- [Workspace Overview](/workspace-and-account/workspace-overview/)
+- [First steps in Aura](/getting-started/first-steps/)

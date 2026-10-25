@@ -1,36 +1,18 @@
 ---
 title: Reviewing Policy Findings
-description: Learn how to review and respond to policy findings in Aura.
+description: Policy findings are not currently available to review in Aura.
 sidebar:
   order: 3
 ---
-Reviewing policy findings helps teams understand and respond to items
-that do not meet configured requirements.
+Aura does not currently produce policy findings, because policies cannot yet be
+defined for a workspace. There is nothing to review here for now.
 
-## Review Process
-
-A typical review includes:
-
-1.  Identifying the affected component or finding.
-2.  Understanding the policy condition.
-3.  Evaluating available context.
-4.  Deciding on an appropriate response.
-
-## Response Actions
-
-Depending on organizational workflows, teams may:
-
--   Update components
--   Change configurations
--   Document decisions
--   Accept or track exceptions
-
-## Availability
-
-Available policy capabilities depend on the configured Aura environment.
+To review license concerns, use the license information described in
+[Licenses](/licenses-and-policies/licenses/). To prioritize security work, see
+[Prioritizing Findings](/risks/prioritizing-findings/).
 
 ## Related articles
 
-- [Policy Results](/licenses-and-policies/policy-results)
-- [Licenses](/licenses-and-policies/licenses)
-- [Understanding Findings](/risks/understanding-findings)
+- [Policy Results](/licenses-and-policies/policy-results/)
+- [Licenses](/licenses-and-policies/licenses/)
+- [Understanding Findings](/risks/understanding-findings/)

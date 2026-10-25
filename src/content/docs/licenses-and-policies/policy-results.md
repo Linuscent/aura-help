@@ -1,38 +1,28 @@
 ---
 title: Policy Results
-description: Understand policy results generated from configured rules and product security information.
+description: Policy results are not currently available in Aura. Learn what to use instead.
 sidebar:
   order: 2
 ---
-Policy results show the outcome of configured rules applied to product
-security information.
+Aura does not currently show policy results or policy violations.
 
-Policies help organizations evaluate components and findings according
-to internal requirements.
+Policies are rules an organization defines, for example to flag certain
+licenses or vulnerability severities. Aura does not yet let you define these
+rules for your workspace, so there are no policy results to review. Policy
+counts and the **Policy** view have been removed from the Risks page, release
+overview and component details.
 
-## Policy Findings
+## What to use instead
 
-A policy result may relate to:
-
--   Component rules
--   License requirements
--   Security conditions
-
-## Reviewing Results
-
-Teams can review policy results to understand:
-
--   What triggered the result
--   Which component or item is affected
--   What action may be required
-
-## Important Note
-
-Policy results support internal governance workflows and do not replace
-organizational security decisions.
+- Review vulnerabilities by severity on the Risks page. See
+  [Understanding Findings](/risks/understanding-findings/).
+- Review license information and license observations such as missing licenses.
+  See [Licenses](/licenses-and-policies/licenses/).
+- Record your own decisions about vulnerabilities with
+  [VEX Decisions](/risks/vex-decisions/).
 
 ## Related articles
 
-- [Licenses](/licenses-and-policies/licenses)
-- [Reviewing Policy Findings](/licenses-and-policies/reviewing-policy-findings)
-- [Understanding Findings](/risks/understanding-findings)
+- [Licenses](/licenses-and-policies/licenses/)
+- [Understanding Findings](/risks/understanding-findings/)
+- [Prioritizing Findings](/risks/prioritizing-findings/)

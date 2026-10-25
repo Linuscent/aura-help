@@ -16,14 +16,13 @@ License data may include:
 
 -   Component license information
 -   License identifiers
--   Related policy results
 
 ## Reviewing Licenses
 
 Teams can review license information to:
 
 -   Understand software obligations
--   Identify policy concerns
+-   Identify missing or unusual license information
 -   Support governance workflows
 
 ## Important Note
@@ -33,5 +32,4 @@ SBOM and connected analysis capabilities.
 
 ## Related articles
 
-- [Policy Results](/licenses-and-policies/policy-results)
 - [Understanding Findings](/risks/understanding-findings)

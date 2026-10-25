@@ -2,7 +2,7 @@
 title: Connect an MCP client to Aura
 description: Connect an MCP client with a workspace API key to read Aura data, use documentation tools, and safely manage supported workflows.
 sidebar:
-  order: 5
+  order: 6
 ---
 
 ## Before you connect
@@ -14,6 +14,13 @@ headers**. Do not assume every Aura deployment already offers this endpoint.
 
 This connection can read and change workspace data. If you only want public
 help articles, use the separate [help-only connection](#help-only-connection).
+
+The [dashboard Assistant](/getting-started/dashboard-assistant/) is a separate
+browser-session feature for deployments that include it; it needs no personal
+API key or external client. It follows the active workspace and requires
+server-enforced confirmation for supported changes. This MCP connection remains
+bound to its API key's workspace, and its confirmation policy remains controlled
+by your client. The Assistant does not change this connection's capabilities.
 
 ## Set up the connection
 
@@ -179,6 +186,7 @@ authenticated connection; use its discovered schemas. The published
 
 - [Account](/workspace-and-account/account/)
 - [Billing and invoices](/workspace-and-account/billing/)
+- [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
 - [API ingestion](/integrations/api-ingestion/)
 - [Workspace settings](/workspace-and-account/workspace-settings/)
 - [Access and permissions](/workspace-and-account/access-and-permissions/)

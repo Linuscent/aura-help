@@ -9,7 +9,7 @@ sidebar:
 Findings depend on the data available from uploaded SBOMs, configured
 analysis capabilities, and product context.
 
-**Upload accepted** confirms that the upload was accepted, not that analysis is complete or the release is secure. A local guided SBOM preview is not a finding result: it counts top-level entries only, excludes the metadata product and nested components, and shows up to five names and versions rather than unique packages or the full inventory.
+**Upload accepted** confirms that the upload was accepted, not that analysis is complete or the release is secure. A local guided SBOM preview is not a finding result. For CycloneDX, it counts only direct, top-level component entries, excluding the metadata product and nested components. For SPDX, it counts source package entries, not converted or ingested components. It shows up to five names and versions from those entries; neither count is the final unique inventory count.
 
 The onboarding illustration uses those preview entries only after acceptance. Its shapes are not dependency relationships, a security graph, a live vulnerability scan, or evidence of completed analysis. Missing preview or result values remain unavailable; they must not be interpreted as zero findings.
 
@@ -31,6 +31,25 @@ Missing or unexpected findings may occur because:
 5.  Review relevant releases and their source data. Missing or partial results are not a security clearance.
 
 If an upload outcome is unclear, inspect the release list, including other pages and any active search, before retrying. Every accepted upload creates a distinct release, even for the same file or version; closing the dialog does not undo it.
+
+## Check suppression and component associations
+
+Suppressed findings are excluded from the default active **Risks** list. Review
+**Audit Vulnerabilities** or expand the affected component in **Components** to
+find them. Open the exact assessment there if you need to reverse suppression.
+Suppression is not proof of remediation.
+
+An unavailable or incomplete **Associated vulnerabilities** result is not an
+empty list. Use **Retry findings** and check the selected release. A missing
+Package URL alone does not always prevent assessment, but a finding that cannot
+be identified exactly remains read-only.
+
+## Recover after switching workspaces
+
+A link can retain a product or release that is not available in the newly selected
+workspace. If Aura says the requested product and release are unavailable or do
+not match, choose **Clear unavailable selection**, then select an accessible
+product and release. Aura does not substitute another workspace's finding.
 
 ## Important Note
 

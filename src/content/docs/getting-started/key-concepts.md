@@ -27,7 +27,6 @@ Products can be used to review areas such as:
 - components;
 - vulnerabilities;
 - exploit information;
-- policy violations;
 - release history.
 
 Each successful SBOM upload to a product creates a new release.
@@ -52,7 +51,7 @@ An SBOM can contain information such as:
 - dependency information;
 - license information.
 
-Aura supports CycloneDX SBOM workflows.
+Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON. SPDX conversion can omit source details, so use CycloneDX when complete dependency relationships matter.
 
 For more information, see [What is an SBOM?](/sbom/what-is-an-sbom).
 
@@ -71,8 +70,7 @@ A **finding** is information identified during analysis that may require attenti
 Examples can include:
 
 - a known vulnerability;
-- a license-related issue;
-- a policy result.
+- a license-related issue.
 
 A finding is a signal for review. It does not necessarily mean that the product is exploitable or that a compliance requirement has been violated.
 
