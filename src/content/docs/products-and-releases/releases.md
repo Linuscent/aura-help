@@ -73,6 +73,28 @@ Aura labels each release by its declared version and upload time, for example
 version. Each release also has a longer technical name; use the copy button next
 to the label if you need it, for example for support.
 
+## Record optional release dates
+
+In the product's release list, select **Edit dates** beside a release to record:
+
+- **Declared release date** — the release date you provide for that release.
+- **Support end date** — the date you provide for the end of its support.
+
+Select **Save** to keep your changes, or **Cancel** to leave the saved dates
+unchanged. Clear an input and save to remove that date. You can record either
+date on its own; a missing date appears as **Not set**. When neither date is
+recorded, editors see **Dates not set**.
+
+These are calendar dates, shown in `YYYY-MM-DD` format without timezone changes.
+They are separate from the upload time and software version. Aura does not fill
+them from the SBOM or require one date to be after the other. Recording a support
+end date does not stop monitoring, change release status or approve a support
+commitment.
+
+Editing uses the same permissions as renaming a release. Archived releases show
+recorded dates without edit controls. You do not need either date to upload an
+SBOM or inspect its results.
+
 ## Multiple releases for the same version
 
 Aura creates a new release for every successful SBOM upload, even when the software version is the same.
