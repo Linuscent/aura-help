@@ -13,6 +13,19 @@ const title = entry.data.title;
 const configuredRobots = head.find(({ tag, attrs }) => tag === 'meta' && attrs?.name === 'robots')?.attrs?.content;
 const noIndex = isNotFound || entry.data.draft || /noindex/i.test(String(configuredRobots ?? ''));
 
+const mermaidRoutes = new Set([
+  'getting-started/how-aura-works',
+  'getting-started/first-steps',
+  'products-and-releases/overview',
+  'products-and-releases/releases',
+  'inventory/overview',
+  'sbom/what-is-an-sbom',
+  'compliance/overview',
+  'integrations/sbom-ingestion',
+  'integrations/github-actions',
+  'evidence/evidence-workflow',
+]);
+
 const overrides = [
   { property: 'og:type', content: isHome ? 'website' : 'article' },
   { property: 'og:locale', content: lang.replace('-', '_') === 'en' ? 'en_GB' : lang.replace('-', '_') },
@@ -85,3 +98,4 @@ const structuredData = JSON.stringify({
 {mergedHead.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
 {overrides.map((attrs) => <meta {...attrs} />)}
 {!noIndex && <script type="application/ld+json" set:html={structuredData} />}
+{mermaidRoutes.has(route.id) && <script src="../scripts/mermaid.ts"></script>}

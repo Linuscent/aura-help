@@ -19,13 +19,12 @@ through CI pipelines and direct API uploads.
 
 The general workflow is:
 
-    SBOM file
-        ↓
-    Ingestion
-        ↓
-    Release creation
-        ↓
-    Component analysis
+```mermaid
+flowchart TD
+    A[SBOM file] --> B[Ingestion]
+    B --> C[Release creation]
+    C --> D[Component analysis]
+```
 
 ## Connect a repository
 

@@ -14,15 +14,13 @@ understand what software exists inside their products.
 
 The typical flow is:
 
-    Product
-       ↓
-    Release
-       ↓
-    SBOM
-       ↓
-    Component Inventory
-       ↓
-    Security Analysis
+```mermaid
+flowchart TD
+    A[Product] --> B[Release]
+    B --> C[SBOM]
+    C --> D[Component Inventory]
+    D --> E[Security Analysis]
+```
 
 ## Inventory Areas
 

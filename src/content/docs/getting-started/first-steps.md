@@ -10,22 +10,15 @@ This guide walks you through the basic Aura workflow, from creating an account t
 
 At a high level:
 
-```text
-Create account
-  ↓
-Verify email
-  ↓
-Create workspace
-  ↓
-Choose workspace plan
-  ↓
-Create product
-  ↓
-Upload SBOM
-  ↓
-Aura creates a release
-  ↓
-Review results
+```mermaid
+flowchart TD
+    A[Create account] --> B[Verify email]
+    B --> C[Create workspace]
+    C --> D[Choose workspace plan]
+    D --> E[Create product]
+    E --> F[Upload SBOM]
+    F --> G[Aura creates a release]
+    G --> H[Review results]
 ```
 
 ## Before you begin

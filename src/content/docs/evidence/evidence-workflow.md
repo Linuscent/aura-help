@@ -9,13 +9,12 @@ security reviews.
 
 A typical workflow includes:
 
-    Requirement
-         ↓
-    Evidence collection
-         ↓
-    Review
-         ↓
-    Internal decision
+```mermaid
+flowchart TD
+    A[Requirement] --> B[Evidence collection]
+    B --> C[Review]
+    C --> D[Internal decision]
+```
 
 ## Working With Evidence
 

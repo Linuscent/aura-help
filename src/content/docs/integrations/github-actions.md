@@ -14,15 +14,13 @@ security analysis processes.
 
 A typical workflow is:
 
-    Code change
-        ↓
-    GitHub Actions workflow
-        ↓
-    SBOM generation or security data collection
-        ↓
-    Aura ingestion
-        ↓
-    Analysis
+```mermaid
+flowchart TD
+    A[Code change] --> B[GitHub Actions workflow]
+    B --> C[SBOM generation or security data collection]
+    C --> D[Aura ingestion]
+    D --> E[Analysis]
+```
 
 ## Benefits
 

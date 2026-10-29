@@ -16,16 +16,12 @@ Each successful SBOM upload creates a new release inside the product.
 
 The basic relationship is:
 
-```text
-Workspace
-  ↓
-Product
-  ↓
-Upload SBOM
-  ↓
-Release
-  ↓
-Inventory and analysis
+```mermaid
+flowchart TD
+    A[Workspace] --> B[Product]
+    B --> C[Upload SBOM]
+    C --> D[Release]
+    D --> E[Inventory and analysis]
 ```
 
 A workspace can contain multiple products.
