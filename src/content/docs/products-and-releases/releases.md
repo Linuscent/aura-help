@@ -85,8 +85,9 @@ unchanged. Clear an input and save to remove that date. You can record either
 date on its own; a missing date appears as **Not set**. When neither date is
 recorded, editors see **Dates not set**.
 
-These are calendar dates, shown in `YYYY-MM-DD` format without timezone changes.
-They are separate from the upload time and software version. Aura does not fill
+Saved dates are shown in `YYYY-MM-DD` format without timezone changes. The date
+picker may use your browser's local date format. These dates are separate from
+the upload time and software version. Aura does not fill
 them from the SBOM or require one date to be after the other. Recording a support
 end date does not stop monitoring, change release status or approve a support
 commitment.
