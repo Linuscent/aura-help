@@ -24,6 +24,8 @@ The exact information available may depend on the product's releases, workspace 
 
 Select **Upload SBOM** to add a supported CycloneDX JSON/XML or SPDX 2.3 JSON SBOM to the product. Review the preview, then select **Import SBOM** to submit. Aura sends the original document text; CycloneDX is passed through unchanged and SPDX is converted server-side. Conversion may omit source details, including dependency relationships. When relationships matter, generate native CycloneDX with those relationships included; completeness depends on the source SBOM.
 
+![Import an SBOM on the product page.](../../../assets/screenshots/products-and-releases/product-import-sbom.png)
+
 Every accepted upload creates a new release.
 
 For detailed instructions, see [Upload an SBOM](/sbom/upload-sbom).
