@@ -13,7 +13,7 @@ At a high level:
 ```mermaid
 flowchart TD
     A[Create account] --> B[Verify email]
-    B --> C[Create workspace]
+    B --> C[Create or join workspace]
     C --> D[Choose workspace plan]
     D --> E[Create product]
     E --> F[Upload SBOM]
@@ -50,11 +50,20 @@ Open the verification message sent to your email address and complete the verifi
 
 If you did not receive the message, you can request another verification email from the verification page.
 
-## 3. Create a workspace
+## 3. Create or join a workspace
 
 After signing in for the first time, Aura displays the **Welcome to Aura** page.
 
 ![Aura's Welcome to Aura page in light theme, showing the Create a workspace card and Create workspace button.](../../../assets/screenshots/getting-started/welcome-empty-workspace.png)
+
+If someone invited your email address to a workspace, the invitation appears on
+this page. Select **Accept** to join that workspace instead of creating your
+own, or **Reject** to decline it. You can also find pending invitations in
+**Account → Profile**. See
+[Respond to an invitation](/workspace-and-account/working-with-your-team/#respond-to-an-invitation).
+Joining a workspace does not create a separate workspace for you.
+
+To create your own workspace instead:
 
 A workspace contains your products, releases, SBOMs, and related security information.
 
@@ -172,6 +181,16 @@ In deployments with current dashboard Help, select **Help** in the left-navigati
 Follow article links and use **Back** within the panel. **Open in new tab** opens the article currently displayed; your browser settings decide whether it opens in a tab or window. Close the panel or press **Escape** to return to your unchanged work. On mobile, the navigation closes before Help opens.
 
 Help is available in the normal workspace dashboard, not the onboarding screen before a workspace exists. It reads published documentation. If it cannot load, use **Retry**; the original dashboard page remains unchanged.
+
+## Ask the Assistant
+
+In deployments that include **Assistant**, select it in the left navigation to
+ask about Aura or your active workspace. Try **“How do I upload an SBOM?”** or
+**“Which releases have critical risks?”** Supported reads can run automatically;
+supported changes require an explicit confirmation card. **Help** remains
+available as an independent article reader. Check answers against the source
+articles and current data. See [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
+for confirmation rules, saved history, privacy, and limits.
 
 ## Manual and automated SBOM ingestion
 

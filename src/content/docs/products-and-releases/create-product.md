@@ -39,6 +39,10 @@ The product is real and retained even if you close the upload dialog. A workspac
 
 The new product appears in the product list.
 
+Manufacturer, brand and model are optional details you can add after creation.
+They are not part of this form and are not required before uploading an SBOM.
+See [Add optional product details](/products-and-releases/product-overview/#add-optional-product-details).
+
 Alternatively, **Import SBOM** in Home or Products opens the shared importer. Choose **New product**, enter its name, and select **Create product & import** after choosing a file. **Use suggested name** copies an available name from the SBOM only when you choose it; you can edit it before creating the product. The product is created before its SBOM is uploaded.
 
 ## What happens next?

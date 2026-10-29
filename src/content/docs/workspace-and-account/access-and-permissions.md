@@ -6,13 +6,13 @@ sidebar:
 ---
 ## Check your active workspace
 
-Access and plan allowances belong to a workspace, not your account as a whole. Check the active workspace before creating a product, inviting someone, or reviewing protected information. Membership in one workspace does not grant access to another.
+Workspace roles and plan allowances govern workspace data and features. Check the active workspace before creating a product, inviting someone, or reviewing protected information. Membership in one workspace does not grant access to another. Personal Account access and payer billing access are separate: a former member can retain access to subscriptions they pay for without retaining access to workspace data.
 
 ## Understand workspace roles
 
 The standard roles have different responsibilities:
 
-- **Owner** — manages workspace settings, billing and membership, as well as products. Owners also have the standard approval and management permissions for paid Compliance workflows.
+- **Owner** — manages workspace settings, membership and plan selection, as well as products. For subscriptions linked to a personal billing account, changing the plan also requires being its payer. Ownership alone does not expose another person's account-linked payment details or grant cancellation rights. Older subscriptions not yet linked to a personal billing account retain workspace-owner management until migrated. Owners also have the standard approval and management permissions for paid Compliance workflows.
 - **Admin** — manages membership and products, with standard Compliance management and approval permissions when that feature is available. Admin status does not itself grant owner-only workspace settings, billing or Trust Center management.
 - **Member** — can read and create products. When Compliance is available and the product is accessible, members can contribute evidence, propose applicability and create actions; this does not grant approval or workspace-management rights.
 
@@ -40,8 +40,20 @@ Paid Compliance, rich VEX/VDR workflows and Trust Center are separate Pro and Te
 
 See [VEX decisions](/risks/vex-decisions/) and [How Aura supports CRA](/compliance/how-aura-supports-cra/) for these distinctions.
 
+## Use the Assistant with your existing access
+
+In deployments that include the dashboard Assistant, it uses your signed-in
+session and active workspace. Your normal role, resource access, and plan checks
+still apply; asking in chat or confirming a proposal grants no additional rights.
+Only the current authorized workspace's messages are used as conversation context,
+and history from workspaces you can no longer access is excluded when chat is
+revalidated. See [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
+for supported workflows and confirmation rules.
+
 ## Related articles
 
+- [Account](/workspace-and-account/account/)
+- [Billing and invoices](/workspace-and-account/billing/)
 - [Working With Your Team](/workspace-and-account/working-with-your-team/)
 - [Workspace Settings](/workspace-and-account/workspace-settings/)
 - [Workspace Overview](/workspace-and-account/workspace-overview/)

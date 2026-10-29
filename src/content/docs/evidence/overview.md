@@ -37,6 +37,12 @@ The Evidence area may provide visibility into:
 -   Requirement review
 -   Internal documentation support
 
+You can explicitly capture a saved technical vulnerability assessment as an
+immutable Evidence record and select it to support an internal release decision.
+The historical snapshot remains separate from the current finding. Saving an
+assessment alone does not create Evidence. See the
+[Evidence Workflow](/evidence/evidence-workflow/) for the steps and permissions.
+
 Compliance readiness indicators and evidence workflows depend on the
 available Aura capabilities and configured data.
 

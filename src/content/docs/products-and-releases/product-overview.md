@@ -20,6 +20,25 @@ From a product, you can:
 
 The exact information available may depend on the product's releases, workspace configuration, and Aura plan.
 
+## Add optional product details
+
+After creating a product, you can record its **Manufacturer**, **Brand** and
+**Model**. Model means the marketed model designation, such as `X200`, not the
+software version of a release.
+
+1. Open the product in **Products**.
+2. Under its description, select **Add product details**, or **Edit product
+   details** if values are already recorded.
+3. Enter any values you need, then select **Save**. Each value can contain up to
+   255 characters.
+
+All three fields are optional. Clear a field and save to remove its value, or
+select **Cancel** to leave the saved details unchanged. They do not change the
+product's name or description and are not required to upload an SBOM.
+
+Editing follows the product's existing update permissions. Archived products
+show recorded details without edit controls.
+
 ## Upload an SBOM
 
 Select **Upload SBOM** to add a supported CycloneDX JSON/XML or SPDX 2.3 JSON SBOM to the product. Review the preview, then select **Import SBOM** to submit. Aura sends the original document text; CycloneDX is passed through unchanged and SPDX is converted server-side. Conversion may omit source details, including dependency relationships. When relationships matter, generate native CycloneDX with those relationships included; completeness depends on the source SBOM.
