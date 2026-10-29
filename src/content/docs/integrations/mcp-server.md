@@ -97,6 +97,32 @@ Depending on permissions and plan, the available categories include:
 | Compliance and VEX | Read supported assessments, evidence, statements, and reports. | Manage permitted assessments, evidence, actions, grants, applicability drafts, statements, and imports. |
 | Trust Center | Read administration data. | Manage supported configuration, content, certifications, documents, published releases, access requests, and vulnerability reports. |
 
+### Read the workspace overview or a release
+
+Call `dashboard_insights` with arguments `{}` to read the overview for the API
+key's bound workspace. It does not accept a `query` object, a Product or release
+selection, a scope, or a time window.
+
+For release-specific results, use the analysis tools instead:
+
+| Tool | Example arguments | Use |
+| --- | --- | --- |
+| `analysis_graph` | `{"query":{"projectId":"<release-id>"}}` | Read release metrics. Despite its name, this tool does not return graph topology. |
+| `analysis_trends` | `{"query":{"projectId":"<release-id>","days":30}}` | Read release metric trends over 7, 30, or 90 days. |
+| `analysis_findings` | `{"query":{"projectId":"<release-id>","pageNumber":1,"pageSize":25}}` | Read a page of release findings. |
+
+Replace `<release-id>` with an Aura release ID, not a Product ID. Use
+`release_graph` for dependency graph topology; check its discovered schema for
+arguments. Existing role and plan restrictions still apply.
+
+After upgrading Aura, refresh your client's discovered tools using `tools/list`
+or its tool-refresh/reconnect action. Clients that cache the previous schema may
+still send retired `dashboard_insights` arguments such as `query.projectId`,
+`query.days`, or `query.scope`; these calls now fail input validation. Refresh
+discovery and send `{}` for the workspace overview, or choose a release-analysis
+tool for release details. Update client templates or saved requests before
+replaying calls that use the old arguments.
+
 ### Keep human-only work in the dashboard
 
 The MCP connection does not expose every Aura workflow. Use the Aura dashboard
@@ -160,6 +186,7 @@ as successful. If a failed write is ambiguous, refresh the affected data first.
 | Endpoint missing or connection fails | Confirm the host and `/api/mcp` path with your Aura administrator, and that the deployment includes MCP support. Use Streamable HTTP, not a legacy SSE connection. |
 | Authentication fails (`401`, or `403` when the credential is missing or unrecognized) | Check the Bearer header and key, whether it was revoked, and whether its owner still belongs to an active workspace. Signing in through a browser does not authenticate this connection. |
 | Tool permission or plan error | Check the key's access level, its owner's current role, the target resource's workspace, and the plan's entitlements. Read-only keys cannot perform mutations. Discovery does not grant access. |
+| `dashboard_insights` rejects previously valid arguments | Refresh discovered tool schemas and call it with `{}`. Use the release-analysis tools for release selection and trends; see [Read the workspace overview or a release](#read-the-workspace-overview-or-a-release). |
 | Wrong workspace data | Use a key created in the intended workspace; changing the browser's active workspace is not enough. |
 | Origin rejected (`403`) or browser CORS failure | Clients normally omit `Origin`. If sent, it must exactly match Aura's canonical origin. Cross-origin browser access is not enabled; use a compatible MCP client rather than bypassing browser protections. |
 | Request or result too large | Reduce file size, filters, or page size within the limits above. Base64 increases request size. |
