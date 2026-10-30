@@ -9,6 +9,14 @@ sbomify and uploads it to an existing Aura product. Generation runs in your
 GitHub Actions environment. Aura does not build your source or merge the pull
 request. A sbomify account is not required.
 
+```mermaid
+flowchart TD
+    A[Code change] --> B[GitHub Actions workflow]
+    B --> C[SBOM generation or security data collection]
+    C --> D[Aura ingestion]
+    D --> E[Analysis]
+```
+
 ## Check requirements
 
 Automatic repository setup requires:

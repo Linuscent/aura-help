@@ -20,15 +20,13 @@ information, including:
 
 A typical workflow is:
 
-    Product Security Data
-            ↓
-    Analysis
-            ↓
-    Evidence Collection
-            ↓
-    Review
-            ↓
-    Compliance Support
+```mermaid
+flowchart TD
+    A[Product Security Data] --> B[Analysis]
+    B --> C[Evidence Collection]
+    C --> D[Review]
+    D --> E[Compliance Support]
+```
 
 ## Important Note
 

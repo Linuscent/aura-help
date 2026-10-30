@@ -45,6 +45,8 @@ expanded **Components** include suppressed findings. Open the exact assessment
 there to review or reverse suppression. An existing exact finding link can also
 open a suppressed finding.
 
+![Saving a technical vulnerability assessment on the Risks page.](../../../assets/screenshots/risks/vex-save-assessment.png)
+
 Use the available finding facts and product context to justify your decision. EPSS and known-exploited (KEV) information are available on all plans when supplied by the source. Unavailable scores or statuses remain unknown; do not interpret them as zero risk or a negative exploitation result.
 
 Saving a technical assessment or changing suppression does not automatically

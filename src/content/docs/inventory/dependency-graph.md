@@ -10,6 +10,8 @@ between software components.
 It helps teams understand dependency paths and how risks may propagate
 through the software supply chain.
 
+![The Dependency Graph Explorer showing the empty state when no dependencies are available.](../../../assets/screenshots/inventory/dependency-graph.png)
+
 ## Using the Dependency Graph
 
 The graph can help answer questions such as:
@@ -22,8 +24,9 @@ The graph can help answer questions such as:
 
 Dependency information depends on the uploaded SBOM data.
 
-If no dependency relationships are available, Aura may display that no
-dependencies were found for the selected product or release.
+If no dependency relationships are available, the Graph Explorer shows **No
+dependencies found for this product yet** with a **Manage product and upload
+SBOM** action.
 
 ## Related articles
 

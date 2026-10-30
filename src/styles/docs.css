@@ -236,6 +236,18 @@ html:not([data-has-hero]) .sl-markdown-content {
   --ec-codeBg: var(--aura-surface-nav);
 }
 
+.aura-mermaid {
+  margin-block: var(--aura-space-6);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.aura-mermaid svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .sl-markdown-content table {
   width: 100%;
   font-size: 0.9375rem;

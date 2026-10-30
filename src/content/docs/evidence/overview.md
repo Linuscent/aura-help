@@ -10,6 +10,17 @@ and supporting compliance workflows.
 Evidence helps teams collect, review, and manage information related to
 security requirements.
 
+## Open Evidence
+
+Select **Evidence** in the left navigation, then choose an authorized release
+with **Choose release**. You can also use **Open authorized portfolio** and
+**Refresh authorized releases** to load the releases you can work with.
+
+![The Evidence page showing the authorized-release selector before a release is chosen.](../../../assets/screenshots/evidence/evidence-overview.png)
+
+Until you select a release, Aura shows **Choose a release to view its evidence
+workflow**.
+
 ## Evidence and Compliance
 
 Evidence supports internal review processes and helps teams connect

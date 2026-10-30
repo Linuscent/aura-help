@@ -49,14 +49,11 @@ Keeping the SBOM associated with a release helps preserve a record of what softw
 
 In Aura:
 
-```text
-Product
-  ↓
-Upload SBOM
-  ↓
-Aura creates a release
-  ↓
-Inventory and analysis
+```mermaid
+flowchart TD
+    A[Product] --> B[Upload SBOM]
+    B --> C[Aura creates a release]
+    C --> D[Inventory and analysis]
 ```
 
 Uploading another SBOM creates another release, including when the SBOM represents the same software version.

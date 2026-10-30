@@ -6,6 +6,8 @@ sidebar:
 ---
 Workspace settings control configuration options for a workspace.
 
+![The Workspace Settings page showing the General tab with workspace identity, plan usage, and the Danger Zone.](../../../assets/screenshots/workspace-and-account/workspace-settings.png)
+
 ## Settings Management
 
 Depending on available capabilities, workspace settings may include:

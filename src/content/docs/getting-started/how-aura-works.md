@@ -8,24 +8,16 @@ Aura connects software inventory, security findings, engineering decisions, and 
 
 At a high level, the process looks like this:
 
-```text
-Workspace
-  ↓
-Product
-  ↓
-Upload SBOM
-  ↓
-Aura creates a release
-  ↓
-Inventory and analysis
-  ↓
-Risks and licenses
-  ↓
-Assessment and decisions
-  ↓
-Remediation and evidence
-  ↓
-Ongoing monitoring
+```mermaid
+flowchart TD
+    A[Workspace] --> B[Product]
+    B --> C[Upload SBOM]
+    C --> D[Aura creates a release]
+    D --> E[Inventory and analysis]
+    E --> F[Risks and licenses]
+    F --> G[Assessment and decisions]
+    G --> H[Remediation and evidence]
+    H --> I[Ongoing monitoring]
 ```
 
 The exact capabilities available to you may depend on your Aura plan and workspace configuration.
