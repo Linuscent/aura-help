@@ -21,11 +21,17 @@ information, including:
 A typical workflow is:
 
 ```mermaid
-flowchart TD
-    A[Product Security Data] --> B[Analysis]
-    B --> C[Evidence Collection]
-    C --> D[Review]
-    D --> E[Compliance Support]
+flowchart LR
+    subgraph analyse["Analyse and evidence"]
+        direction TB
+        A[Product Security Data] --> B[Analysis] --> C[Evidence Collection]
+    end
+    subgraph review["Review and support"]
+        direction TB
+        D[Review] --> E[Compliance Support]
+    end
+
+    analyse --> review
 ```
 
 ## Important Note

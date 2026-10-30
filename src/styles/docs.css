@@ -248,6 +248,12 @@ html:not([data-has-hero]) .sl-markdown-content {
   height: auto;
 }
 
+/* Wide flowcharts keep a readable size on narrow screens and scroll
+   horizontally inside their own container instead of shrinking illegibly. */
+.aura-mermaid--wide svg {
+  min-width: var(--aura-mermaid-min-width, 36rem);
+}
+
 .sl-markdown-content table {
   width: 100%;
   font-size: 0.9375rem;

@@ -11,14 +11,21 @@ This guide walks you through the basic Aura workflow, from creating an account t
 At a high level:
 
 ```mermaid
-flowchart TD
-    A[Create account] --> B[Verify email]
-    B --> C[Create or join workspace]
-    C --> D[Choose workspace plan]
-    D --> E[Create product]
-    E --> F[Upload SBOM]
-    F --> G[Aura creates a release]
-    G --> H[Review results]
+flowchart LR
+    subgraph account["Account"]
+        direction TB
+        A[Create account] --> B[Verify email]
+    end
+    subgraph workspace["Workspace"]
+        direction TB
+        C[Create or join workspace] --> D[Choose workspace plan]
+    end
+    subgraph first["First SBOM"]
+        direction TB
+        E[Create product] --> F[Upload SBOM] --> G[Aura creates a release] --> H[Review results]
+    end
+
+    account --> workspace --> first
 ```
 
 ## Before you begin

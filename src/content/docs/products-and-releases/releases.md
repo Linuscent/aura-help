@@ -15,12 +15,21 @@ You do not need to create a release before uploading an SBOM.
 The workflow is:
 
 ```mermaid
-flowchart TD
-    A[Open product] --> B[Upload SBOM]
-    B --> C[Aura processes the SBOM]
-    C --> D[Aura creates a release]
-    D --> E[Analysing]
-    E --> F[Results ready]
+flowchart LR
+    subgraph upload["Upload"]
+        direction TB
+        A[Open product] --> B[Upload SBOM]
+    end
+    subgraph process["Process"]
+        direction TB
+        C[Aura processes the SBOM] --> D[Aura creates a release]
+    end
+    subgraph analyse["Analyse"]
+        direction TB
+        E[Analysing] --> F[Results ready]
+    end
+
+    upload --> process --> analyse
 ```
 
 Each successful SBOM upload creates a new release.

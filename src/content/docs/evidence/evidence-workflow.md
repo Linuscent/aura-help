@@ -10,10 +10,17 @@ security reviews.
 A typical workflow includes:
 
 ```mermaid
-flowchart TD
-    A[Requirement] --> B[Evidence collection]
-    B --> C[Review]
-    C --> D[Internal decision]
+flowchart LR
+    subgraph gather["Gather"]
+        direction TB
+        A[Requirement] --> B[Evidence collection]
+    end
+    subgraph decide["Review and decide"]
+        direction TB
+        C[Review] --> D[Internal decision]
+    end
+
+    gather --> decide
 ```
 
 ## Working With Evidence

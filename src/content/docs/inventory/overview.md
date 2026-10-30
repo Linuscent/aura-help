@@ -15,11 +15,17 @@ understand what software exists inside their products.
 The typical flow is:
 
 ```mermaid
-flowchart TD
-    A[Product] --> B[Release]
-    B --> C[SBOM]
-    C --> D[Component Inventory]
-    D --> E[Security Analysis]
+flowchart LR
+    subgraph contain["Containers"]
+        direction TB
+        A[Product] --> B[Release] --> C[SBOM]
+    end
+    subgraph analyse["Analysis"]
+        direction TB
+        D[Component Inventory] --> E[Security Analysis]
+    end
+
+    contain --> analyse
 ```
 
 ## Inventory Areas

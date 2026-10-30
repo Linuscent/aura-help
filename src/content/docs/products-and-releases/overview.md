@@ -17,11 +17,17 @@ Each successful SBOM upload creates a new release inside the product.
 The basic relationship is:
 
 ```mermaid
-flowchart TD
-    A[Workspace] --> B[Product]
-    B --> C[Upload SBOM]
-    C --> D[Release]
-    D --> E[Inventory and analysis]
+flowchart LR
+    subgraph organise["Organise"]
+        direction TB
+        A[Workspace] --> B[Product]
+    end
+    subgraph analyse["Release and analyse"]
+        direction TB
+        C[Upload SBOM] --> D[Release] --> E[Inventory and analysis]
+    end
+
+    organise --> analyse
 ```
 
 A workspace can contain multiple products.

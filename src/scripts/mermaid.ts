@@ -3,6 +3,8 @@ import mermaid from 'mermaid';
 
 const MERMAID_PRE_SELECTOR = 'pre[data-language="mermaid"]';
 const RENDERED_FLAG = 'data-mermaid-rendered';
+const MOBILE_DIAGRAM_MIN_WIDTH = 300;
+const MERMAID_MIN_WIDTH_CAP = 576;
 
 let diagramCount = 0;
 
@@ -13,6 +15,7 @@ function initializeMermaid(): void {
     theme: 'base',
     look: 'classic',
     fontFamily: 'var(--aura-font-body)',
+    htmlLabels: false,
     flowchart: {
       useMaxWidth: true,
       curve: 'basis',
@@ -30,7 +33,11 @@ function initializeMermaid(): void {
       .label,
       .nodeLabel,
       .cluster-label span,
-      .cluster-label text {
+      .cluster-label text,
+      .node text,
+      .node tspan,
+      .cluster text,
+      .cluster tspan {
         color: var(--aura-text-body);
         fill: var(--aura-text-body);
       }
@@ -77,6 +84,15 @@ async function renderOne(pre: HTMLPreElement): Promise<void> {
   const id = `aura-mermaid-${++diagramCount}`;
   const { svg } = await mermaid.render(id, source);
   container.innerHTML = svg;
+
+  const renderedSvg = container.querySelector('svg');
+  const viewBox = renderedSvg?.getAttribute('viewBox');
+  const width = viewBox ? parseFloat(viewBox.split(/\s+/)[2] ?? '0') : 0;
+  if (width > MOBILE_DIAGRAM_MIN_WIDTH) {
+    const minWidth = Math.min(width, MERMAID_MIN_WIDTH_CAP);
+    container.style.setProperty('--aura-mermaid-min-width', `${minWidth}px`);
+    container.classList.add('aura-mermaid--wide');
+  }
 
   const block = pre.closest('.expressive-code') ?? pre;
   block.replaceWith(container);

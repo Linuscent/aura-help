@@ -10,11 +10,17 @@ GitHub Actions environment. Aura does not build your source or merge the pull
 request. A sbomify account is not required.
 
 ```mermaid
-flowchart TD
-    A[Code change] --> B[GitHub Actions workflow]
-    B --> C[SBOM generation or security data collection]
-    C --> D[Aura ingestion]
-    D --> E[Analysis]
+flowchart LR
+    subgraph ci["CI pipeline"]
+        direction TB
+        A[Code change] --> B[GitHub Actions workflow] --> C[SBOM generation or security data collection]
+    end
+    subgraph aura["Aura"]
+        direction TB
+        D[Aura ingestion] --> E[Analysis]
+    end
+
+    ci --> aura
 ```
 
 ## Check requirements

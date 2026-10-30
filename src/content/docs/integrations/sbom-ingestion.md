@@ -18,10 +18,17 @@ through CI pipelines and direct API uploads.
 The general workflow is:
 
 ```mermaid
-flowchart TD
-    A[SBOM file] --> B[Ingestion]
-    B --> C[Release creation]
-    C --> D[Component analysis]
+flowchart LR
+    subgraph ingest["Ingest"]
+        direction TB
+        A[SBOM file] --> B[Ingestion]
+    end
+    subgraph process["Process"]
+        direction TB
+        C[Release creation] --> D[Component analysis]
+    end
+
+    ingest --> process
 ```
 
 ## Connect a repository
