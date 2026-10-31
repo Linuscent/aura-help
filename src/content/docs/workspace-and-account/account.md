@@ -4,8 +4,8 @@ description: Understand the account area and user-specific settings available in
 sidebar:
   order: 5
 ---
-Account Settings contains **Profile**, **Security**, **API Keys**, and
-**Billing**. You can open Account while signed in even if you no longer belong
+Account Settings contains **Profile**, **Security**, **API Keys**, **Authorized apps**,
+and **Billing**. You can open Account while signed in even if you no longer belong
 to a workspace.
 
 ## Account Management
@@ -60,6 +60,24 @@ Replace exposed keys and update clients that used them.
 Keys marked **Read and write (legacy)** retain role-limited access. To restrict
 one to read-only access, create a replacement key, update its clients, and revoke
 the old key.
+
+## Review and remove app authorizations
+
+Open **Account → Authorized apps** to review your own app authorizations. Each
+authorization is read-only and bound to one workspace. You can review and remove
+your authorizations even if you no longer have access to that workspace.
+
+Connecting apps through sign-in is not available yet. The **No authorized apps**
+empty state is expected. For current MCP access, use the API-key workflow in
+[Connect an MCP client to Aura](/integrations/mcp-server/). App authorizations are
+separate from API keys; removing an authorization does not revoke an API key.
+
+An authorization can show **Authorized**, **Expired**, **Workspace access lost**,
+or **Removed**. To remove one, select **Remove**, then confirm with
+**Remove authorization**. Removal blocks future authorization checks, but does
+not stop requests already in flight. The row remains in the list as **Removed**.
+If you cannot tell whether removal succeeded, reload the list and check its
+status before retrying.
 
 ## Manage subscriptions you pay for
 
