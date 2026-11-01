@@ -149,6 +149,23 @@ provides `search_docs`, `get_doc`, and `list_docs`. The version file lets it
 detect updated documentation. CI builds use `GITHUB_SHA` as the revision;
 local builds use a content hash.
 
+### Screenshot URLs for the dashboard reader
+
+`npm run build` publishes screenshot assets referenced by catalog articles under
+`dist/help-assets/screenshots/` and rewrites those catalog image references to
+absolute URLs on the configured documentation site. Article sources stay in
+`src/assets/screenshots/`; do not hand-edit the generated catalog or copy images
+into `dist/` manually. Missing or unsafe local screenshot references fail the
+build instead of producing broken reader URLs.
+
+Deploy the catalog and generated assets together. Aura's Help reader only loads
+approved raster images from this path on its documentation origin and uses
+anonymous CORS requests without a referrer. Hosting must allow cross-origin
+image reads (for example `Access-Control-Allow-Origin: *`, supplied by GitHub
+Pages). The standalone site's existing optimized images and appearance are
+unchanged. This build support does not by itself change an already published
+catalog.
+
 To test a local build without deploying, configure the client to run
 `npx -y @stellayazilim/mcp-starlight@0.2.1 ./dist/mcp-catalog.json` from the
 repository root (or pass an absolute catalog path).

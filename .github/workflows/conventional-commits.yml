@@ -57,7 +57,7 @@ jobs:
               grep -Fxv 'refs/remotes/origin/HEAD' || true)
             commits=$(git rev-list --reverse "$HEAD_SHA" --not "${other_refs[@]}")
           else
-            # Fail rather than silently skip commits if pre-push history is unavailable.
+            # Default-branch pushes must retain their full pre-push history.
             if [[ "$BRANCH_REF" == "refs/heads/$DEFAULT_BRANCH" ]]; then
               commits=$(git rev-list --reverse "$BASE_SHA..$HEAD_SHA")
             else
@@ -66,7 +66,14 @@ jobs:
               # commit, including the merge commit itself.
               default_ref="refs/remotes/origin/$DEFAULT_BRANCH"
               git rev-parse --verify "$default_ref^{commit}" > /dev/null
-              commits=$(git rev-list --reverse "$BASE_SHA..$HEAD_SHA" --not "$default_ref")
+              if git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
+                commits=$(git rev-list --reverse "$BASE_SHA..$HEAD_SHA" --not "$default_ref")
+              else
+                # A force-push can make the old tip unreachable to checkout.
+                # Validate the entire current feature history, never skip lint.
+                echo "Pre-push commit unavailable; checking all feature commits against $DEFAULT_BRANCH."
+                commits=$(git rev-list --reverse "$HEAD_SHA" --not "$default_ref")
+              fi
             fi
           fi
           for commit in $commits; do
