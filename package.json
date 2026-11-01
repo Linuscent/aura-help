@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && npm run check:seo",
+    "build": "astro build && node scripts/publish-help-assets.mjs && npm run check:seo",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
@@ -33,6 +33,7 @@
     "@commitlint/cli": "^21.2.3",
     "@commitlint/config-conventional": "^21.2.3",
     "@playwright/test": "^1.64.0",
+    "mdast-util-from-markdown": "^2.1.0",
     "typescript": "^6.0.3"
   }
 }
