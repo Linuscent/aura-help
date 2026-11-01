@@ -17,11 +17,15 @@ This connection can read and change workspace data. If you only want public
 help articles, use the separate [help-only connection](#help-only-connection).
 
 The [dashboard Assistant](/getting-started/dashboard-assistant/) is a separate
-browser-session feature for deployments that include it; it needs no personal
-API key or external client. It follows the active workspace and requires
-server-enforced confirmation for supported changes. This MCP connection remains
-bound to its selected workspace, and its confirmation policy remains controlled
-by your client. The Assistant does not change this connection's capabilities.
+browser-session feature for deployments that include the update. It uses the
+full current shared MCP catalog, but needs no personal API key, OAuth connection,
+or external client. It follows the active workspace, supplies its own **Attach
+file** picker, and requires server-enforced confirmation for supported changes
+and download preparation. These are Assistant controls, not remote MCP controls;
+external clients still use the file encodings and limits described below.
+This MCP connection remains bound to its selected workspace, and its confirmation
+policy remains controlled by your client. The Assistant does not change this
+connection's capabilities.
 
 ## Choose how to connect
 

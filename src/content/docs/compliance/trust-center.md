@@ -63,9 +63,28 @@ The **Analytics** section shows counts for:
 - Vuln reports
 - Revocations
 
+## Upload a document with the Assistant
+
+On deployments with the updated [dashboard Assistant](/getting-started/dashboard-assistant/),
+a workspace owner with the current Trust Center plan entitlement can attach a
+document and ask to add it to the Trust Center. Current permissions and file
+validation still apply; chat does not grant extra access.
+
+Enter an instruction with the document title, use **Attach file**, and select
+**Send**. Review **File**, the target, title, visibility, and watermark settings
+before selecting **Upload document**. Omitted settings default to **Gated**
+visibility and **Watermark: Yes**; confirm the explicit choices rather than
+assuming the document will be public. The decoded file limit is **2 MiB**, within
+the shared 4 MiB request limit. Uploading a document does not publish a draft
+portal.
+
+See [Assistant file handling](/getting-started/dashboard-assistant/#attach-a-file-for-a-supported-upload)
+for temporary payloads, confirmation, and size limits.
+
 ## Related articles
 
 - [Reporting](/compliance/reporting)
 - [Compliance Overview](/compliance/overview)
 - [Workspace Settings](/workspace-and-account/workspace-settings)
 - [Access and Permissions](/workspace-and-account/access-and-permissions)
+- [Use the dashboard Assistant](/getting-started/dashboard-assistant/)

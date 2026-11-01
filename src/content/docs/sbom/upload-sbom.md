@@ -18,7 +18,7 @@ You need:
 
 If you do not have a product yet, select **Import SBOM** in Products, choose **New product**, and enter its name. After choosing your file, select **Create product & import** to create the product before uploading its SBOM. See [Create a product](/products-and-releases/create-product/) for this alternative, or [First steps in Aura](/getting-started/first-steps/) for the product-first Home flow.
 
-Export a CycloneDX JSON/XML or SPDX 2.3 JSON SBOM from your build or security tooling, or request one from your product supplier. The upload request limit is **10 MiB including the request envelope**, not a guarantee that a 10 MiB file fits. The browser uploads the original document text without converting or reserializing it.
+Export a CycloneDX JSON/XML or SPDX 2.3 JSON SBOM from your build or security tooling, or request one from your product supplier. The regular dashboard upload dialog's request limit is **10 MiB including the request envelope**, not a guarantee that a 10 MiB file fits. The browser uploads the original document text without converting or reserializing it.
 
 ## Upload an SBOM
 
@@ -38,15 +38,28 @@ The guided upload previews the local file before submission. For CycloneDX, it c
 
 Missing names, versions, or component/package lists remain unavailable rather than being invented. An explicitly empty list can show zero; an unavailable list is not zero. If an SPDX document does not identify exactly one root package, the suggested name and version remain unknown and Aura does not guess. An unknown version is okay. After acceptance, the guided product illustration uses only those preview entries, up to five, not all components or dependency relationships.
 
+## Upload with the Assistant
+
+On deployments with the updated [dashboard Assistant](/getting-started/dashboard-assistant/),
+you can attach a supported SBOM and ask to upload it to a selected **existing
+Product**. Review the file, Product, and effect before selecting **Upload SBOM**.
+The Assistant uses a **4 MiB request limit including JSON overhead**, smaller
+than the regular dashboard dialog's 10 MiB allowance; a file under 4 MiB can
+still be rejected. The AI receives file metadata, not its contents.
+
+Every accepted Assistant upload also creates a new release. Acceptance is not
+completed analysis. If the outcome is unknown, inspect the Product's releases
+before asking again—do not automatically retry an upload that may have succeeded.
+
 ## Source document and analysis
 
-Aura detects the format from the document contents. The browser sends Aura the original document text. CycloneDX is passed through unchanged for analysis; SPDX is converted server-side, so you do not need to run a converter.
+Aura detects the format from the document contents. The regular upload dialog sends Aura the original document text. CycloneDX is passed through unchanged for analysis; SPDX is converted server-side, so you do not need to run a converter.
 
 SPDX conversion can omit information, including dependency relationships (which are not reconstructed), custom license definitions, and some file or snippet details. When dependency relationships matter, generate native CycloneDX with those relationships included; completeness depends on the source SBOM. A preview's source package count is not the final unique inventory count.
 
 Where evidence capture is available, Aura retains the original SPDX document and its digest, not the converted document. This does not mean every upload is retained as downloadable evidence.
 
-The upload request is limited to 10 MiB, including its request envelope, and converted output has a separate 10 MiB limit. A source file under the request limit may still exceed the converted-output limit.
+The regular dashboard upload request is limited to 10 MiB, including its request envelope, and converted output has a separate 10 MiB limit. A source file under the request limit may still exceed the converted-output limit. The Assistant's smaller request limit still applies when using chat.
 
 ## What happens after upload?
 
@@ -57,7 +70,7 @@ After an upload is accepted:
 
 **Upload accepted** (an HTTP **202 Accepted** receipt) means Aura accepted the upload and recorded a new release. It does not establish completed analysis or security clearance.
 
-Select **Open release overview** to open the exact saved release. Acceptance does not automatically close the dialog or navigate. Closing the dialog does not undo the accepted release; in the current guided session, the receipt and file summary remain visible afterward. Aura does not automatically submit the upload again.
+In the regular upload dialog, select **Open release overview** to open the exact saved release. Acceptance does not automatically close the dialog or navigate. Closing the dialog does not undo the accepted release; in the current guided session, the receipt and file summary remain visible afterward. Aura does not automatically submit the upload again.
 
 The release overview shows **Analysing** while Aura processes the SBOM and updates
 on its own when results are ready; this usually takes a few seconds. You can still
@@ -117,3 +130,4 @@ See [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/).
 - [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/)
 - [What is an SBOM?](/sbom/what-is-an-sbom/)
 - [Inventory Overview](/inventory/overview/)
+- [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
