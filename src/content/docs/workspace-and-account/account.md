@@ -36,8 +36,8 @@ creating another.
      deleting workspace data.
    - **Read and write** allows only operations your current workspace role
      permits. It is unavailable if your role has no write permissions.
-4. Enter a name and choose an expiry: **No expiry** (the default), **30 days**,
-   **90 days**, or **1 year**.
+4. Enter a name of up to **100 characters** and choose an expiry: **No expiry**
+   (the default), **30 days**, **90 days**, or **1 year**.
 5. Create the key and copy its secret immediately. Select **I have copied this
    key**, then **Done**. The secret is shown only once.
 

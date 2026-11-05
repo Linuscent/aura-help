@@ -43,10 +43,9 @@ Connections are private to your Aura account and workspace:
 - **GitLab.com** requires Maintainer access and the OAuth API scope to create
   files, merge requests, and protected CI variables.
 
-In the current environment, both **GitHub** and **GitLab.com** show
-**Unavailable**. These connections require an administrator to configure the
-GitHub App (or GitLab.com OAuth) and repository encryption on the Aura server.
-They are not active until that configuration is completed.
+If a provider shows **Unavailable**, ask your Aura administrator to configure
+the GitHub App or GitLab.com OAuth and repository encryption on the Aura server.
+Availability depends on that server’s configuration.
 
 **Disconnect** only stops Aura from accessing the provider. To stop ingestion,
 revoke the setup key in **Account → API Keys**, or remove its CI secret and
@@ -131,6 +130,11 @@ admins can connect GitHub.com or GitLab.com under **SBOM Ingestion**. Select an
 existing product and lockfile, preview the proposed files, then explicitly
 authorize creating a workspace API key, installing a CI secret and opening a
 pull or merge request. Aura does not merge it automatically.
+
+Previews expire after **15 minutes**. If the repository or generated workflow
+configuration changes, select **Preview file changes** again and review the new
+files before authorizing setup. Previewing does not create an API key or write
+to the provider.
 
 Generation runs in your CI environment using sbomify; a sbomify account is not
 required. The generated job runs on protected tags or a manual run on a

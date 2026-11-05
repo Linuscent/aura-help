@@ -126,17 +126,24 @@ generates `dist/mcp-catalog.json` and `dist/mcp-catalog.version.json` during
 MCP process or deployment changes are needed. The catalog contains documentation
 from `src/content/docs/`, not live Aura workspace data.
 
-After deploying, add this configuration to an MCP client that supports local
-stdio servers (Node.js and npm are required):
+After deploying, use a patched local installation of the helper with an MCP
+client that supports stdio servers (Node.js and npm are required). The upstream
+`@stellayazilim/mcp-starlight@0.2.1` package still depends on Zod affected by
+[GHSA-mrhx-c7xc-m3w5](https://github.com/advisories/GHSA-mrhx-c7xc-m3w5).
+Running it independently through `npx` does **not** inherit this repository's
+dependency override.
+
+This repository's `npm ci` installs the helper with patched Zod. Point the client
+at that installation's absolute executable path, or use a separately managed
+installation with the same scoped Zod override, rather than the unpatched
+upstream `npx` command:
 
 ```json
 {
   "mcpServers": {
     "aura-help": {
-      "command": "npx",
+      "command": "/absolute/path/to/aura-help/node_modules/.bin/mcp-starlight",
       "args": [
-        "-y",
-        "@stellayazilim/mcp-starlight@0.2.1",
         "https://docs.aura.linuscent.com"
       ]
     }
@@ -144,7 +151,7 @@ stdio servers (Node.js and npm are required):
 }
 ```
 
-The client runs the server locally, which fetches the published catalog and
+The client runs the patched server locally, which fetches the published catalog and
 provides `search_docs`, `get_doc`, and `list_docs`. The version file lets it
 detect updated documentation. CI builds use `GITHUB_SHA` as the revision;
 local builds use a content hash.
@@ -167,13 +174,17 @@ unchanged. This build support does not by itself change an already published
 catalog.
 
 To test a local build without deploying, configure the client to run
-`npx -y @stellayazilim/mcp-starlight@0.2.1 ./dist/mcp-catalog.json` from the
-repository root (or pass an absolute catalog path).
+`./node_modules/.bin/mcp-starlight ./dist/mcp-catalog.json` from this
+repository after `npm ci` (or pass absolute executable and catalog paths).
 
 The extension currently declares an Astro 5 peer dependency. `package.json`
 scopes an override to this package to use the site's Astro 7 dependency,
 without relaxing peer checks globally. A local declaration file supplies its
-missing integration types. Recheck both workarounds when upgrading the extension.
+missing integration types. A second scoped override selects Zod **4.6.7** for
+the helper instead of its vulnerable Zod 3 dependency. This patches this
+repository's installation, not independently installed helpers or the upstream
+published package. Recheck the overrides and type declaration when upgrading
+the extension, including its MCP tool schemas and validation behavior.
 
 ## AI-assisted development
 

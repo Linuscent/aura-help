@@ -79,8 +79,8 @@ use an environment secret or require environment-reviewer approval.
 
 Connections and setup records are private to your Aura account within the
 selected workspace. Connecting GitHub does not change how you sign in to Aura.
-If the repository changes or the preview expires, generate a fresh preview
-before authorizing setup.
+Previews expire after **15 minutes**. If the repository or generated workflow
+configuration changes, generate and review a fresh preview before authorizing setup.
 
 ## Run the workflow
 
@@ -105,6 +105,11 @@ product's releases before rerunning it.
 - For **Setup needs attention**, read the message before retrying. Repository
   and status reads have retry controls; interrupted writes are not automatically
   repeated.
+- If **The workflow configuration changed. Generate and review a fresh preview.**
+  appears, select **Preview file changes** again and review the new files. If the
+  same error returns immediately for each fresh preview, contact your Aura
+  administrator rather than reinstalling the GitHub App or creating extra keys
+  as a workaround.
 - For **Inspection required**, use **Inspect** and check the provider branch,
   pull request, secret and Aura key. A partially created pull request may refer
   to a key that Aura has already revoked. Do not assume it is ready to run.
