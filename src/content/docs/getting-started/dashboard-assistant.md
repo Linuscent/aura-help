@@ -7,9 +7,10 @@ sidebar:
 
 ## Open the Assistant
 
-These instructions apply to deployments that include the dashboard **Assistant**.
-If it is not available, ask your Aura administrator whether your deployment
-includes it.
+These instructions apply to deployments with the updated dashboard **Assistant**,
+including shared MCP tools and file attachments. Ask your Aura administrator
+whether your deployment includes this update; an older Assistant may not offer
+the operations described here.
 
 1. Sign in to Aura and select the workspace you want to work in.
 2. Select **Assistant** in the left navigation.
@@ -17,9 +18,10 @@ includes it.
    workspace requests.
 4. Enter your question and select **Send**. Press **Shift+Enter** for a new line.
 
-You do not need an API key or a separate AI client. The Assistant uses your
-signed-in session and your current workspace permissions. **Help** remains an
-independent article reader; you can use it without asking the Assistant.
+You do not need an API key, OAuth connection, or a separate AI client. The
+Assistant uses your signed-in session and your current workspace permissions.
+**Help** remains an independent article reader; you can use it without asking
+the Assistant.
 
 ## Ask a focused question
 
@@ -28,7 +30,8 @@ information, try **“List the products in this workspace”** or **“Which rel
 have critical risks?”** You can select a suggested question to put it in the
 message box, then review it before sending.
 
-The Assistant can search public help and perform supported read operations
+The Assistant uses the full current shared MCP tool catalog, not every Aura
+workflow. It can search public help and perform supported read operations
 without asking for confirmation. Access to workspace information still depends
 on your role, access to the resource, and the workspace's plan. Not every Aura
 operation is available through chat.
@@ -56,16 +59,21 @@ Asking for a change does not authorize it. For a supported change, the Assistant
 shows a **Confirm change** card instead of immediately carrying it out.
 
 1. Review **Action**, **Target**, **Workspace**, **Changes**, and **Effect**.
+   For an upload, also check the **File** row after **Workspace**.
 2. Select **Cancel** if anything is wrong. Ask again with the intended details.
 3. To proceed, select the confirmation button labelled with the action, such as
    **Create product**. This explicit confirmation is required; replying **“yes”**
    in chat is not confirmation.
-4. Read the reported result and check the affected item when necessary.
+4. Read the human-readable result receipt and check the affected item when
+   necessary.
 
 A confirmation expires after **five minutes** and is single-use. It is tied to
 your signed-in session, workspace, and current chat. Switching workspaces
 cancels pending confirmations; switching back does not restore them. Clearing
-chat or stopping a turn also invalidates pending confirmations.
+chat or stopping a turn also invalidates pending confirmations. Cancelling or
+expiry leaves an unclaimed change unexecuted, but cannot undo an operation
+already sent for execution. An expired card has no **Retry** action: ask for a
+fresh proposal and review it again.
 
 The preview describes the proposed change, not a locked snapshot of the item.
 Someone else may change the item before you confirm. Aura checks permissions,
@@ -83,26 +91,85 @@ its current state before asking for the change again. There is no automatic
 mutation retry. Retrying a failed question is not a way to replay a confirmed
 change.
 
+## Attach a file for a supported upload
+
+1. Check the active workspace and enter an instruction naming the intended
+   operation and target. A file alone is not an instruction.
+2. Select the paperclip **Attach file** control and choose one file. You can attach
+   only **one file per message**. Use **Remove** to discard a mistaken selection.
+3. Select **Send**. Until then, the file stays local in your browser. Sending
+   transfers it to Aura as a temporary payload; it does not yet upload it to a
+   Product, release, or Trust Center document collection.
+4. Review the confirmation card, including **File**, target, settings, and effect.
+   Select the named upload action only when they are correct.
+
+The AI receives only the filename, type, size, and a reference for this turn—not
+the file's bytes. It does **not** read or summarize the attached file's contents.
+You do not need to encode it as base64 or paste its contents into chat. File
+metadata is not proof of what the file contains.
+
+The picker accepts non-empty files up to **4 MiB** as an initial size check.
+Operation-specific validation can reject a smaller file:
+
+- **SBOM:** the complete shared MCP request must fit **4 MiB including JSON
+  overhead**. Choose a supported UTF-8 SBOM document. This is smaller than the
+  regular dashboard upload allowance.
+- **VEX and Trust Center documents:** the decoded file limit is **2 MiB**, and
+  the complete request must still fit the 4 MiB limit. Existing format and
+  validation rules also apply.
+
+Temporary payloads are cleaned up when their lifecycle ends. Expired payload
+cleanup is opportunistic: the five-minute confirmation expiry is not a promise
+of physical deletion at exactly five minutes. Clearing chat does not delete
+completed native uploads or change their retention rules.
+
+### Review the upload's effect
+
+| Confirmation | What to check |
+| --- | --- |
+| **Upload SBOM** | Select an existing Product. Every accepted upload creates a new release, even for identical content or versions. Acceptance does not mean analysis has finished. See [Upload an SBOM](/sbom/upload-sbom/). |
+| **Import VEX** | Select the exact release and a CycloneDX VEX JSON file matching its captured SBOM. A current captured SBOM, Compliance evidence-management permission, release access, and a paid VEX-enabled plan are required. Import stores evidence and stages statements and conflicts; it does not apply or publish them. |
+| **Upload document** | Check the title, file, visibility, and watermark settings. Workspace-owner access and current Trust Center plan entitlement are required. Omitted settings default to **Gated** visibility and **Watermark: Yes**; review the explicit choices before confirming. Uploading a document does not publish a draft portal. See [Trust Center](/compliance/trust-center/). |
+
+## Save a finding decision or retry archive sync
+
+For **Save decision**, identify the exact release, component, and advisory, not
+just a component name. Review the full assessment fields—state, justification,
+response, details, and suppression—before confirming. Saving affects only that
+exact finding; suppression does not fix a vulnerability. Current finding access
+and permissions still apply. If the save is unconfirmed, refresh the assessment
+before trying again. See [VEX decisions](/risks/vex-decisions/).
+
+**Retry archive sync** retries pending release archive or restore
+synchronization. It does **not** retry SBOM ingestion or analysis.
+
+## Download an existing report
+
+Ask for an existing VEX/VDR report revision in the active workspace. This does
+not create an export or publish a report.
+
+1. Review the report and release on the confirmation card, then select
+   **Prepare download**.
+2. Check the filename, type, and size on the **File ready** card.
+3. Select **Download** to save the file. It never downloads automatically,
+   including after reloading chat. HTML reports are downloaded, not displayed
+   inline.
+
+Assistant downloads are limited to **1 MiB**. Aura checks current report access
+again when you click: withdrawal, a different active workspace, or lost workspace
+membership can prevent download even if a card remains visible. If the file is
+expired, missing, or no longer available, ask again; a fresh request cannot
+bypass lost permissions. Clearing chat invalidates its download cards.
+
 ## Use the regular dashboard for unsupported work
 
-The Assistant does not support:
-
-- file uploads or downloads;
-- saving finding decisions;
-- SBOM ingestion, including pasting serialized SBOM content into chat;
-- retrying release synchronization.
-
-It can explain an upload workflow, but you must perform the upload through the
-regular dashboard or a supported integration. See [Upload an SBOM](/sbom/upload-sbom/).
-Every accepted upload creates a new release, so inspect the product's releases
-before repeating an upload with an unclear outcome.
-
-Other human-only workflows also remain outside the Assistant. Use the regular
+Human-only workflows remain outside the Assistant. Use the regular
 dashboard for Reporting, Compliance approvals, export creation, VEX publication
 or withdrawal, API-key administration, workspace archival, member editing or
-removal, creating invitations, creating or switching workspaces, accepting
-invitations, billing, and sign-in. Do not assume that an operation is supported
-just because a related read operation is available.
+removal, leaving a workspace, creating invitations, creating or switching
+workspaces, accepting invitations, billing, sign-in, and public or gated visitor
+access flows. Do not assume that an operation is supported just because a related
+read operation is available.
 
 ## Understand saved history and privacy
 
@@ -135,8 +202,9 @@ chat.
 
 Clearing deletes your saved chat content across **all workspaces** and cancels
 changes waiting for confirmation. It does not undo completed changes, remove
-existing audit records, or delete provider-side records or gateway metadata. A
-change already executing can temporarily block clearing; wait for its result.
+existing audit records, delete completed native uploads, or delete provider-side
+records or gateway metadata. A change already executing can temporarily block
+clearing; wait for its result.
 Other open tabs recheck chat state rather than updating instantaneously. If
 prompted, select **Reload chat** before continuing.
 
@@ -163,7 +231,9 @@ request or read the relevant article directly in **Help**.
 | Assistant temporarily unavailable | Your saved chat remains. Use **Open Help** for articles and ask your administrator to check Assistant provider configuration and availability. |
 | Too many requests | Wait for the displayed countdown before trying again. Check the current state before repeating any change with an unknown outcome. |
 | Permission error or unsupported operation | Check the selected workspace, your access, and whether the operation is supported. Use the regular dashboard where appropriate; do not try to bypass the restriction through another prompt. |
-| Expired or cancelled confirmation | Ask again for a fresh proposal and review it. An old confirmation cannot be reused. |
+| Expired or cancelled confirmation | Ask again for a fresh proposal and review it. An old confirmation cannot be reused; expiry does not offer a Retry action. |
+| File rejected or too large | Check the operation's format and size limits, not just the picker's 4 MiB check. Attach a suitable file again with an instruction. |
+| Download no longer available | Check the active workspace and current report access, then ask again. A saved card does not preserve access to a withdrawn or missing report. |
 | Workspace access changed or chat was cleared in another tab | Select **Reload chat** when offered and check the active workspace before continuing. |
 | Help could not be searched or an article could not be read | Open **Help** and check the original article. Do not treat an unsourced answer as verified instructions. |
 
@@ -171,9 +241,11 @@ request or read the relevant article directly in **Help**.
 
 The dashboard Assistant uses your browser session and current workspace, with
 server-enforced confirmation for supported changes. An
-[external MCP client](/integrations/mcp-server/) instead uses a workspace-bound
-personal API key. Switching workspaces in the browser does not retarget that
-key. External-client confirmation is controlled by the client; the Assistant's
+[external MCP client](/integrations/mcp-server/) instead connects using OAuth or a
+personal API key, bound to the workspace selected for that connection. Switching
+workspaces in the browser does not retarget it. Both use the shared tool catalog,
+but the Assistant supplies its own file picker and confirmation flow.
+External-client confirmation is controlled by the client; the Assistant's
 confirmation cards do not add server-enforced confirmation to MCP calls or change
 which operations that connection supports.
 
@@ -183,3 +255,5 @@ which operations that connection supports.
 - [Connect an MCP client to Aura](/integrations/mcp-server/)
 - [Access and Permissions](/workspace-and-account/access-and-permissions/)
 - [Upload an SBOM](/sbom/upload-sbom/)
+- [VEX decisions](/risks/vex-decisions/)
+- [Trust Center](/compliance/trust-center/)

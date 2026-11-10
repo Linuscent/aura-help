@@ -37,6 +37,16 @@ is **unconfirmed**, inspect the current assessment before another explicit save:
 the first request may already have succeeded. Cancel or discard affects the
 draft, not an already saved decision.
 
+### Save with the Assistant
+
+On deployments with the updated [dashboard Assistant](/getting-started/dashboard-assistant/),
+you can ask to save a technical assessment for an exact release, component, and
+advisory. Review the complete assessment and suppression fields on the card
+before selecting **Save decision**. The same finding-access, permission, and
+plan rules apply; using chat does not unlock paid VEX workflows. If the result
+is unconfirmed, inspect the saved assessment before another explicit save.
+This does not capture Evidence, create a VEX report, or approve CRA compliance.
+
 ## Review suppressed findings
 
 Suppression removes a finding from the active Risks list; it does not remove the
@@ -69,6 +79,14 @@ the [Evidence workflow](/evidence/evidence-workflow/) for the complete steps.
 
 The existing rich VEX/VDR workflows require Pro or Team and the applicable workspace, product, release and evidence permissions. Free technical triage does not unlock paid Compliance evidence, VEX/VDR exports or Trust Center publication.
 
+The updated Assistant can separately **Import VEX** from an attached CycloneDX
+VEX JSON file that matches the release's current captured SBOM, with the required
+Compliance evidence-management permission and paid-plan access. Import retains
+evidence and stages statements and conflicts; it does not apply or publish them.
+It can also prepare a download of an **existing report**, not create an export.
+See [Assistant uploads and downloads](/getting-started/dashboard-assistant/#attach-a-file-for-a-supported-upload)
+for file limits, confirmation, and the explicit download step.
+
 ## Decision Context
 
 A VEX decision may include:
@@ -87,3 +105,4 @@ For separate human-led reportability assessments, see [How Aura supports CRA](/c
 - [Remediation](/risks/remediation/)
 - [Understanding Findings](/risks/understanding-findings/)
 - [Evidence Overview](/evidence/overview/)
+- [Use the dashboard Assistant](/getting-started/dashboard-assistant/)

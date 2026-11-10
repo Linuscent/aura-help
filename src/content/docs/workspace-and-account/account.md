@@ -4,9 +4,9 @@ description: Understand the account area and user-specific settings available in
 sidebar:
   order: 5
 ---
-Account Settings contains **Profile**, **Security**, **API Keys**, and
-**Billing**. You can open Account while signed in even if you no longer belong
-to a workspace.
+Account Settings contains **Profile**, **Security**, **API Keys**, **Billing**,
+and, on updated deployments, **Authorized apps**. You can open Account while
+signed in even if you no longer belong to a workspace.
 
 ## Account Management
 
@@ -60,6 +60,58 @@ Replace exposed keys and update clients that used them.
 Keys marked **Read and write (legacy)** retain role-limited access. To restrict
 one to read-only access, create a replacement key, update its clients, and revoke
 the old key.
+
+## Authorized apps
+
+Ask your administrator whether OAuth connection is available on your updated
+Aura deployment. Where available, start from an approved, pre-registered app,
+sign in to Aura, and explicitly choose one workspace to approve. See
+[Connect with OAuth](/integrations/mcp-server/#connect-with-oauth).
+
+Open **Account → Authorized apps** to review your own authorizations across
+workspaces, including workspaces you can no longer access. The list records
+approval, not proof that an app finished connecting.
+
+Each authorization grants **Full MCP access** in its selected workspace:
+supported reads and writes through current tools and tools Aura adds later,
+limited on every request by your current role, resource permissions, and
+workspace plan. It does not include actions reserved for the Aura dashboard.
+Switching the website's active workspace does not retarget an app.
+
+| Status | Meaning |
+| --- | --- |
+| **Authorized** | The authorization currently permits access, subject to current permissions. This does not confirm that the app finished connecting. |
+| **Expired** | The authorization is no longer usable. Start from the app for a new approval if you still want access. |
+| **Workspace access lost** | The authorization can no longer use that workspace. Check your workspace access before starting a new approval. |
+| **Removed** | The authorization no longer permits access. Its row remains in the list. |
+
+When offered during approval, **Stay connected for up to 30 days** is optional
+and unchecked. If you leave it off, the app may need you to reconnect soon.
+**Stays connected**
+with an **Until** date appears only for a currently authorized app with continued
+access; inactive rows do not show a future date. Signing out of the Aura website
+does **not** revoke app authorization.
+
+### Remove an authorization
+
+1. Open **Account → Authorized apps** and find the app and workspace.
+2. Select **Remove**, then confirm with **Remove authorization**.
+3. Check that the row shows **Removed**. If removal cannot be confirmed, inspect
+   the current list before trying again.
+
+Removal permanently denies future access under that authorization. It does not
+undo earlier changes, and requests already in progress may finish, including
+writes. You can remove your authorization even after leaving its workspace.
+To allow access again, start from the app and approve a new request.
+
+Approving the same app for the same workspace replaces its previous
+authorization, which stops working. Selecting **Deny** on a new request leaves
+existing authorizations unchanged. If an approval result is uncertain, inspect
+this list before repeating approval.
+
+API keys are separate: removing an app authorization does not revoke API keys,
+and revoking an API key does not remove an app authorization. Manage keys
+under **Account → API Keys**.
 
 ## Manage subscriptions you pay for
 
