@@ -63,6 +63,17 @@ A processed release can show summary information such as:
 
 Use the release to continue into more detailed views where available.
 
+## Review firmware for a release
+
+On the release's **Overview**, open the **Firmware** panel to review a saved
+static advisory if you can read the release's vulnerability results. If firmware
+analysis is available and you can manage the release, you can upload a binary
+and then request analysis separately.
+
+See [Analyze release firmware](/products-and-releases/firmware-analysis/) for
+upload, replacement, and advisory review. The advisory is not a new vulnerability
+scan or a release approval.
+
 ## Working with multiple releases
 
 A product can contain multiple releases.
@@ -71,6 +82,7 @@ Because every accepted SBOM upload creates a new release, the product keeps sepa
 
 ## Related articles
 
+- [Analyze release firmware](/products-and-releases/firmware-analysis/)
 - [Create a product](/products-and-releases/create-product)
 - [Releases](/products-and-releases/releases)
 - [Products and releases](/products-and-releases/overview)

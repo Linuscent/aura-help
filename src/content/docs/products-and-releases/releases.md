@@ -70,6 +70,18 @@ In the release list, the **Upload** column shows when the upload was accepted
 
 If a release does not reach the expected state, see [Troubleshoot an SBOM](/sbom/troubleshoot-sbom).
 
+## Review release firmware
+
+When firmware analysis is available, release managers can upload a binary from
+the **Firmware** panel on the release's **Overview**. Uploading does not start
+analysis. Select **Analyze firmware** once the release's vulnerability results
+are complete and readable. A completed report with zero findings is valid.
+
+The saved static advisory compares firmware observations with saved release
+results, not a fresh vulnerability scan. See [Analyze release
+firmware](/products-and-releases/firmware-analysis/) for permissions, coverage,
+evidence, retry, and replacement behavior.
+
 ## Release names
 
 Aura labels each release by its declared version and upload time, for example
@@ -118,6 +130,7 @@ Release-level records help teams answer questions such as:
 
 ## Related articles
 
+- [Analyze release firmware](/products-and-releases/firmware-analysis/)
 - [Product overview](/products-and-releases/product-overview)
 - [Active release monitoring](/products-and-releases/active-release-monitoring)
 - [Products and releases](/products-and-releases/overview)

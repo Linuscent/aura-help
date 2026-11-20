@@ -51,6 +51,24 @@ workspace. If Aura says the requested product and release are unavailable or do
 not match, choose **Clear unavailable selection**, then select an accessible
 product and release. Aura does not substitute another workspace's finding.
 
+## Distinguish firmware observations from vulnerability findings
+
+A firmware static advisory compares observations with saved release SBOM and
+vulnerability results; it does not perform a fresh vulnerability scan. Check the
+snapshot capture time, coverage, limitations, and supporting evidence. An
+observed but undeclared component has not been checked for known vulnerabilities
+by this workflow. Missing observations or zero saved findings are not clearance.
+
+Firmware upload does not start analysis. **Analyze firmware** requires complete,
+readable release vulnerability results, including a valid completed report with
+zero findings. New findings do not automatically rerun a successful analysis.
+
+If a firmware upload's status is unknown, select **Refresh firmware status**
+before uploading again. If firmware analysis is unavailable, contact your Aura
+operator; recorded advisories remain readable with the appropriate result
+access. See [Analyze release firmware](/products-and-releases/firmware-analysis/)
+for manual retry and replacement behavior.
+
 ## Important Note
 
 Finding results should be interpreted using product context and
@@ -58,6 +76,7 @@ available assessment information.
 
 ## Related articles
 
+- [Analyze release firmware](/products-and-releases/firmware-analysis/)
 - [Integration Issues](/troubleshooting/integration-issues/)
 - [Troubleshooting Overview](/troubleshooting/)
 - [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/)
