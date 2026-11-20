@@ -191,9 +191,10 @@ Help is available in the normal workspace dashboard, not the onboarding screen b
 
 ## Ask the Assistant
 
-In deployments that include **Assistant**, select it in the left navigation to
-ask about Aura or your active workspace. Try **“How do I upload an SBOM?”** or
-**“Which releases have critical risks?”** Supported reads can run automatically;
+In deployments that include **Assistant**, select the robot button in the
+bottom-right corner of the dashboard to ask about Aura or your active workspace.
+Its accessible name is **Open chat with agent**. Try **“How do I upload an SBOM?”**
+or **“Which releases have critical risks?”** Supported reads can run automatically;
 supported changes require an explicit confirmation card. **Help** remains
 available as an independent article reader. Check answers against the source
 articles and current data. See [Use the dashboard Assistant](/getting-started/dashboard-assistant/)

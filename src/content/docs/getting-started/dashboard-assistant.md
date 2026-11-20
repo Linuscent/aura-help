@@ -12,7 +12,8 @@ If it is not available, ask your Aura administrator whether your deployment
 includes it.
 
 1. Sign in to Aura and select the workspace you want to work in.
-2. Select **Assistant** in the left navigation.
+2. Select the robot button in the bottom-right corner of the dashboard. Its
+   accessible name is **Open chat with agent**.
 3. Check the active workspace before sending a question; it sets the context for
    workspace requests.
 4. Enter your question and select **Send**. Press **Shift+Enter** for a new line.
