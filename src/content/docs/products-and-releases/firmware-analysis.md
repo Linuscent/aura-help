@@ -23,8 +23,8 @@ does not offer a raw firmware download.
 
 ## Upload a firmware binary
 
-1. Open the product, then go to **Overview** for the release you want to review.
-2. In the release's **Firmware** panel, select **Upload firmware**.
+1. In **Products**, open the product and select the release you want to review.
+2. Select the **Firmware Analysis** tab, then select **Upload firmware**.
 3. Choose a non-empty firmware binary within the maximum size displayed in the
    dialog. The default is **100 MB (100,000,000 bytes)**, using decimal MB, but
    your operator may configure a different limit.
@@ -60,8 +60,9 @@ these steps:
 3. **Compare with release results**
 4. **Prepare advisory**
 
-You can leave the page while analysis is queued or running. An open, visible
-release page updates as progress is recorded. If the live connection is lost,
+You can leave the tab while analysis is queued or running. The **Firmware
+Analysis** tab shows the latest saved progress when you return and updates as
+progress is recorded while it is visible. If the live connection is lost,
 the panel retains the last-known status while reconnecting and falls back to
 refreshing. Select **Refresh firmware status** to check the saved status yourself.
 

@@ -63,9 +63,9 @@ Firmware upload does not start analysis. **Analyze firmware** requires complete,
 readable release vulnerability results, including a valid completed report with
 zero findings. New findings do not automatically rerun a successful analysis.
 
-If a firmware upload's status is unknown, select **Refresh firmware status**
-before uploading again. If firmware analysis is unavailable, contact your Aura
-operator; recorded advisories remain readable with the appropriate result
+If a firmware upload's status is unknown, open **Firmware Analysis** and select
+**Refresh firmware status** before uploading again. If analysis is unavailable,
+contact your Aura operator; recorded advisories remain readable with the appropriate result
 access. See [Analyze release firmware](/products-and-releases/firmware-analysis/)
 for manual retry and replacement behavior.
 
