@@ -70,12 +70,34 @@ In the release list, the **Upload** column shows when the upload was accepted
 
 If a release does not reach the expected state, see [Troubleshoot an SBOM](/sbom/troubleshoot-sbom).
 
+## Navigate a release
+
+Use **Overview**, **Components**, **Risks**, or **Firmware Analysis** to inspect
+the same release. The release header stays in view when you switch tabs, and
+each tab has its own link.
+
+To review another release, select **Back to {product} releases**. Use **Search
+releases** or choose a release from that product's list.
+
+## Review release firmware
+
+When firmware analysis is available, release managers can upload a binary from
+the release's **Firmware Analysis** tab. Uploading does not start
+analysis. Select **Analyze firmware** once the release's vulnerability results
+are complete and readable. A completed report with zero findings is valid.
+
+The saved static advisory compares firmware observations with saved release
+results, not a fresh vulnerability scan. See [Analyze release
+firmware](/products-and-releases/firmware-analysis/) for permissions, coverage,
+evidence, retry, and replacement behavior.
+
 ## Release names
 
 Aura labels each release by its declared version and upload time, for example
 **1.0.0 · 25 Sep 2026, 12:50**, or **Unversioned · …** when the SBOM has no
-version. Each release also has a longer technical name; use the copy button next
-to the label if you need it, for example for support.
+version. **Copy release ID** copies the release identifier, not its technical
+name. When the technical name is displayed, use its separate copy control if
+you need the name for support.
 
 ## Record optional release dates
 
@@ -118,6 +140,7 @@ Release-level records help teams answer questions such as:
 
 ## Related articles
 
+- [Analyze release firmware](/products-and-releases/firmware-analysis/)
 - [Product overview](/products-and-releases/product-overview)
 - [Active release monitoring](/products-and-releases/active-release-monitoring)
 - [Products and releases](/products-and-releases/overview)

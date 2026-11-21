@@ -61,16 +61,31 @@ A processed release can show summary information such as:
 - High vulnerabilities;
 - Components.
 
-Use the release to continue into more detailed views where available.
+Open a release to switch between **Overview**, **Components**, **Risks**, and
+**Firmware Analysis** without changing which release you're viewing.
+
+## Review firmware for a release
+
+On the release, select **Firmware Analysis** to review a saved
+static advisory if you can read the release's vulnerability results. If firmware
+analysis is available and you can manage the release, you can upload a binary
+and then request analysis separately.
+
+See [Analyze release firmware](/products-and-releases/firmware-analysis/) for
+upload, replacement, and advisory review. The advisory is not a new vulnerability
+scan or a release approval.
 
 ## Working with multiple releases
 
-A product can contain multiple releases.
+A product can contain multiple releases. From an open release, select
+**Back to {product} releases** to return to the product, then use **Search
+releases** or choose another release from the list.
 
 Because every accepted SBOM upload creates a new release, the product keeps separate release records for different uploads over time.
 
 ## Related articles
 
+- [Analyze release firmware](/products-and-releases/firmware-analysis/)
 - [Create a product](/products-and-releases/create-product)
 - [Releases](/products-and-releases/releases)
 - [Products and releases](/products-and-releases/overview)
