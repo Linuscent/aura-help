@@ -45,9 +45,10 @@ analysis. Closing the page does not undo a confirmed upload.
 3. Review the selected binary, release comparison, and data-processing notice,
    then confirm with **Analyze firmware**.
 
-Derived text is processed by a model on Cloudflare; the binary and extracted
-files are not sent to the model. The model prioritizes existing observations and
-supporting evidence. It does not create vulnerability findings or assign severity.
+Only limited text describing what analysis found is sent to a third-party AI
+provider. The firmware file, extracted files, and Assistant chat are not sent.
+AI prioritizes existing observations and supporting evidence. It does not
+create vulnerability findings or assign severity.
 
 ## Follow progress
 

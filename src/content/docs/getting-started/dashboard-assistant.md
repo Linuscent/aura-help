@@ -120,12 +120,9 @@ without replaying operations. **Load earlier messages** retrieves older history,
 but the AI receives only a bounded portion of the current workspace's conversation,
 not everything you have ever saved.
 
-Cloudflare processes your messages and the necessary tool results to generate
-answers. Aura configures gateway logging for request metadata, not raw prompt or
-response payloads. That logging setting does not mean there is no provider-side
-processing or retention: Cloudflare's separate terms and retention practices
-apply. Do not put passwords, API keys, session tokens, or other credentials in
-chat.
+A third-party AI provider processes your messages and the necessary tool
+results to generate answers. Do not put passwords, API keys, session tokens,
+or other credentials in chat.
 
 ### Clear your chat
 
@@ -135,7 +132,7 @@ chat.
 
 Clearing deletes your saved chat content across **all workspaces** and cancels
 changes waiting for confirmation. It does not undo completed changes, remove
-existing audit records, or delete provider-side records or gateway metadata. A
+existing audit records, or guarantee deletion of provider-side records. A
 change already executing can temporarily block clearing; wait for its result.
 Other open tabs recheck chat state rather than updating instantaneously. If
 prompted, select **Reload chat** before continuing.
@@ -179,6 +176,7 @@ which operations that connection supports.
 
 ## Related articles
 
+- [Model product threats](/risks/threat-modeling/)
 - [First steps in Aura](/getting-started/first-steps/)
 - [Connect an MCP client to Aura](/integrations/mcp-server/)
 - [Access and Permissions](/workspace-and-account/access-and-permissions/)
