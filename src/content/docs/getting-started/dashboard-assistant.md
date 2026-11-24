@@ -37,6 +37,15 @@ Some apparently read-only requests can initialize workspace settings. For
 example, the first read of certain Compliance or Trust Center information can
 create baseline records. Those operations also require confirmation.
 
+### Choose a suggested reply
+
+When the Assistant asks you to choose, select a **Suggested reply** or type an
+answer in your own words. Selecting a button sends that answer without
+replacing anything already in the composer. It does not approve a change.
+On **Diagram** and **STRIDE**, drafting choices belong to the matching product
+and tab. Where ordinary alternatives are shown as text, type your choice.
+If a choice is out of date, type your reply instead.
+
 ### Check the answer and its sources
 
 Activity messages show when the Assistant searches help or opens an article.
@@ -54,6 +63,9 @@ cannot verify procedural instructions from that article.
 
 Asking for a change does not authorize it. For a supported change, the Assistant
 shows a **Confirm change** card instead of immediately carrying it out.
+On the [Threat model](/risks/threat-modeling/) page, **Draft with Assistant**
+can show a proposal directly. Select **Apply** on the card to save it or
+**Cancel** to leave the model unchanged.
 
 1. Review **Action**, **Target**, **Workspace**, **Changes**, and **Effect**.
 2. Select **Cancel** if anything is wrong. Ask again with the intended details.
