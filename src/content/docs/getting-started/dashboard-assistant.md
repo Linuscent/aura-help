@@ -37,6 +37,26 @@ Some apparently read-only requests can initialize workspace settings. For
 example, the first read of certain Compliance or Trust Center information can
 create baseline records. Those operations also require confirmation.
 
+### Ask about the current page or tab
+
+Ordinary Assistant chat can use a hint for the recognized dashboard page and
+supported tab active when you **send or retry** a message. If you navigate while
+chat stays open, the next send or retry uses the page and supported tab active
+then, not the ones active when you opened chat.
+
+For example, on **Threat model → STRIDE review**, you can ask **“What does this
+tab show?”** The hint supplies the page and supported tab names, not the page
+contents. **Trust Center** supplies the page name but not its open tab.
+
+For record-specific questions, name the **Product or release explicitly**. The
+hint does not identify the selected record, read page contents, or authorize
+actions. If the page is not recognized, or the Assistant misunderstands
+**“here”**, include the page and tab names in your question too.
+
+This ordinary-chat hint is separate from **Draft with Assistant** on the
+[Threat model](/risks/threat-modeling/) page; that workflow still uses its
+selected Product and active drafting tab and requires **Apply** to save a proposal.
+
 ### Choose a suggested reply
 
 When the Assistant asks you to choose, select a **Suggested reply** or type an

@@ -33,6 +33,15 @@ Read article links and use **Back** within the panel. **Open in new tab** opens 
 
 If published documentation is unavailable, select **Retry**. A Help loading failure does not change the original page. Help is available in the normal workspace dashboard, not onboarding before you have a workspace.
 
+## The Assistant misunderstands “here”
+
+Name the **page and tab**, plus the **Product or release** for record-specific
+questions. Ordinary chat uses a recognized page and supported tab hint from the
+time you send or retry, even if chat stays open as you navigate. The hint does
+not identify the selected record or read page contents; Trust Center supplies
+only its page name, not its open tab. See
+[Ask about the current page or tab](/getting-started/dashboard-assistant/#ask-about-the-current-page-or-tab).
+
 ## Product or upload outcome is unclear
 
 Inspect **Products** and the relevant product's releases before submitting again. Check additional list pages and searches; a stale or empty result is not proof that nothing was created. Closing an import dialog does not delete its saved product or accepted release. Each accepted upload creates another release, even for identical content.
