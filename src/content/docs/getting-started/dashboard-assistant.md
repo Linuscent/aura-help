@@ -12,7 +12,8 @@ If it is not available, ask your Aura administrator whether your deployment
 includes it.
 
 1. Sign in to Aura and select the workspace you want to work in.
-2. Select **Assistant** in the left navigation.
+2. Open **Assistant**. If your dashboard shows a floating chat button, select
+   **Open chat with agent**.
 3. Check the active workspace before sending a question; it sets the context for
    workspace requests.
 4. Enter your question and select **Send**. Press **Shift+Enter** for a new line.
@@ -55,15 +56,16 @@ actions. If the page is not recognized, or the Assistant misunderstands
 
 This ordinary-chat hint is separate from **Draft with Assistant** on the
 [Threat model](/risks/threat-modeling/) page; that workflow still uses its
-selected Product and active drafting tab and requires **Apply** to save a proposal.
+selected Product and active drafting tab. For diagram drafting from chat,
+include the exact Product name.
 
 ### Choose a suggested reply
 
 When the Assistant asks you to choose, select a **Suggested reply** or type an
 answer in your own words. Selecting a button sends that answer without
 replacing anything already in the composer. It does not approve a change.
-On **Diagram** and **STRIDE**, drafting choices belong to the matching product
-and tab. Where ordinary alternatives are shown as text, type your choice.
+On **Diagram** and **STRIDE review**, drafting choices belong to the matching
+Product and tab. Where ordinary alternatives are shown as text, type your choice.
 If a choice is out of date, type your reply instead.
 
 ### Check the answer and its sources
@@ -82,10 +84,9 @@ cannot verify procedural instructions from that article.
 ## Confirm a supported change
 
 Asking for a change does not authorize it. For a supported change, the Assistant
-shows a **Confirm change** card instead of immediately carrying it out.
-On the [Threat model](/risks/threat-modeling/) page, **Draft with Assistant**
-can show a proposal directly. Select **Apply** on the card to save it or
-**Cancel** to leave the model unchanged.
+normally shows a **Confirm change** card instead of immediately carrying it out.
+Diagram drafts use a separate review step where page-based draft review is
+available.
 
 1. Review **Action**, **Target**, **Workspace**, **Changes**, and **Effect**.
 2. Select **Cancel** if anything is wrong. Ask again with the intended details.
@@ -114,6 +115,33 @@ If the Assistant reports an unknown outcome, open the affected item and inspect
 its current state before asking for the change again. There is no automatic
 mutation retry. Retrying a failed question is not a way to replay a confirmed
 change.
+
+## Review a diagram draft
+
+Where page-based diagram review is available, type **“Draft a diagram for
+Gateway”**, replacing **Gateway** with the exact Product name, or select **Draft
+with Assistant** on the Product's **Diagram** tab. Both routes show **Review
+draft** in chat when a draft is ready. Follow it to that Product's **Threat
+model** page. The draft expires after 30 minutes; only **Apply draft** on that
+page saves a revision. Use **Discard draft** to leave the saved model unchanged.
+
+If nothing changed, there is no approval card. If you can't tell whether a draft
+was prepared, check chat for **Review draft** before trying again. If you can't
+tell whether **Apply draft** saved, check **Version history** first. Aura does not
+automatically retry that save. Layout-only requests and pending STRIDE
+suggestions still use inline confirmation. See [Model product
+threats](/risks/threat-modeling/#draft-and-review-a-diagram).
+
+## Check firmware analysis
+
+Where Assistant firmware actions are available, type a question naming the
+exact Product and release, such as **“What's the firmware status for Gateway,
+release 1.2?”** You can also ask about the saved advisory or explicitly request
+the first analysis of an eligible uploaded binary. Review the release and file
+details before selecting **Start analysis**. Use **Open Firmware Analysis** to
+check progress, read the full saved advisory, or verify whether an uncertain
+start succeeded. Upload, replacement, and retry stay on the release page.
+See [Ask the Assistant about firmware](/products-and-releases/firmware-analysis/#ask-the-assistant-about-firmware).
 
 ## Use the regular dashboard for unsupported work
 
@@ -201,8 +229,9 @@ request or read the relevant article directly in **Help**.
 The dashboard Assistant uses your browser session and current workspace, with
 server-enforced confirmation for supported changes. An
 [external MCP client](/integrations/mcp-server/) instead uses a workspace-bound
-personal API key. Switching workspaces in the browser does not retarget that
-key. External-client confirmation is controlled by the client; the Assistant's
+personal API key or, where available, a workspace-bound OAuth authorization.
+Switching workspaces in the browser does not retarget either connection.
+External-client confirmation is controlled by the client; the Assistant's
 confirmation cards do not add server-enforced confirmation to MCP calls or change
 which operations that connection supports.
 

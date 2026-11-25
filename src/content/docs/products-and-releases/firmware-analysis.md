@@ -50,6 +50,28 @@ provider. The firmware file, extracted files, and Assistant chat are not sent.
 AI prioritizes existing observations and supporting evidence. It does not
 create vulnerability findings or assign severity.
 
+## Ask the Assistant about firmware
+
+Where Assistant firmware actions are available, type a request naming the exact
+Product and release, such as **“What's the firmware status for Gateway, release
+1.2?”** or **“Summarize the firmware advisory for Gateway, release 1.2.”**
+If releases share a version, use the exact technical name, for example
+`Firmware status for Gateway, release name "gateway-1.2-build-18"`.
+Put names with punctuation in double quotes. The page hint alone does not
+select a release.
+
+To request the first analysis of an eligible uploaded binary, type **“Start
+firmware analysis for Gateway, release 1.2.”** On the confirmation
+card, check the release, filename, size, upload time, and SHA-256 before
+selecting **Start analysis**. Consent applies only to that exact upload; it
+cannot start analysis for a replacement, even if the filename is the same.
+
+Chat starts the same job as the release page, but it does not monitor progress.
+Select **Open Firmware Analysis** for progress or the full saved advisory and
+its evidence. A chat summary reflects the saved comparison, not a new scan or
+release approval. Uploading, replacing, and retrying firmware analysis are
+available only on the release page; an upload never starts analysis by itself.
+
 ## Follow progress
 
 In **Analysis progress**, **Queued** means the request is waiting to start;
@@ -147,6 +169,9 @@ upload blocks another upload and analysis.
   to check the deployment upload limit before retrying.
 - **Upload status unknown:** select **Refresh firmware status** before uploading
   again. Do not assume that a missing confirmation means the upload failed.
+- **Not sure analysis started:** open the exact release's **Firmware Analysis**
+  tab and select **Refresh firmware status** before asking or submitting again.
+  A missing confirmation does not mean the job failed to start.
 - **Status cannot be read:** use **Reload** or **Refresh firmware status**.
   Actions remain unavailable until the status can be read.
 - **Analysis is waiting for results:** check that the selected release's
@@ -163,6 +188,7 @@ upload blocks another upload and analysis.
 ## Related articles
 
 - [Releases](/products-and-releases/releases/)
+- [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
 - [Product overview](/products-and-releases/product-overview/)
 - [Missing or Unexpected Findings](/troubleshooting/missing-or-unexpected-findings/)
 - [Evidence Review](/evidence/evidence-review/)

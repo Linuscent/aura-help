@@ -42,6 +42,17 @@ not identify the selected record or read page contents; Trust Center supplies
 only its page name, not its open tab. See
 [Ask about the current page or tab](/getting-started/dashboard-assistant/#ask-about-the-current-page-or-tab).
 
+## A diagram draft or firmware start is uncertain
+
+If you can't tell whether the Assistant prepared a diagram draft, check chat
+for **Review draft**. After an uncertain **Apply draft**, check the Product's
+**Version history** before trying again. See [Diagram draft
+recovery](/risks/threat-modeling/#if-the-draft-or-save-outcome-is-unclear).
+
+If you can't tell whether firmware analysis started, check the exact release's
+**Firmware Analysis** tab before submitting again. See [Firmware status and
+action troubleshooting](/products-and-releases/firmware-analysis/#troubleshoot-unavailable-actions-or-uncertain-status).
+
 ## Product or upload outcome is unclear
 
 Inspect **Products** and the relevant product's releases before submitting again. Check additional list pages and searches; a stale or empty result is not proof that nothing was created. Closing an import dialog does not delete its saved product or accepted release. Each accepted upload creates another release, even for identical content.

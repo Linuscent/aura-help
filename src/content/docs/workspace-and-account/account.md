@@ -5,8 +5,8 @@ sidebar:
   order: 5
 ---
 Account Settings contains **Profile**, **Security**, **API Keys**, and
-**Billing**. You can open Account while signed in even if you no longer belong
-to a workspace.
+**Billing**. Where OAuth for MCP is available, it also lists **Authorized apps**.
+You can open Account while signed in even if you no longer belong to a workspace.
 
 ## Account Management
 
@@ -60,6 +60,23 @@ Replace exposed keys and update clients that used them.
 Keys marked **Read and write (legacy)** retain role-limited access. To restrict
 one to read-only access, create a replacement key, update its clients, and revoke
 the old key.
+
+## Review and remove authorized apps
+
+Open **Account → Authorized apps** to review OAuth authorizations across
+workspaces. This is separate from **API Keys**. Check the app and workspace
+here if you aren't sure whether approval was recorded. **Deny** on a new
+request does not remove a previous authorization.
+
+To disconnect an app, find its entry for the intended workspace, select
+**Remove**, then **Remove authorization**. You can do this even after losing
+access to that workspace. If the result is unclear, check the refreshed list
+before trying again.
+
+Signing out of Aura does not remove authorizations. Removal blocks future
+access under that authorization; it does not undo changes or stop requests
+already in progress. See [Connect with OAuth](/integrations/mcp-server/#connect-with-oauth)
+for what an app can access and the optional stay-connected setting.
 
 ## Manage subscriptions you pay for
 
