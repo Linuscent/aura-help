@@ -18,16 +18,16 @@ manage the release and depend on your Aura operator's configuration. If you can
 read the release's vulnerability results, you can read its saved firmware
 advisory and supporting evidence.
 
-A release can have one current firmware binary. Aura stores it privately and
-does not offer a raw firmware download.
+A release can have one current firmware binary. Uploads are sent through Aura
+and stored privately. Aura does not offer a raw firmware download.
 
 ## Upload a firmware binary
 
 1. In **Products**, open the product and select the release you want to review.
 2. Select the **Firmware Analysis** tab, then select **Upload firmware**.
 3. Choose a non-empty firmware binary within the maximum size displayed in the
-   dialog. The default is **100 MB (100,000,000 bytes)**, using decimal MB, but
-   your operator may configure a different limit.
+   dialog. The default is **100 MB (100,000,000 bytes)**, using decimal MB.
+   Larger uploads are available only if your deployment accepts them.
 4. Select **Upload firmware** and wait for confirmation.
 
 Uploading does not start analysis. A completed upload shows the filename, size,
@@ -133,16 +133,18 @@ Select **Replace firmware**, choose the new binary, review the replacement
 notice, and confirm **Replace firmware**.
 
 The current binary and advisory stay current until the replacement upload
-succeeds. If the upload fails, they are kept. After successful replacement, the
-old binary and advisory are no longer accessible through Aura; only minimal
-replacement audit information remains. Uploading the replacement does not start
-analysis: request it separately when the release results are ready.
+succeeds. If the upload fails or is canceled, they are kept. After successful
+replacement, the old binary and advisory are no longer accessible through Aura;
+only minimal replacement audit information remains. Uploading the replacement
+does not start analysis: request it separately when the release results are ready.
 
 Queued or running analysis blocks replacement and another analysis. A pending
 upload blocks another upload and analysis.
 
 ## Troubleshoot unavailable actions or uncertain status
 
+- **Uploads repeatedly rejected within the shown limit:** ask your Aura operator
+  to check the deployment upload limit before retrying.
 - **Upload status unknown:** select **Refresh firmware status** before uploading
   again. Do not assume that a missing confirmation means the upload failed.
 - **Status cannot be read:** use **Reload** or **Refresh firmware status**.
