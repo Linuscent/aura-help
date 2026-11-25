@@ -57,8 +57,19 @@ jobs:
               grep -Fxv 'refs/remotes/origin/HEAD' || true)
             commits=$(git rev-list --reverse "$HEAD_SHA" --not "${other_refs[@]}")
           else
-            # Default-branch pushes must retain their full pre-push history.
             if [[ "$BRANCH_REF" == "refs/heads/$DEFAULT_BRANCH" ]]; then
+              # A history rewrite can leave the pre-push tip outside checkout.
+              if [[ ! "$BASE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+                echo "::error::Invalid pre-push commit SHA for the default branch." >&2
+                exit 1
+              fi
+              if ! git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
+                if ! git fetch --no-tags --no-recurse-submodules --no-write-fetch-head origin "$BASE_SHA" ||
+                   ! git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
+                  echo "::error::Cannot resolve pre-push commit $BASE_SHA for the default branch; cannot validate the pushed range." >&2
+                  exit 1
+                fi
+              fi
               commits=$(git rev-list --reverse "$BASE_SHA..$HEAD_SHA")
             else
               # Updating a feature branch from main must not re-lint history
