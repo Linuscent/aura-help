@@ -1,6 +1,6 @@
 ---
 title: Connect an MCP client to Aura
-description: Connect an MCP client with a workspace API key to read Aura data, use documentation tools, and safely manage supported workflows.
+description: Connect an MCP client with a workspace API key or an approved OAuth app, and review what each connection can access.
 sidebar:
   order: 6
 ---
@@ -8,9 +8,11 @@ sidebar:
 ## Before you connect
 
 Aura's Model Context Protocol (MCP) server lets a compatible client work with
-your workspace. You need an Aura deployment that includes MCP support, access
-to the workspace, and a client that supports **Streamable HTTP with custom
-headers**. Do not assume every Aura deployment already offers this endpoint.
+your workspace. You need an Aura deployment that supports your connection
+method, access to the workspace, and a compatible **Streamable HTTP** client.
+Use an [API key](#connect-with-an-api-key) if the client supports custom headers.
+Use [OAuth](#connect-with-oauth) only if your Aura operator has registered the
+compatible client for your deployment.
 
 This connection can read and change workspace data. If you only want public
 help articles, use the separate [help-only connection](#help-only-connection).
@@ -18,16 +20,17 @@ help articles, use the separate [help-only connection](#help-only-connection).
 The [dashboard Assistant](/getting-started/dashboard-assistant/) is a separate
 browser-session feature for deployments that include it; it needs no personal
 API key or external client. It follows the active workspace and requires
-server-enforced confirmation for supported changes. This MCP connection remains
-bound to its API key's workspace, and its confirmation policy remains controlled
-by your client. The Assistant does not change this connection's capabilities.
+server-enforced confirmation for supported changes. Each MCP connection stays
+bound to its chosen workspace, and its confirmation policy is controlled by
+your client. The Assistant does not change the MCP connection's capabilities.
 
-## Set up the connection
+## Connect with an API key
 
 1. Open **Account → API Keys → Create API key** in Aura.
-2. Choose the workspace the client should access, name the key, and choose its
-   expiry. Use **Read only** for inspection, or **Read and write** for supported
-   mutations within your own permissions. Copy the secret when it is shown;
+2. Explicitly choose the workspace the client should access, name the key, and
+   choose its expiry. Keep **Read only** (the default) for inspection. Choose
+   **Read and write** only if needed for supported changes; it never grants
+   more than your current permissions. Copy the secret when it is shown;
    it is shown only once. The Workspace Settings shortcut can preselect a
    workspace, but key management is in Account.
 3. Add a remote MCP server in your client using these settings:
@@ -44,8 +47,8 @@ by your client. The Assistant does not change this connection's capabilities.
    Products in the key's workspace without changing them. An empty list can be
    a valid result.
 
-Aura does not offer interactive OAuth sign-in for this connection. Browser
-session cookies and the `X-Api-Key` header are not authentication fallbacks.
+The `/api/mcp` endpoint accepts API-key Bearer authentication, not OAuth sign-in.
+Browser session cookies and the `X-Api-Key` header are not fallbacks.
 
 Store the key in your client's secret store or supported environment-variable
 mechanism. Never put it in a URL, prompt, source file, shared configuration, or
@@ -64,6 +67,31 @@ MCP-tool scopes. Every call checks access, including applicable resource,
 role, and plan restrictions. Revoking the key, removing its owner from the
 workspace, or archiving the workspace prevents further access. A tool appearing
 in discovery does **not** mean your key is authorized to use it.
+
+## Connect with OAuth
+
+Use this option only where OAuth for MCP is available and your Aura operator
+has registered your compatible client. OAuth here authorizes MCP, not ordinary
+Aura API requests.
+
+1. In your client, use `https://<your-aura-host>/api/mcp/oauth`, not the API-key
+   URL or header. Start the client's sign-in flow.
+2. Sign in to Aura and check the app and account. Explicitly select one
+   workspace, even if only one is offered. Changing your active workspace later
+   does not retarget the connection.
+3. Review the access before selecting **Approve access**. This is not read-only:
+   it covers all supported MCP operations, including writes that your current
+   role, resource permissions, and workspace plan allow. There is no per-tool
+   selection, and Aura does not prompt before each MCP write. If shown,
+   **Stay connected for up to 30 days** is optional and unchecked. Leave it off
+   unless you want the app to retain access in the background.
+4. Select **Deny** if you don't want to grant access. Denying creates no new
+   authorization and leaves any previous one in place.
+
+**Approval recorded** does not mean the client finished connecting. If approval
+is uncertain, check **Account → Authorized apps** for the app and workspace
+before trying again. Signing out of Aura does not remove access; see
+[Review and remove authorized apps](/workspace-and-account/account/#review-and-remove-authorized-apps).
 
 ## Find help from the client
 
@@ -99,9 +127,9 @@ Depending on permissions and plan, the available categories include:
 
 ### Read the workspace overview or a release
 
-Call `dashboard_insights` with arguments `{}` to read the overview for the API
-key's bound workspace. It does not accept a `query` object, a Product or release
-selection, a scope, or a time window.
+Call `dashboard_insights` with arguments `{}` to read the overview for the
+connection's bound workspace. It does not accept a `query` object, a Product
+or release selection, a scope, or a time window.
 
 For release-specific results, use the analysis tools instead:
 
@@ -131,7 +159,7 @@ for:
 - **Reporting and approvals:** Reporting work, including finding-evidence
   handoffs; Compliance approval and reviewer attribution; export creation; and
   VEX publication or withdrawal.
-- **Account and workspace administration:** API-key administration, workspace
+- **Account and workspace administration:** API keys, authorized apps, workspace
   archival, member editing/removal, leaving a workspace, and creating invitations.
 - **Workspace navigation:** creating or switching workspaces and accepting
   invitations. MCP cannot enumerate other workspaces.
@@ -143,11 +171,11 @@ and [Workspace settings](/workspace-and-account/workspace-settings/).
 
 ## Review changes before allowing them
 
-Enable your client's confirmation setting for mutations and review the tool,
-target, and arguments before approving. A key with broad permissions can make
-significant changes, including adding members, archiving Products, or publishing
-Trust Center content. Read-only, destructive, and idempotency annotations are
-client hints, **not server-enforced confirmation**.
+Use a client that can ask before making changes, turn that confirmation on,
+and review the tool, target, and arguments before approving. A connection with
+write access can make significant changes, including adding members, archiving
+Products, or publishing Trust Center content. Read-only, destructive, and
+idempotency annotations are client hints, **not server-enforced confirmation**.
 
 After a timeout or ambiguous write failure, inspect the current data before
 retrying. Do not automatically repeat the mutation: it may have succeeded even
@@ -183,11 +211,12 @@ as successful. If a failed write is ambiguous, refresh the affected data first.
 
 | Symptom | What to check |
 | --- | --- |
-| Endpoint missing or connection fails | Confirm the host and `/api/mcp` path with your Aura administrator, and that the deployment includes MCP support. Use Streamable HTTP, not a legacy SSE connection. |
-| Authentication fails (`401`, or `403` when the credential is missing or unrecognized) | Check the Bearer header and key, whether it was revoked, and whether its owner still belongs to an active workspace. Signing in through a browser does not authenticate this connection. |
-| Tool permission or plan error | Check the key's access level, its owner's current role, the target resource's workspace, and the plan's entitlements. Read-only keys cannot perform mutations. Discovery does not grant access. |
+| Endpoint missing or connection fails | Confirm the host and path with your Aura operator: `/api/mcp` for an API key or `/api/mcp/oauth` for an operator-registered OAuth client. Use Streamable HTTP, not a legacy SSE connection. |
+| API-key authentication fails | Check the Bearer header, whether the key was revoked or expired, and whether its owner still belongs to an active workspace. Signing in through a browser does not authenticate the API-key connection. |
+| OAuth approval or connection is unclear | Check **Account → Authorized apps** for the intended app and workspace before approving again. Confirm the client's connection separately. |
+| Tool permission or plan error | Check the connected workspace, your current role, the target resource, and the plan's entitlements. If using a key, check its access level. Discovery does not grant access. |
 | `dashboard_insights` rejects previously valid arguments | Refresh discovered tool schemas and call it with `{}`. Use the release-analysis tools for release selection and trends; see [Read the workspace overview or a release](#read-the-workspace-overview-or-a-release). |
-| Wrong workspace data | Use a key created in the intended workspace; changing the browser's active workspace is not enough. |
+| Wrong workspace data | Use a key for the intended workspace, or review and approve that workspace in the OAuth flow. Changing the browser's active workspace is not enough. |
 | Origin rejected (`403`) or browser CORS failure | Clients normally omit `Origin`. If sent, it must exactly match Aura's canonical origin. Cross-origin browser access is not enabled; use a compatible MCP client rather than bypassing browser protections. |
 | Request or result too large | Reduce file size, filters, or page size within the limits above. Base64 increases request size. |
 | Documentation unavailable | Ask your administrator to check the configured public documentation source and its reachability. Documentation failure does not disable application tools or discovery. |

@@ -191,13 +191,19 @@ Help is available in the normal workspace dashboard, not the onboarding screen b
 
 ## Ask the Assistant
 
-In deployments that include **Assistant**, select it in the left navigation to
+In deployments that include **Assistant**, open it from the dashboard to
 ask about Aura or your active workspace. Try **“How do I upload an SBOM?”** or
 **“Which releases have critical risks?”** Supported reads can run automatically;
 supported changes require an explicit confirmation card. **Help** remains
 available as an independent article reader. Check answers against the source
 articles and current data. See [Use the dashboard Assistant](/getting-started/dashboard-assistant/)
 for confirmation rules, saved history, privacy, and limits.
+
+Ordinary chat can use the recognized page and supported tab active when you
+send or retry, even if chat stays open as you navigate. Name the **Product or
+release** for record-specific questions; the hint does not identify the selected
+record or read page contents. See
+[Ask about the current page or tab](/getting-started/dashboard-assistant/#ask-about-the-current-page-or-tab).
 
 ## Manual and automated SBOM ingestion
 

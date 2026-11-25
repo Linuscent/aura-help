@@ -91,6 +91,11 @@ results, not a fresh vulnerability scan. See [Analyze release
 firmware](/products-and-releases/firmware-analysis/) for permissions, coverage,
 evidence, retry, and replacement behavior.
 
+Where Assistant firmware actions are available, [ask about firmware in
+chat](/products-and-releases/firmware-analysis/#ask-the-assistant-about-firmware)
+using the exact Product and release. Follow **Open Firmware Analysis** to
+check progress or review the full saved advisory.
+
 ## Release names
 
 Aura labels each release by its declared version and upload time, for example

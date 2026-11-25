@@ -85,6 +85,7 @@ Because every accepted SBOM upload creates a new release, the product keeps sepa
 
 ## Related articles
 
+- [Model product threats](/risks/threat-modeling/)
 - [Analyze release firmware](/products-and-releases/firmware-analysis/)
 - [Create a product](/products-and-releases/create-product)
 - [Releases](/products-and-releases/releases)
