@@ -165,7 +165,7 @@ From the release view, you can continue to areas such as:
 - Licenses
 
 In the upcoming dashboard navigation, open release-level **Compliance** from
-**Products → choose a product release → release overview → Compliance**, then
+**Products → choose a product release → release overview → Compliance workspace**, then
 select the **Evidence** tab. Evidence will be a tab, not a standalone sidebar
 item. This navigation may not yet be available in your deployment.
 

@@ -37,7 +37,7 @@ If published documentation is unavailable, select **Retry**. A Help loading fail
 
 The upcoming dashboard navigation may not yet be available in your deployment.
 If you no longer see a standalone **Evidence** sidebar item, open **Products →
-choose a product release → release overview → Compliance** and select the
+choose a product release → release overview → Compliance workspace** and select the
 **Evidence** tab. Confirm the selected release and your workspace plan and
 permissions. Actual release Compliance workflows have Pro and Team access by
 default; Free users will see the existing **Evidence on Pro** explanation with

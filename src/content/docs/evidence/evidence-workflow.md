@@ -34,7 +34,7 @@ Teams can use evidence workflows to:
 ## Find the release workspace in the upcoming navigation
 
 The upcoming dashboard navigation may not yet be available in your deployment.
-Open **Products → choose a product release → release overview → Compliance**,
+Open **Products → choose a product release → release overview → Compliance workspace**,
 then select the **Evidence** tab. Evidence will no longer be a standalone sidebar
 item. Check the selected product and release before capturing or reviewing records.
 

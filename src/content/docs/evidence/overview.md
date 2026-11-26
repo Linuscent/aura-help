@@ -16,9 +16,13 @@ The upcoming dashboard navigation moves release-level evidence into the selected
 release's **Compliance** workspace. It may not yet be available in your deployment.
 
 1. Open **Products** and choose a product release.
-2. From the **release overview**, open **Compliance**.
+2. From the **release overview**, open **Compliance workspace**.
 3. Select the **Evidence** tab and confirm that you are working with the intended
    product and release.
+
+If your deployment does not yet show **Compliance workspace** and **Evidence**
+is still in the left navigation, select **Evidence**, then choose an authorized
+release.
 
 **Evidence** will be a tab, not a standalone sidebar item. Release Compliance
 workflows depend on your workspace plan and permissions, with Pro and Team access

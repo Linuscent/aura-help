@@ -20,7 +20,7 @@ information, including:
 
 The upcoming dashboard navigation may not yet be available in your deployment.
 To open release-level Compliance, use **Products → choose a product release →
-release overview → Compliance**. Confirm the product and release before reviewing
+release overview → Compliance workspace**. Confirm the product and release before reviewing
 evidence or recording a decision.
 
 **Evidence** will be a tab in this workspace, not a standalone sidebar item.
