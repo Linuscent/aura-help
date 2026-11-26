@@ -11,9 +11,9 @@ Open it from **Advanced → Portfolio** in the left navigation.
 
 ![The Portfolio view showing Workspace scope, the 7d/30d/90d range, and portfolio metrics.](../../../assets/screenshots/products-and-releases/portfolio.png)
 
-## Portfolio Metrics
+## Portfolio metrics
 
-The **Portfolio Metrics** section shows metrics for the selected time range
+The **Portfolio metrics** section shows metrics for the selected time range
 (**7d**, **30d**, or **90d**):
 
 - Releases

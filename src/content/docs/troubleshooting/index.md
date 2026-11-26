@@ -71,7 +71,7 @@ for **Review draft**. After an uncertain **Apply draft**, check the Product's
 recovery](/risks/threat-modeling/#if-the-draft-or-save-outcome-is-unclear).
 
 If you can't tell whether firmware analysis started, check the exact release's
-**Firmware Analysis** tab before submitting again. See [Firmware status and
+**Firmware analysis** tab before submitting again. See [Firmware status and
 action troubleshooting](/products-and-releases/firmware-analysis/#troubleshoot-unavailable-actions-or-uncertain-status).
 
 ## Product or upload outcome is unclear

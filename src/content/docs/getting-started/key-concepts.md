@@ -157,9 +157,9 @@ An **active release** is a product release included in ongoing monitoring.
 
 Monitoring active releases helps teams identify when new vulnerability or policy information becomes relevant after the original release assessment.
 
-## SBOM Ingestion
+## SBOM ingestion
 
-**SBOM Ingestion** is the area used for automated SBOM ingestion workflows.
+**SBOM ingestion** is the area used for automated SBOM ingestion workflows.
 
 This can include API-based and CI/CD-based ingestion.
 

@@ -4,7 +4,7 @@ description: Understand the account area and user-specific settings available in
 sidebar:
   order: 5
 ---
-Account Settings contains **Profile**, **Security**, **API Keys**, and
+Account settings contains **Profile**, **Security**, **API keys**, and
 **Billing**. Where OAuth for MCP is available, it also lists **Authorized apps**.
 You can open Account while signed in even if you no longer belong to a workspace.
 
@@ -28,9 +28,9 @@ You must belong to an active workspace to create a new key. Without one, you
 can still review and revoke existing keys; create or join a workspace before
 creating another.
 
-1. Open **Account → API Keys → Create API key**.
+1. Open **Account → API keys → Create API key**.
 2. Choose the workspace the key will access. Direct Account access requires an
-   explicit choice; the Workspace Settings shortcut preselects its workspace.
+   explicit choice; the Workspace settings shortcut preselects its workspace.
 3. Choose an access level:
    - **Read only** is the default. It allows reading, not creating, changing, or
      deleting workspace data.
@@ -64,7 +64,7 @@ the old key.
 ## Review and remove authorized apps
 
 Open **Account → Authorized apps** to review OAuth authorizations across
-workspaces. This is separate from **API Keys**. Check the app and workspace
+workspaces. This is separate from **API keys**. Check the app and workspace
 here if you aren't sure whether approval was recorded. **Deny** on a new
 request does not remove a previous authorization.
 

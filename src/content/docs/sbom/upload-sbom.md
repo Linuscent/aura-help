@@ -89,7 +89,7 @@ Manual upload is useful when:
 - you are testing an SBOM;
 - you need to add an individual SBOM manually.
 
-For recurring engineering workflows, use the **SBOM Ingestion** area for automated ingestion through supported API or CI/CD workflows.
+For recurring engineering workflows, use the **SBOM ingestion** area for automated ingestion through supported API or CI/CD workflows.
 
 See:
 

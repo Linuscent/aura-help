@@ -33,7 +33,7 @@ flowchart LR
 The inventory section includes:
 
 -   Components
--   Dependency Graph
+-   Dependency graph
 
 Inventory information helps teams understand software composition,
 dependencies, and related security context.

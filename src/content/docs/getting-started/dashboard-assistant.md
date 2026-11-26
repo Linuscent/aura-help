@@ -138,7 +138,7 @@ Where Assistant firmware actions are available, type a question naming the
 exact Product and release, such as **“What's the firmware status for Gateway,
 release 1.2?”** You can also ask about the saved advisory or explicitly request
 the first analysis of an eligible uploaded binary. Review the release and file
-details before selecting **Start analysis**. Use **Open Firmware Analysis** to
+details before selecting **Start analysis**. Use **Open Firmware analysis** to
 check progress, read the full saved advisory, or verify whether an uncertain
 start succeeded. Upload, replacement, and retry stay on the release page.
 See [Ask the Assistant about firmware](/products-and-releases/firmware-analysis/#ask-the-assistant-about-firmware).

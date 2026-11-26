@@ -8,7 +8,7 @@ SBOM ingestion sends a Software Bill of Materials to an existing Aura product
 and creates a release for analysis. You can upload a CycloneDX file manually,
 send it through the API, or generate and upload it from your CI pipeline.
 
-The **SBOM Ingestion** area provides Aura-native examples for ingesting SBOMs
+The **SBOM ingestion** area provides Aura-native examples for ingesting SBOMs
 through CI pipelines and direct API uploads.
 
 ![The SBOM Ingestion area showing the Connect a repository options, the Quick API Reference, and the GitHub Actions workflow.](../../../assets/screenshots/integrations/sbom-ingestion.png)
@@ -48,10 +48,10 @@ the GitHub App or GitLab.com OAuth and repository encryption on the Aura server.
 Availability depends on that server’s configuration.
 
 **Disconnect** only stops Aura from accessing the provider. To stop ingestion,
-revoke the setup key in **Account → API Keys**, or remove its CI secret and
+revoke the setup key in **Account → API keys**, or remove its CI secret and
 workflow.
 
-## Quick API Reference
+## Quick API reference
 
 The API reference documents the direct upload endpoint:
 
@@ -126,7 +126,7 @@ CI job times out, inspect the product's releases before trying again.
 ## Set up repository generation
 
 When your Aura administrator has configured a provider, workspace owners and
-admins can connect GitHub.com or GitLab.com under **SBOM Ingestion**. Select an
+admins can connect GitHub.com or GitLab.com under **SBOM ingestion**. Select an
 existing product and lockfile, preview the proposed files, then explicitly
 authorize creating a workspace API key, installing a CI secret and opening a
 pull or merge request. Aura does not merge it automatically.
@@ -152,7 +152,7 @@ authorizing setup.
 
 Connections are private to your Aura account in the workspace. **Disconnect**
 does not revoke the upload key or remove the provider workflow/secret. To stop
-uploads, revoke the specific key through **Account → API Keys**. Keys also stop
+uploads, revoke the specific key through **Account → API keys**. Keys also stop
 working on expiry or loss of the owner's required workspace access.
 
 Automatic setup allows one setup per repository in each workspace, including a setup

@@ -20,22 +20,22 @@ Depending on available capabilities, workspace settings may include:
 
 Available settings depend on the Aura workspace configuration.
 
-To manage personal API keys, open **Workspace Settings → API keys → Manage API
+To manage personal API keys, open **Workspace settings → API keys → Manage API
 keys in Account**. This opens Account with this workspace preselected for key
-creation. Keys are managed in Account, not directly in Workspace Settings. See
+creation. Keys are managed in Account, not directly in Workspace settings. See
 [Account](/workspace-and-account/account/) for access levels and revocation, and
 [Connect an MCP client to Aura](/integrations/mcp-server/) for setup and key safety.
 
-Repository setup in **SBOM Ingestion** can create a personal workspace key and
+Repository setup in **SBOM ingestion** can create a personal workspace key and
 install it in GitHub or GitLab CI after your explicit consent. It has your
 workspace permissions, not only access to the selected product. Manage its key
-ID and expiry through **Account → API Keys**. Disconnecting the provider does
+ID and expiry through **Account → API keys**. Disconnecting the provider does
 not revoke that key or stop existing CI uploads; see
 [SBOM Ingestion](/integrations/sbom-ingestion/) before removing access.
 
 ## Review workspace billing
 
-Workspace owners use **Workspace Settings → Billing** to review workspace
+Workspace owners use **Workspace settings → Billing** to review workspace
 access and available plans. Starting a subscription requires confirming
 **I'll pay for this subscription from my personal billing account**.
 

@@ -36,7 +36,7 @@ Automatic repository setup requires:
 - GitHub Actions enabled and permission to use the generated action and container.
 
 GitHub Enterprise is not supported by this connection flow. If GitHub shows
-**Unavailable** in **SBOM Ingestion**, ask your Aura administrator to configure
+**Unavailable** in **SBOM ingestion**, ask your Aura administrator to configure
 the GitHub App. The manual workflow reference remains available below the
 repository setup area.
 
@@ -59,7 +59,7 @@ use an environment secret or require environment-reviewer approval.
 
 ## Connect and review the workflow
 
-1. Select the intended workspace in Aura and open **SBOM Ingestion**.
+1. Select the intended workspace in Aura and open **SBOM ingestion**.
 2. Under **Connect a repository**, select **Install GitHub App** and grant access
    to the intended repositories. Return to Aura and select **Connect GitHub**.
    Installation and account authorization are separate steps.
@@ -118,7 +118,7 @@ product's releases before rerunning it.
   create new keys or rerun an uncertain upload.
 - Keys expire after the selected lifetime and depend on the owner's continued
   workspace access. Review the setup's key ID and expiry, and use
-  **Account → API Keys** to manage the key.
+  **Account → API keys** to manage the key.
 - **Disconnect** removes Aura's stored provider connection, but does not revoke
   the workspace key, delete the repository secret or workflow, close the pull
   request, or stop existing CI uploads. Revoke the specific Aura key to stop its

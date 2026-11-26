@@ -24,7 +24,7 @@ and stored privately. Aura does not offer a raw firmware download.
 ## Upload a firmware binary
 
 1. In **Products**, open the product and select the release you want to review.
-2. Select the **Firmware Analysis** tab, then select **Upload firmware**.
+2. Select the **Firmware analysis** tab, then select **Upload firmware**.
 3. Choose a non-empty firmware binary within the maximum size displayed in the
    dialog. The default is **100 MB (100,000,000 bytes)**, using decimal MB.
    Larger uploads are available only if your deployment accepts them.
@@ -67,7 +67,7 @@ selecting **Start analysis**. Consent applies only to that exact upload; it
 cannot start analysis for a replacement, even if the filename is the same.
 
 Chat starts the same job as the release page, but it does not monitor progress.
-Select **Open Firmware Analysis** for progress or the full saved advisory and
+Select **Open Firmware analysis** for progress or the full saved advisory and
 its evidence. A chat summary reflects the saved comparison, not a new scan or
 release approval. Uploading, replacing, and retrying firmware analysis are
 available only on the release page; an upload never starts analysis by itself.
@@ -169,7 +169,7 @@ upload blocks another upload and analysis.
   to check the deployment upload limit before retrying.
 - **Upload status unknown:** select **Refresh firmware status** before uploading
   again. Do not assume that a missing confirmation means the upload failed.
-- **Not sure analysis started:** open the exact release's **Firmware Analysis**
+- **Not sure analysis started:** open the exact release's **Firmware analysis**
   tab and select **Refresh firmware status** before asking or submitting again.
   A missing confirmation does not mean the job failed to start.
 - **Status cannot be read:** use **Reload** or **Refresh firmware status**.

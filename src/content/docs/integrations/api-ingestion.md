@@ -44,7 +44,7 @@ not restricted to SBOM uploads or to the product selected in your workflow.
 Review who can read or use the secret in your CI platform.
 
 Keys depend on their owner's continued workspace access and expire according
-to their configured lifetime. Use **Account → API Keys** to inspect or revoke a
+to their configured lifetime. Use **Account → API keys** to inspect or revoke a
 key. Revocation stops that key's access but does not delete already accepted
 releases.
 
@@ -55,7 +55,7 @@ See the provider guide for its exact trust requirements.
 
 ## Availability
 
-The manual API and workflow references are shown in **SBOM Ingestion**.
+The manual API and workflow references are shown in **SBOM ingestion**.
 Automatic repository setup additionally requires provider configuration by
 your Aura administrator. It currently supports GitHub.com and GitLab.com, not
 self-managed instances.

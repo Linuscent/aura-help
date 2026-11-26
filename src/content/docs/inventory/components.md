@@ -12,7 +12,7 @@ the analyzed release.
 
 ![The Components view showing the component inventory table with Component, Type, Package ID, Risk, and Details columns.](../../../assets/screenshots/inventory/components.png)
 
-## Component Inventory
+## Component inventory
 
 The component list shows the components Aura identified for the release, with a
 count such as **5 of 5 components**.

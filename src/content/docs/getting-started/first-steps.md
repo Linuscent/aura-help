@@ -154,7 +154,7 @@ From the release view, you can continue to areas such as:
 ### Inventory
 
 - Components
-- Dependency Graph
+- Dependency graph
 
 ### Risk
 
@@ -226,7 +226,7 @@ record or read page contents. See
 
 Manual SBOM upload is available from a product and is useful when getting started or testing Aura.
 
-The **SBOM Ingestion** area is intended for automated ingestion workflows, including API and CI/CD integrations.
+The **SBOM ingestion** area is intended for automated ingestion workflows, including API and CI/CD integrations.
 
 See:
 

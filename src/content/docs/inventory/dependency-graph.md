@@ -4,15 +4,17 @@ description: Explore dependency relationships between software components in Aur
 sidebar:
   order: 3
 ---
-The Dependency Graph Explorer provides a visual view of relationships
-between software components.
+The **Dependency graph** page provides a visual view of relationships
+between software components. Open it from **Advanced → Dependency graph** in
+the sidebar, or select **Dependency graph** in the release bar at the top of the
+**Components** or **Risks** view.
 
 It helps teams understand dependency paths and how risks may propagate
 through the software supply chain.
 
 ![The Dependency Graph Explorer showing the empty state when no dependencies are available.](../../../assets/screenshots/inventory/dependency-graph.png)
 
-## Using the Dependency Graph
+## Using the dependency graph
 
 The graph can help answer questions such as:
 
@@ -24,7 +26,7 @@ The graph can help answer questions such as:
 
 Dependency information depends on the uploaded SBOM data.
 
-If no dependency relationships are available, the Graph Explorer shows **No
+If no dependency relationships are available, the **Graph explorer** shows **No
 dependencies found for this product yet** with a **Manage product and upload
 SBOM** action.
 
