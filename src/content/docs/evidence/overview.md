@@ -10,16 +10,23 @@ and supporting compliance workflows.
 Evidence helps teams collect, review, and manage information related to
 security requirements.
 
-## Open Evidence
+## Open Evidence in the upcoming navigation
 
-Select **Evidence** in the left navigation, then choose an authorized release
-with **Choose release**. You can also use **Open authorized portfolio** and
-**Refresh authorized releases** to load the releases you can work with.
+The upcoming dashboard navigation moves release-level evidence into the selected
+release's **Compliance** workspace. It may not yet be available in your deployment.
 
-![The Evidence page showing the authorized-release selector before a release is chosen.](../../../assets/screenshots/evidence/evidence-overview.png)
+1. Open **Products** and choose a product release.
+2. From the **release overview**, open **Compliance**.
+3. Select the **Evidence** tab and confirm that you are working with the intended
+   product and release.
 
-Until you select a release, Aura shows **Choose a release to view its evidence
-workflow**.
+**Evidence** will be a tab, not a standalone sidebar item. Release Compliance
+workflows depend on your workspace plan and permissions, with Pro and Team access
+by default.
+
+**Reporting** stays in primary navigation for confidential CRA case evidence.
+Release Evidence and Reporting cases are separate workflows; opening Compliance
+does not disclose release evidence to a case.
 
 ## Evidence and Compliance
 
@@ -48,8 +55,9 @@ available Aura capabilities and configured data.
 
 ## On the Free plan
 
-Evidence workflows are part of Pro and Team. On Free, the Evidence page explains
-what you can already do and links to it:
+Evidence workflows are part of Pro and Team. In the upcoming navigation, Free
+users opening release Compliance will see the existing **Evidence on Pro**
+explanation, with links to what they can already do:
 
 - review and assess vulnerabilities on the Risks page;
 - prepare reporting cases in **Reporting**.

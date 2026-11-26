@@ -31,6 +31,19 @@ Teams can use evidence workflows to:
 -   Review available supporting data
 -   Record internal decisions
 
+## Find the release workspace in the upcoming navigation
+
+The upcoming dashboard navigation may not yet be available in your deployment.
+Open **Products → choose a product release → release overview → Compliance**,
+then select the **Evidence** tab. Evidence will no longer be a standalone sidebar
+item. Check the selected product and release before capturing or reviewing records.
+
+Release Compliance workflows depend on plan and permissions, with Pro and Team
+access by default. Free users will see the existing **Evidence on Pro** explanation
+with links to **Risks** and **Reporting**, rather than the release evidence workflow.
+**Reporting** stays in primary navigation for confidential CRA case evidence; it
+is separate from the release workspace described below.
+
 ## Capture a saved vulnerability assessment
 
 Evidence workflows require Pro or Team and the applicable workspace and product

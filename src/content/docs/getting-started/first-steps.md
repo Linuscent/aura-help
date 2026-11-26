@@ -163,7 +163,17 @@ From the release view, you can continue to areas such as:
 ### Compliance
 
 - Licenses
-- Evidence
+
+In the upcoming dashboard navigation, open release-level **Compliance** from
+**Products → choose a product release → release overview → Compliance**, then
+select the **Evidence** tab. Evidence will be a tab, not a standalone sidebar
+item. This navigation may not yet be available in your deployment.
+
+Release Compliance workflows depend on plan and permissions, with Pro and Team
+access by default. Free users will see the existing **Evidence on Pro** explanation
+with links to **Risks** and **Reporting**. **Reporting** stays in primary navigation
+for confidential CRA case evidence, separate from release-level Compliance. See
+[Compliance Overview](/compliance/overview/).
 
 You can also review other release-related security information available in your workspace.
 
@@ -188,6 +198,13 @@ In deployments with current dashboard Help, select **Help** in the left-navigati
 Follow article links and use **Back** within the panel. **Open in new tab** opens the article currently displayed; your browser settings decide whether it opens in a tab or window. Close the panel or press **Escape** to return to your unchanged work. On mobile, the navigation closes before Help opens.
 
 Help is available in the normal workspace dashboard, not the onboarding screen before a workspace exists. It reads published documentation. If it cannot load, use **Retry**; the original dashboard page remains unchanged.
+
+In the upcoming navigation, **Help → Reference → Regulations** in the Help footer
+will open a read-only educational reference. A regular click closes Help and
+navigates to Regulations, even if the Help article is unavailable; unlike article
+links, it does not open another article inside the panel. Modifier clicks leave
+Help open. The release Compliance workspace will also offer **Regulations
+reference**. See [Regulations](/compliance/regulations/).
 
 ## Ask the Assistant
 

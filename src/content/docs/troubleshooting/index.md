@@ -33,6 +33,27 @@ Read article links and use **Back** within the panel. **Open in new tab** opens 
 
 If published documentation is unavailable, select **Retry**. A Help loading failure does not change the original page. Help is available in the normal workspace dashboard, not onboarding before you have a workspace.
 
+## Find Evidence or Regulations in the upcoming navigation
+
+The upcoming dashboard navigation may not yet be available in your deployment.
+If you no longer see a standalone **Evidence** sidebar item, open **Products →
+choose a product release → release overview → Compliance** and select the
+**Evidence** tab. Confirm the selected release and your workspace plan and
+permissions. Actual release Compliance workflows have Pro and Team access by
+default; Free users will see the existing **Evidence on Pro** explanation with
+links to **Risks** and **Reporting**.
+
+**Reporting** stays in primary navigation for confidential CRA case evidence.
+It is not replaced by the release Compliance workspace. See
+[Evidence Overview](/evidence/overview/).
+
+For the read-only educational Regulations reference, use **Help → Reference →
+Regulations** in the Help footer or **Regulations reference** on release Compliance.
+A regular click on the Help reference closes Help and navigates even if the
+article cannot load. This is expected, unlike article links that stay inside the
+panel. Modifier clicks leave Help open; normal in-panel **Back** and **Escape**
+behavior is unchanged. See [Regulations](/compliance/regulations/).
+
 ## The Assistant misunderstands “here”
 
 Name the **page and tab**, plus the **Product or release** for record-specific
