@@ -43,7 +43,7 @@ Older advisories remain readable but may use **Show evidence** and lack grouped
 observations or inventory counts. Do not infer missing details.
 
 After a successful firmware replacement, the old advisory and its supporting
-evidence are no longer accessible in the **Firmware Analysis** tab. Don't treat
+evidence are no longer accessible in the **Firmware analysis** tab. Don't treat
 those entries as separately captured Evidence or retained decision citations. See
 [Analyze release firmware](/products-and-releases/firmware-analysis/) for the
 review and replacement workflow.

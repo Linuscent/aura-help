@@ -28,7 +28,7 @@ files but has no explicit `stages` list, setup asks you to configure it manually
 or declare the complete stage list first. This avoids overriding stages defined
 by an included file.
 
-If GitLab.com shows **Unavailable** in **SBOM Ingestion**, ask your Aura
+If GitLab.com shows **Unavailable** in **SBOM ingestion**, ask your Aura
 administrator to configure the connection. You can still adapt the manual
 GitLab reference shown below the repository setup area.
 
@@ -53,7 +53,7 @@ or branches before running the generated job.
 
 ## Connect and review the pipeline
 
-1. Select your workspace and open **SBOM Ingestion** in Aura.
+1. Select your workspace and open **SBOM ingestion** in Aura.
 2. Under **Connect a repository**, select **Connect GitLab.com** and review the
    GitLab authorization request.
 3. Under **Propose an ingestion workflow**, select GitLab.com, the repository
@@ -97,7 +97,7 @@ the new key after a failure, so an existing merge request does not prove its
 credential still works. Automatic replacement of failed setups is not
 supported; ask your Aura administrator to reconcile the result.
 
-Use **Account → API Keys** to manage the setup's key. It expires after the chosen
+Use **Account → API keys** to manage the setup's key. It expires after the chosen
 lifetime and depends on the owner's continued workspace access; there is no
 automatic renewal.
 

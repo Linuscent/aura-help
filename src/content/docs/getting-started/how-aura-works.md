@@ -122,7 +122,7 @@ Notification and monitoring capabilities may depend on your Aura plan.
 
 Manual SBOM upload is available from a product and is useful when getting started or testing Aura.
 
-The **SBOM Ingestion** area is intended for automated ingestion workflows, including API and CI/CD integrations.
+The **SBOM ingestion** area is intended for automated ingestion workflows, including API and CI/CD integrations.
 
 ## Aura and compliance
 

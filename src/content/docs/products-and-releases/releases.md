@@ -72,7 +72,7 @@ If a release does not reach the expected state, see [Troubleshoot an SBOM](/sbom
 
 ## Navigate a release
 
-Use **Overview**, **Components**, **Risks**, or **Firmware Analysis** to inspect
+Use **Overview**, **Components**, **Risks**, **Licenses**, or **Firmware analysis** to inspect
 the same release. The release header stays in view when you switch tabs, and
 each tab has its own link.
 
@@ -82,7 +82,7 @@ releases** or choose a release from that product's list.
 ## Review release firmware
 
 When firmware analysis is available, release managers can upload a binary from
-the release's **Firmware Analysis** tab. Uploading does not start
+the release's **Firmware analysis** tab. Uploading does not start
 analysis. Select **Analyze firmware** once the release's vulnerability results
 are complete and readable. A completed report with zero findings is valid.
 
@@ -93,7 +93,7 @@ evidence, retry, and replacement behavior.
 
 Where Assistant firmware actions are available, [ask about firmware in
 chat](/products-and-releases/firmware-analysis/#ask-the-assistant-about-firmware)
-using the exact Product and release. Follow **Open Firmware Analysis** to
+using the exact Product and release. Follow **Open Firmware analysis** to
 check progress or review the full saved advisory.
 
 ## Release names

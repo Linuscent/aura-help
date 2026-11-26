@@ -48,7 +48,7 @@ billing-contact details.
 
 ## Understand workspace billing permissions
 
-Workspace owners use **Workspace Settings → Billing** to review workspace
+Workspace owners use **Workspace settings → Billing** to review workspace
 access and available plans. Starting a subscription requires confirming
 **I'll pay for this subscription from my personal billing account**.
 
@@ -56,11 +56,11 @@ For subscriptions linked to a personal billing account, workspace ownership
 does not expose another person's payment details or grant their cancellation
 rights. Owners can see who funds the subscription. Changing the plan requires
 being both its payer and a current workspace owner; use **Change plan in
-Workspace Settings** when available.
+Workspace settings** when available.
 
 Older subscriptions not yet linked to a personal billing account retain their
 workspace-owner management path until migrated. If a subscription does not
-appear under your personal billing account, check Workspace Settings and follow
+appear under your personal billing account, check Workspace settings and follow
 the displayed guidance rather than assuming it has ended.
 
 Review prorated charges, credits, and tax before **Confirm upgrade**. Plan or

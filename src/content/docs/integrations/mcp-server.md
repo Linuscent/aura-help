@@ -26,12 +26,12 @@ your client. The Assistant does not change the MCP connection's capabilities.
 
 ## Connect with an API key
 
-1. Open **Account → API Keys → Create API key** in Aura.
+1. Open **Account → API keys → Create API key** in Aura.
 2. Explicitly choose the workspace the client should access, name the key, and
    choose its expiry. Keep **Read only** (the default) for inspection. Choose
    **Read and write** only if needed for supported changes; it never grants
    more than your current permissions. Copy the secret when it is shown;
-   it is shown only once. The Workspace Settings shortcut can preselect a
+   it is shown only once. The Workspace settings shortcut can preselect a
    workspace, but key management is in Account.
 3. Add a remote MCP server in your client using these settings:
 

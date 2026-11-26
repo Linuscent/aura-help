@@ -62,11 +62,11 @@ A processed release can show summary information such as:
 - Components.
 
 Open a release to switch between **Overview**, **Components**, **Risks**, and
-**Firmware Analysis** without changing which release you're viewing.
+**Firmware analysis** without changing which release you're viewing.
 
 ## Review firmware for a release
 
-On the release, select **Firmware Analysis** to review a saved
+On the release, select **Firmware analysis** to review a saved
 static advisory if you can read the release's vulnerability results. If firmware
 analysis is available and you can manage the release, you can upload a binary
 and then request analysis separately.

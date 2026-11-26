@@ -19,7 +19,7 @@ to return to the release overview.
 
 ## License Inventory
 
-The **License Inventory** summarizes what Aura detected for the release:
+The **License inventory** summarizes what Aura detected for the release:
 
 - the total number of licenses;
 - the number of unclassified licenses;

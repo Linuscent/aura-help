@@ -22,7 +22,7 @@ Team collaboration depends on workspace membership and user permissions.
 
 ## Inviting teammates
 
-Workspace owners and admins invite people from **Workspace Settings →
+Workspace owners and admins invite people from **Workspace settings →
 Invitations**. The form shows how many seats are used, counting members and
 pending invitations.
 
