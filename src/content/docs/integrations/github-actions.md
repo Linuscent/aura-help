@@ -53,9 +53,10 @@ access the selected product. Only continue if every repository writer should
 have that level of access to your Aura workspace.
 :::
 
-The protected-ref condition in Aura's generated job restricts that job. It does
-**not** protect the repository secret from other workflows. This setup does not
-use an environment secret or require environment-reviewer approval.
+The workflow triggers and the protected-ref requirement for manual runs control
+when Aura's generated job runs. They do **not** restrict access to the repository
+secret from other workflows. This setup does not use an environment secret or
+require environment-reviewer approval.
 
 ## Connect and review the workflow
 
@@ -84,16 +85,23 @@ configuration changes, generate and review a fresh preview before authorizing se
 
 ## Run the workflow
 
-The generated workflow uses a pinned sbomify container and checkout action. It
-runs on **protected tag pushes**, including tag names with slashes, or through
-GitHub's **Run workflow** action on a protected ref. Configure the appropriate
-branch protections or tag rulesets first. An unprotected ref skips the generated
-job; it does not prevent other workflows from accessing the repository secret.
+Newly generated workflows invoke the public
+[Linuscent Aura SBOM action](https://github.com/Linuscent/aura-sbom-action) and
+the checkout action, both pinned to full commit SHAs. The workflow runs
+automatically on every push to the default branch detected during setup, even
+if that branch is unprotected. Tag pushes do not trigger it automatically.
+If you select **Run workflow** in GitHub, the Aura job skips unprotected
+branches and tags. We recommend protecting the default branch so changes are
+reviewed before merging, but protection is optional for automatic runs. If the
+default branch changes, update the workflow's branch filter. Aura does not
+rewrite older installed workflows; they keep their configured triggers.
 
 The workflow must be present on the default branch for GitHub's manual trigger
 to be available. The workflow and selected lockfile must also exist at the ref
-you run. Runner availability, repository Actions policies, private package
-access and generator ecosystem requirements can affect execution.
+you run. The runner needs network access for generator tools and package
+metadata, as well as access to any required private packages. Runner
+availability, repository Actions policies and generator ecosystem requirements
+can affect execution.
 
 An accepted upload creates a new Aura release. It does not mean analysis has
 finished. Rerunning a successful upload creates another release, even when the
