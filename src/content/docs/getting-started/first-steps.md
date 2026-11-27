@@ -14,7 +14,7 @@ At a high level:
 flowchart LR
     subgraph account["Account"]
         direction TB
-        A[Create account] --> B[Verify email]
+        A[Create account] --> B[Verify email if using a password]
     end
     subgraph workspace["Workspace"]
         direction TB
@@ -38,24 +38,43 @@ To complete this guide, you need:
 
 ## 1. Create your account
 
+You can create an Aura account with email and password. If Google sign-up is
+displayed on the Aura sign-up page, you can also create your account with
+Google. Google sign-up is not offered in every deployment.
+
+### With email and password
+
 On the Aura sign-up page:
 
 1. Enter your name.
 2. Enter your email address.
 3. Create and confirm your password.
 4. Accept the Terms & Conditions and acknowledge the Privacy Policy.
-5. Complete the human verification check.
+5. Complete the human verification check when shown.
 6. Select **Create account**.
 
 Aura is provided for business use.
 
+### With Google
+
+1. Accept the Terms & Conditions and acknowledge the Privacy Policy.
+2. Complete the human verification check when shown.
+3. Select **Sign up with Google**.
+4. Pick a verified Gmail address or a managed Workspace account.
+
+Returning users can select **Sign in with Google** on the sign-in page to sign
+in with the Google account used for the Aura account.
+
 ## 2. Verify your email
 
-After creating your account, Aura asks you to verify your email address.
+If you created your account with email and password, after creating your
+account Aura asks you to verify your email address.
 
 Open the verification message sent to your email address and complete the verification process.
 
 If you did not receive the message, you can request another verification email from the verification page.
+
+If you created your account with Google sign-up, no separate verification email is sent.
 
 ## 3. Create or join a workspace
 

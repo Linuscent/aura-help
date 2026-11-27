@@ -15,6 +15,40 @@ Under **Profile**, select the edit icon beside your name, then **Save Name** or
 your current and new passwords. Changing your password does not revoke existing
 API keys.
 
+## Sign-in methods
+
+If Google sign-in is available for your account, you can connect Google as an
+additional way to sign in. Connecting Google doesn't replace or remove your
+existing sign-in method.
+
+1. First, sign in to Aura with your existing sign-in method.
+2. Open **Account → Security → Sign-in methods → Connect Google**.
+
+Before connecting Google:
+
+- You need a recent sign-in. If Aura asks you to sign in again, choose
+  **Sign in again**, then retry connecting Google.
+- Both your Aura account email and your Google account email must be verified.
+- Use an eligible Gmail or managed Workspace account with the same verified
+  email address as your Aura account. Email matching is case-insensitive.
+
+Google accounts aren't linked automatically: connecting Google always requires
+this explicit action, even when the email addresses match. Disconnecting Google
+isn't available in this release.
+
+Connecting Google is separate from accepting workspace invitations and from
+authorizing MCP apps; those remain separate and explicit. See
+[Respond to an invitation](/workspace-and-account/working-with-your-team/#respond-to-an-invitation)
+and [Connect with OAuth](/integrations/mcp-server/#connect-with-oauth).
+
+### Set up a password
+
+If you created your Aura account with Google and don't have a password, open
+**Account → Security** and choose **Set up a password** in the **Password**
+card. Enter your Aura email address, then follow the reset link sent to that
+address to set a password; afterwards you can sign in with email and password
+as well.
+
 ## Pending invitations
 
 **Account → Profile** lists every pending workspace invitation sent to your
