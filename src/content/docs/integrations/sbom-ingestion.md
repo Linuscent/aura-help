@@ -121,7 +121,8 @@ SBOM ingestion can provide information about:
 An accepted upload creates the basis for analysis; it does not mean processing
 has finished. Each accepted upload creates a distinct release, even when the
 content or declared version is unchanged. If you lose the upload response or a
-CI job times out, inspect the product's releases before trying again.
+CI job times out, inspect the product's releases before trying again. The
+generated workflows do not automatically retry uploads.
 
 ## Set up repository generation
 
@@ -137,9 +138,16 @@ files before authorizing setup. Previewing does not create an API key or write
 to the provider.
 
 Generation runs in your CI environment using sbomify; a sbomify account is not
-required. The generated job runs on protected tags or a manual run on a
-protected ref, not on every push. A repository connection does not change the
-release-per-upload behavior.
+required. Newly generated workflows use these triggers:
+
+- **GitHub:** The workflow runs automatically on every push to the default
+  branch detected during setup, even if it is unprotected. Tag pushes do not
+  trigger it automatically. Manual runs skip unprotected branches and tags.
+- **GitLab:** The job runs automatically on protected tag pushes. You can start
+  a manual run from the web UI on a protected branch or tag.
+
+Older installed workflows keep their configured triggers. A repository
+connection does not change the release-per-upload behavior.
 
 :::caution[Review the credential trust boundary]
 The generated credential is a personal, full-role workspace API key, not an
