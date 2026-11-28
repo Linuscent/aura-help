@@ -72,5 +72,5 @@ other members are asked to contact the owner.
 
 ## Related articles
 
-- [Evidence Workflow](/evidence/evidence-workflow)
-- [Compliance Overview](/compliance/overview)
+- [Evidence Workflow](/evidence/evidence-workflow/)
+- [Compliance Overview](/compliance/overview/)

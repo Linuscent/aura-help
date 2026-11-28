@@ -39,8 +39,8 @@ requirements.
 
 ## Related articles
 
-- [Vulnerability Severity](/risks/vulnerability-severity)
-- [VEX Decisions](/risks/vex-decisions)
-- [Understanding Findings](/risks/understanding-findings)
-- [Evidence Overview](/evidence/overview)
+- [Vulnerability Severity](/risks/vulnerability-severity/)
+- [VEX Decisions](/risks/vex-decisions/)
+- [Understanding Findings](/risks/understanding-findings/)
+- [Evidence Overview](/evidence/overview/)
 - [Workspace Overview](/workspace-and-account/workspace-overview/)

@@ -67,5 +67,5 @@ acceptance status.
 
 ## Related articles
 
-- [Vulnerability Severity](/risks/vulnerability-severity)
-- [Evidence Overview](/evidence/overview)
+- [Vulnerability Severity](/risks/vulnerability-severity/)
+- [Evidence Overview](/evidence/overview/)

@@ -1,6 +1,6 @@
 ---
 title: Upload an SBOM
-description: Upload a CycloneDX or SPDX 2.3 JSON SBOM to an Aura product and create a new release.
+description: Learn how to upload a CycloneDX JSON or XML file or an SPDX 2.3 JSON SBOM to an Aura product, preview it, and open the new release.
 sidebar:
   order: 3
 ---

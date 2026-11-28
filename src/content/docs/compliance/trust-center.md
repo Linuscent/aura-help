@@ -65,7 +65,7 @@ The **Analytics** section shows counts for:
 
 ## Related articles
 
-- [Reporting](/compliance/reporting)
-- [Compliance Overview](/compliance/overview)
-- [Workspace Settings](/workspace-and-account/workspace-settings)
-- [Access and Permissions](/workspace-and-account/access-and-permissions)
+- [Reporting](/compliance/reporting/)
+- [Compliance Overview](/compliance/overview/)
+- [Workspace Settings](/workspace-and-account/workspace-settings/)
+- [Access and Permissions](/workspace-and-account/access-and-permissions/)

@@ -68,7 +68,7 @@ and results can still change as new vulnerability information is published.
 In the release list, the **Upload** column shows when the upload was accepted
 (for example **Accepted · 25 Sep 2026**), not the analysis status.
 
-If a release does not reach the expected state, see [Troubleshoot an SBOM](/sbom/troubleshoot-sbom).
+If a release does not reach the expected state, see [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/).
 
 ## Navigate a release
 
@@ -146,7 +146,7 @@ Release-level records help teams answer questions such as:
 ## Related articles
 
 - [Analyze release firmware](/products-and-releases/firmware-analysis/)
-- [Product overview](/products-and-releases/product-overview)
-- [Active release monitoring](/products-and-releases/active-release-monitoring)
-- [Products and releases](/products-and-releases/overview)
-- [Upload an SBOM](/sbom/upload-sbom)
+- [Product overview](/products-and-releases/product-overview/)
+- [Active release monitoring](/products-and-releases/active-release-monitoring/)
+- [Products and releases](/products-and-releases/overview/)
+- [Upload an SBOM](/sbom/upload-sbom/)

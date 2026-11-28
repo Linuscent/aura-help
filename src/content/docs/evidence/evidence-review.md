@@ -59,6 +59,6 @@ in Aura and connected workflows.
 ## Related articles
 
 - [Analyze release firmware](/products-and-releases/firmware-analysis/)
-- [Evidence Workflow](/evidence/evidence-workflow)
-- [Evidence Overview](/evidence/overview)
-- [Compliance Overview](/compliance/overview)
+- [Evidence Workflow](/evidence/evidence-workflow/)
+- [Evidence Overview](/evidence/overview/)
+- [Compliance Overview](/compliance/overview/)

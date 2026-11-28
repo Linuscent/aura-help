@@ -71,27 +71,38 @@ const breadcrumbs = {
   '@id': `${url}#breadcrumbs`,
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: siteTitle, item: siteUrl },
-    ...(!isHome ? [{ '@type': 'ListItem', position: 2, name: title, item: url }] : []),
+    { '@type': 'ListItem', position: 2, name: title, item: url },
   ],
 };
-const webpage = {
-  '@type': isHome ? 'WebPage' : 'TechArticle',
-  '@id': `${url}#page`,
+const pageDetails = {
   url,
   name: title,
-  ...(isHome ? {} : { headline: title }),
   description,
   inLanguage: lang,
   isPartOf: { '@id': website['@id'] },
   publisher: { '@id': organization['@id'] },
   image: imageUrl,
-  breadcrumb: { '@id': breadcrumbs['@id'] },
   ...(lastUpdated ? { dateModified: lastUpdated.toISOString() } : {}),
+};
+const article = {
+  ...pageDetails,
+  '@type': 'TechArticle',
+  '@id': `${url}#article`,
+  headline: title,
+};
+const webpage = {
+  ...pageDetails,
+  '@type': 'WebPage',
+  '@id': `${url}#page`,
+  ...(isHome ? {} : {
+    breadcrumb: { '@id': breadcrumbs['@id'] },
+    mainEntity: { '@id': article['@id'] },
+  }),
 };
 // Escape HTML-significant characters so future frontmatter cannot close the script.
 const structuredData = JSON.stringify({
   '@context': 'https://schema.org',
-  '@graph': [organization, website, webpage, breadcrumbs],
+  '@graph': [organization, website, webpage, ...(isHome ? [] : [article, breadcrumbs])],
 }).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026');
 ---
 

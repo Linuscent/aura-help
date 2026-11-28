@@ -101,6 +101,6 @@ appropriate decisions.
 
 ## Related articles
 
-- [Evidence Overview](/evidence/overview)
-- [Evidence Review](/evidence/evidence-review)
-- [Compliance Overview](/compliance/overview)
+- [Evidence Overview](/evidence/overview/)
+- [Evidence Review](/evidence/evidence-review/)
+- [Compliance Overview](/compliance/overview/)

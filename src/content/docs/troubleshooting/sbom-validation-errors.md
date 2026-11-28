@@ -32,7 +32,7 @@ uploaded SBOM.
 
 ## Related articles
 
-- [SBOM Upload Errors](/troubleshooting/sbom-upload-errors)
-- [Integration Issues](/troubleshooting/integration-issues)
-- [Troubleshooting Overview](/troubleshooting)
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom)
+- [SBOM Upload Errors](/troubleshooting/sbom-upload-errors/)
+- [Integration Issues](/troubleshooting/integration-issues/)
+- [Troubleshooting Overview](/troubleshooting/)
+- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/)

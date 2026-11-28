@@ -135,6 +135,6 @@ Do not share sensitive SBOM contents outside your organisation unless your suppo
 
 ## Related articles
 
-- [Upload an SBOM](/sbom/upload-sbom)
-- [What is an SBOM?](/sbom/what-is-an-sbom)
-- [Inventory Overview](/inventory/overview)
+- [Upload an SBOM](/sbom/upload-sbom/)
+- [What is an SBOM?](/sbom/what-is-an-sbom/)
+- [Inventory Overview](/inventory/overview/)
