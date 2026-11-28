@@ -1,6 +1,6 @@
 ---
 title: Trust Center
-description: Configure Aura's public security portal with branding, a custom domain, and analytics.
+description: Publish and manage your workspace's public security portal in Aura.
 sidebar:
   order: 8
 ---
@@ -12,6 +12,9 @@ Select **Trust Center** in the left navigation to open it.
 ![The Trust Center showing the Publish action, navigation tabs, Branding settings, Custom domain, and Analytics.](../../../assets/screenshots/compliance/trust-center.png)
 
 ## Publish the portal
+
+Only eligible **Pro** or **Team** workspace owners can manage and publish the
+portal.
 
 The portal starts as a draft. Select **Publish** to make it live. A public URL is
 shown with **Copy** and **Open** actions; until you publish, the portal is not
@@ -49,8 +52,12 @@ Select **Save branding** to keep your changes.
 
 ## Custom domain
 
-Under **Settings → Custom domain**, enter a **Domain** (for example
-`trust.acme.com`) and select **Save**.
+On **Team**, under **Settings → Custom domain**, you can enter a **Domain**
+(for example `trust.acme.com`), save it, configure the DNS records shown, and
+verify them.
+
+Completing DNS verification does not make the root of your custom domain
+serve the portal. Share the portal’s Aura-hosted address (`https://<your-aura-host>/trust/<workspace-id>`). If **Public URL**, **Copy**, or **Open** points to the custom domain after verification, use the Aura-hosted address instead.
 
 ## Analytics
 
