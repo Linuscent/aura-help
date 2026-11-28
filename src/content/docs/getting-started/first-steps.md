@@ -210,6 +210,21 @@ You can continue by reviewing:
 
 You can upload another SBOM later to create another release and review how the product changes over time.
 
+## Explore feature tips on Home
+
+When your active workspace already has products, **Home** rotates through
+available **Advanced** feature tips, choosing a tip at each new sign-in.
+These tips are separate from empty-workspace onboarding, which has no **Skip**
+action.
+
+- Select the **Open** link for the suggested feature.
+- Select **Skip today** to hide feature tips until the next day in your local time.
+- Select **Don't show this tip again** to hide the tip for that feature.
+
+If you hide all available tips, Home shows **Explore Aura features** instead.
+Tip preferences are saved in the current browser for your account and do not
+sync across devices.
+
 ## Read Help without leaving your work
 
 In deployments with current dashboard Help, select **Help** in the left-navigation footer to open a right-side modal with guidance for the current page. Pages without a dedicated article show the general guide with a fallback notice.
