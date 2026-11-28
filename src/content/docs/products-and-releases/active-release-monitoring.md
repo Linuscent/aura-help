@@ -62,7 +62,9 @@ If Aura cannot use a release as a healthy source for workspace metrics, the Over
 
 Active release monitoring does not replace historical release records.
 
-Aura preserves uploads as separate releases so previous release data remains available for history and future comparison workflows.
+Aura keeps each successful SBOM upload as a separate release so you can review earlier releases.
+
+[Compare two releases](/products-and-releases/releases/#compare-two-releases) to review changes between two non-archived releases of the same product. Choosing a baseline does not change which release contributes to the workspace Overview totals.
 
 ## Related articles
 

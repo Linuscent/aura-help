@@ -77,7 +77,24 @@ the same release. The release header stays in view when you switch tabs, and
 each tab has its own link.
 
 To review another release, select **Back to {product} releases**. Use **Search
-releases** or choose a release from that product's list.
+releases** or choose a release from that product's list. **Search releases**
+matches the release name or declared version.
+
+## Compare two releases
+
+Compare two releases of the same product to review inventory and finding changes.
+
+1. Open the product's **Releases** list. You need at least two non-archived releases.
+2. Select **Compare releases**. If you do not see it, clear the search and check that you are not viewing **Archived**.
+3. Choose the **Candidate release** you want to evaluate and a different **Baseline release** to compare against. In either picker, search by name or declared version.
+4. Select **Compare**.
+
+Reopening the comparison link restores the chosen pair if you still have access to both releases.
+
+- **Components**: Components appear as **Only in candidate**, **Only in baseline**, or **Version differs**. **Not matched** means Aura could not establish a reliable package identity or compare versions confidently.
+- **Findings**: Findings appear as **Only in candidate**, **Only in baseline**, or **In both**. The comparison uses current analysis, including suppressed findings, rather than results from the time of upload. Baseline-only findings do not prove a fix. Comparison does not change or carry over assessment decisions.
+
+Aura does not show rows for a section when it cannot verify full coverage; this can happen when a section is pending, incomplete, or unavailable. Select **Retry** in that section when analysis is ready or to try loading it again. Missing results do not mean there are no differences.
 
 ## Review release firmware
 
