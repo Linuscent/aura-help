@@ -37,6 +37,11 @@ Aura provides security context to support review decisions. Teams should
 evaluate findings based on their own security processes and
 requirements.
 
+## Compare a candidate release
+
+To compare findings against a chosen baseline, see
+[Compare two releases](/products-and-releases/releases/#compare-two-releases).
+
 ## Related articles
 
 - [Vulnerability Severity](/risks/vulnerability-severity/)

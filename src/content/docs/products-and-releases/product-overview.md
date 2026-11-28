@@ -83,6 +83,8 @@ releases** or choose another release from the list.
 
 Because every accepted SBOM upload creates a new release, the product keeps separate release records for different uploads over time.
 
+To compare two releases of the same product, see [Compare two releases](/products-and-releases/releases/#compare-two-releases).
+
 ## Related articles
 
 - [Model product threats](/risks/threat-modeling/)
