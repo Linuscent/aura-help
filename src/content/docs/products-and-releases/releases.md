@@ -96,6 +96,16 @@ Reopening the comparison link restores the chosen pair if you still have access 
 
 Aura does not show rows for a section when it cannot verify full coverage; this can happen when a section is pending, incomplete, or unavailable. Select **Retry** in that section when analysis is ready or to try loading it again. Missing results do not mean there are no differences.
 
+### Critical and High findings only in candidate
+
+When comparison is complete, **Findings** starts with **Critical** and **High** advisory/package groups that appear only in the candidate release (**Only in candidate**), **Critical** first. The comparison uses the **Candidate release** you chose and the **Baseline release** you explicitly selected.
+
+- An advisory can affect multiple component versions; a group's severity is the highest across the listed versions.
+- **Only in candidate** is not a historical change and does not prove an introduction.
+- Findings where Aura could not confidently identify the package are omitted from this list, as are findings whose severity is unknown; those omissions are disclosed.
+- The first 10 rows are shown. **Show all findings only in candidate** filters the detailed **Findings** list; it appears when more rows exist or when other candidate-only severities are present.
+- **Open in Risks** selects the exact candidate finding when matchable; **Open candidate Risks** opens the candidate vulnerabilities list without selecting one. Suppressed findings may not appear in the default list.
+
 ## Review release firmware
 
 When firmware analysis is available, release managers can upload a binary from
