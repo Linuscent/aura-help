@@ -14,7 +14,7 @@ At a high level:
 flowchart LR
     subgraph account["Account"]
         direction TB
-        A[Create account] --> B[Verify email if using a password]
+        A[Create account] --> B[Verify email if prompted]
     end
     subgraph workspace["Workspace"]
         direction TB
@@ -41,8 +41,9 @@ To complete this guide, you need:
 You can create an Aura account with email and password. If Google sign-up is
 displayed on the Aura sign-up page, you can also create your account with
 Google. If **Sign up with GitHub** is displayed, you can also create your
-account with GitHub. Google and GitHub sign-up are not offered in every
-deployment.
+account with GitHub. If **Sign up with Microsoft** is displayed, you can also
+create your account with a personal, work, or school Microsoft account. Google,
+GitHub, and Microsoft sign-up are not offered in every deployment.
 
 ### With email and password
 
@@ -88,6 +89,28 @@ not use the email sign-up resend action for a GitHub sign-up link.
 After completing the email-link step, explicitly select **Sign in with GitHub**
 on the Aura sign-in page. Linking GitHub for sign-in does not grant access to
 your GitHub repositories or your Aura workspaces.
+
+### With Microsoft
+
+1. Accept the Terms & Conditions and acknowledge the Privacy Policy.
+2. Complete the human verification check when shown.
+3. Select **Sign up with Microsoft**.
+4. Complete sign-in at Microsoft when prompted.
+
+Aura then sends a verification link to the email address Microsoft shared.
+Opening that link in your browser finishes creating your account. Open it in
+the **same browser** where you started Microsoft sign-up. If your mail
+application opens another browser, copy and paste the link into the original
+browser. The link expires after **15 minutes**. If the link cannot be used,
+restart Microsoft sign-up to request a new link.
+
+After verifying, explicitly select **Sign in with Microsoft** on the Aura
+sign-in page; Aura does not sign you in automatically.
+
+If Microsoft does not share an email address usable for sign-up, create your
+account with email and password instead, verify that email, then connect
+Microsoft from **Account → Security → Sign-in methods → Connect Microsoft**.
+See [Sign-in methods](/workspace-and-account/account/#microsoft).
 
 ## 2. Verify your email
 
