@@ -49,6 +49,27 @@ card. Enter your Aura email address, then follow the reset link sent to that
 address to set a password; afterwards you can sign in with email and password
 as well.
 
+### GitHub
+
+If GitHub sign-in is available for your account, you can connect GitHub as an
+additional way to sign in when it is shown. GitHub sign-in is not offered in
+every deployment.
+
+1. First, sign in to Aura with your usual existing sign-in method.
+2. Open **Account → Security → Connect GitHub**.
+3. Connect GitHub only when your verified Aura account email and your GitHub
+   verified primary email match. A GitHub primary email marked private can
+   still match. Matching email addresses do not link accounts automatically;
+   connecting GitHub requires this explicit action.
+4. Use a recent session. If Aura asks you to sign in again, sign in again with
+   your usual method, then retry connecting GitHub.
+5. After linking, use **Sign in with GitHub** on the Aura sign-in page.
+
+Connecting GitHub doesn't replace or remove your existing sign-in method.
+Linking GitHub for sign-in doesn't grant access to your GitHub repositories or
+your Aura workspaces. This sign-in linking is separate from authorizing GitHub
+repositories, accepting workspace invitations, and authorizing other apps.
+
 ## Pending invitations
 
 **Account → Profile** lists every pending workspace invitation sent to your
