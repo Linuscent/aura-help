@@ -14,7 +14,7 @@ At a high level:
 flowchart LR
     subgraph account["Account"]
         direction TB
-        A[Create account] --> B[Verify email if using a password]
+        A[Create account] --> B[Verify email if prompted]
     end
     subgraph workspace["Workspace"]
         direction TB

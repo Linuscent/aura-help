@@ -97,8 +97,8 @@ Troubleshooting:
 
 - If your session is no longer recent or Aura asks you to sign in again, sign
   in again with your usual method and start over.
-- If the confirmation link has expired or you lost it, retry connecting
-  Microsoft.
+- If the confirmation link has expired or you lost it, sign in again and restart
+  from **Account → Security**; the original session must still be recent.
 
 After connecting, select **Sign in with Microsoft** on the Aura sign-in page
 and use the same linked Microsoft account. Connecting Microsoft doesn't
