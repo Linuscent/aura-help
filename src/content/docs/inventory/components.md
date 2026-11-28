@@ -64,6 +64,6 @@ the information available in the source SBOM.
 
 ## Related articles
 
-- [Inventory Overview](/inventory/overview)
-- [Dependency Graph](/inventory/dependency-graph)
-- [Understanding Findings](/risks/understanding-findings)
+- [Inventory Overview](/inventory/overview/)
+- [Dependency Graph](/inventory/dependency-graph/)
+- [Understanding Findings](/risks/understanding-findings/)

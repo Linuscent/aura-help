@@ -1,6 +1,6 @@
 ---
 title: Cyber Resilience Act (CRA) Overview
-description: Learn the basics of the EU Cyber Resilience Act and how it relates to product cybersecurity work in Aura.
+description: Learn what the EU Cyber Resilience Act (CRA) means for products with digital elements and how Aura helps organize security evidence.
 sidebar:
   order: 2
 ---
@@ -28,6 +28,6 @@ regulatory requirements.
 
 ## Related articles
 
-- [Compliance Overview](/compliance/overview)
-- [How Aura Supports CRA](/compliance/how-aura-supports-cra)
-- [Evidence Overview](/evidence/overview)
+- [Compliance Overview](/compliance/overview/)
+- [How Aura Supports CRA](/compliance/how-aura-supports-cra/)
+- [Evidence Overview](/evidence/overview/)

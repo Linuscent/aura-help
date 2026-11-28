@@ -40,7 +40,7 @@ organization using Aura.
 
 ## Related articles
 
-- [How Aura Supports CRA](/compliance/how-aura-supports-cra)
-- [Evidence Chain](/compliance/evidence-chain)
-- [Compliance Overview](/compliance/overview)
-- [Evidence Overview](/evidence/overview)
+- [How Aura Supports CRA](/compliance/how-aura-supports-cra/)
+- [Evidence Chain](/compliance/evidence-chain/)
+- [Compliance Overview](/compliance/overview/)
+- [Evidence Overview](/evidence/overview/)

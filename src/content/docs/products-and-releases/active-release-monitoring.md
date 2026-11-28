@@ -68,6 +68,6 @@ Aura keeps each successful SBOM upload as a separate release so you can review e
 
 ## Related articles
 
-- [Releases](/products-and-releases/releases)
-- [Products and releases](/products-and-releases/overview)
-- [Upload an SBOM](/sbom/upload-sbom)
+- [Releases](/products-and-releases/releases/)
+- [Products and releases](/products-and-releases/overview/)
+- [Upload an SBOM](/sbom/upload-sbom/)

@@ -47,7 +47,7 @@ Select **Upload SBOM** to add a supported CycloneDX JSON/XML or SPDX 2.3 JSON SB
 
 Every accepted upload creates a new release.
 
-For detailed instructions, see [Upload an SBOM](/sbom/upload-sbom).
+For detailed instructions, see [Upload an SBOM](/sbom/upload-sbom/).
 
 ## Release status
 
@@ -87,7 +87,7 @@ Because every accepted SBOM upload creates a new release, the product keeps sepa
 
 - [Model product threats](/risks/threat-modeling/)
 - [Analyze release firmware](/products-and-releases/firmware-analysis/)
-- [Create a product](/products-and-releases/create-product)
-- [Releases](/products-and-releases/releases)
-- [Products and releases](/products-and-releases/overview)
-- [Upload an SBOM](/sbom/upload-sbom)
+- [Create a product](/products-and-releases/create-product/)
+- [Releases](/products-and-releases/releases/)
+- [Products and releases](/products-and-releases/overview/)
+- [Upload an SBOM](/sbom/upload-sbom/)

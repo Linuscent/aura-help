@@ -10,6 +10,7 @@ const seenTitles = new Set();
 const seenDescriptions = new Set();
 const indexable = new Set();
 const pages = new Map();
+const notFoundFile = path.join(root, '404.html');
 
 async function walk(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -34,8 +35,24 @@ function one(items, test, context) {
   return matches[0];
 }
 
+function pageRoute(file) {
+  // Starlight formats the noindex error page's canonical as /404/ even though
+  // GitHub Pages serves the generated file as /404.html for missing routes.
+  if (file === notFoundFile) return '/404/';
+  const relative = path.relative(root, file).split(path.sep).join('/');
+  return `/${relative.replace(/(^|\/)index\.html$/, '$1')}`;
+}
+
+function decodeMetadata(value) {
+  const entities = { amp: '&', quot: '"', apos: "'", lt: '<', gt: '>' };
+  return value.replace(/&(amp|quot|apos|lt|gt|#\d+|#x[\da-fA-F]+);/g, (_, entity) =>
+    entity.startsWith('#')
+      ? String.fromCodePoint(Number(entity.replace(/^#x/, '0x').replace(/^#/, '')))
+      : entities[entity]);
+}
+
 async function localFile(url) {
-  if (url.pathname === '/404/') return path.join(root, '404.html');
+  if (url.pathname === '/404/') return notFoundFile;
   const file = path.resolve(root, `.${decodeURIComponent(url.pathname)}`);
   assert(file === root || file.startsWith(`${root}${path.sep}`), `URL escapes output directory: ${url}`);
   try {
@@ -49,9 +66,7 @@ await walk(root);
 assert(pages.size > 0, 'No HTML pages found; run the build first');
 for (const [file, html] of pages) {
   const relative = path.relative(root, file).split(path.sep).join('/');
-  // Starlight formats the noindex error page's canonical as /404/ even though
-  // GitHub Pages serves the generated file as /404.html for missing routes.
-  const route = relative === '404.html' ? '/404/' : `/${relative.replace(/index\.html$/, '')}`;
+  const route = pageRoute(file);
   const url = `${origin}${route}`;
   const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1];
   assert(head, `${relative}: missing head`);
@@ -62,8 +77,12 @@ for (const [file, html] of pages) {
   assert.equal(one(meta, (tag) => tag.property === 'og:url', `${relative}: og:url`).content, url);
   const robots = one(meta, (tag) => tag.name === 'robots', `${relative}: robots`).content;
   const noIndex = robots.includes('noindex');
-  if (relative === '404.html') assert(noIndex, '404 must not be indexed');
+  if (file === notFoundFile) assert(noIndex, '404 must not be indexed');
   assert(elements(html, 'html')[0]?.lang, `${relative}: missing document language`);
+
+  const scripts = [...head.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
+    .filter(([, attrs]) => attributes(attrs).type === 'application/ld+json');
+  assert.equal(scripts.length, noIndex ? 0 : 1, `${relative}: unexpected JSON-LD script count`);
 
   if (!noIndex) {
     indexable.add(url);
@@ -94,28 +113,63 @@ for (const [file, html] of pages) {
     assert.equal(png.readUInt32BE(16), 1200);
     assert.equal(png.readUInt32BE(20), 630);
 
-    const scripts = [...head.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
-      .filter(([, attrs]) => attributes(attrs).type === 'application/ld+json');
-    assert.equal(scripts.length, 1, `${relative}: expected one JSON-LD graph`);
     const schema = JSON.parse(scripts[0][2]);
     assert.equal(schema['@context'], 'https://schema.org');
     const graph = schema['@graph'];
-    for (const type of ['Organization', 'WebSite', 'BreadcrumbList', route === '/' ? 'WebPage' : 'TechArticle']) {
-      one(graph, (item) => item['@type'] === type, `${relative}: schema ${type}`);
+    const node = (type) => one(graph, (item) => item['@type'] === type, `${relative}: schema ${type}`);
+    const ref = (item) => ({ '@id': item['@id'] });
+    const organization = node('Organization');
+    const website = node('WebSite');
+    const page = node('WebPage');
+    assert.equal(organization['@id'], 'https://linuscent.com/#organization');
+    const home = `${origin}/`;
+    assert.equal(website['@id'], `${home}#website`);
+    assert.equal(website.url, home);
+    assert.deepEqual(website.publisher, ref(organization), `${relative}: website publisher`);
+    assert.equal(page['@id'], `${url}#page`, `${relative}: schema page ID`);
+    assert.equal(page.url, canonical, `${relative}: schema page URL`);
+    const pageName = decodeMetadata(one(meta, (tag) => tag.property === 'og:title', `${relative}: og:title`).content);
+    const siteName = decodeMetadata(one(meta, (tag) => tag.property === 'og:site_name', `${relative}: og:site_name`).content);
+    assert.equal(website.name, siteName, `${relative}: schema website name`);
+    assert.equal(page.name, pageName, `${relative}: schema page name`);
+    assert.equal(page.description, decodeMetadata(description), `${relative}: schema page description`);
+    assert.deepEqual(page.isPartOf, ref(website), `${relative}: page website`);
+    assert.deepEqual(page.publisher, ref(organization), `${relative}: page publisher`);
+
+    if (route === '/') {
+      assert.equal(graph.length, 3, `${relative}: homepage should contain only organization, website, and page nodes`);
+      assert(!('breadcrumb' in page), `${relative}: unexpected homepage breadcrumb reference`);
+      assert(!('mainEntity' in page), `${relative}: unexpected homepage main entity`);
+    } else {
+      assert.equal(graph.length, 5, `${relative}: expected five guide graph nodes`);
+      const article = node('TechArticle');
+      const breadcrumbs = node('BreadcrumbList');
+      assert.equal(article['@id'], `${url}#article`, `${relative}: schema article ID`);
+      assert.deepEqual(page.mainEntity, ref(article), `${relative}: page must reference its article`);
+      assert.equal(article.url, canonical, `${relative}: schema article URL`);
+      assert.equal(article.headline, pageName, `${relative}: article headline`);
+      assert.equal(article.description, page.description, `${relative}: article description`);
+      assert.deepEqual(article.publisher, ref(organization), `${relative}: article publisher`);
+      assert(!('breadcrumb' in article), `${relative}: breadcrumb belongs on the WebPage, not the article`);
+      assert.equal(breadcrumbs['@id'], `${url}#breadcrumbs`, `${relative}: schema breadcrumb ID`);
+      assert.deepEqual(page.breadcrumb, ref(breadcrumbs), `${relative}: page must reference its breadcrumb trail`);
+      assert.deepEqual(breadcrumbs.itemListElement, [
+        { '@type': 'ListItem', position: 1, name: siteName, item: home },
+        { '@type': 'ListItem', position: 2, name: pageName, item: canonical },
+      ], `${relative}: expected a canonical home-to-guide breadcrumb trail`);
     }
-    const page = one(graph, (item) => item['@id'] === `${url}#page`, `${relative}: schema page`);
-    assert.equal(page.url, canonical);
-    assert.equal(page.description, description.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&#x27;/g, "'"));
-    const trail = one(graph, (item) => item['@type'] === 'BreadcrumbList', `${relative}: breadcrumbs`).itemListElement;
-    assert.equal(trail.at(-1).item, url);
   }
 
-  for (const tag of [...elements(html, 'a'), ...links]) {
+  const navigation = new Set([...elements(html, 'a'), ...elements(html, 'area')]);
+  for (const tag of [...navigation, ...links]) {
     if (!tag.href || /^(mailto:|tel:|javascript:|data:)/i.test(tag.href)) continue;
     const target = new URL(tag.href.replace(/&amp;/g, '&'), url);
     if (target.origin !== origin) continue;
     assert(!target.pathname.startsWith('/aura-help'), `${relative}: obsolete base path`);
     const targetFile = await localFile(target);
+    if (navigation.has(tag) && !('download' in tag) && pages.has(targetFile) && targetFile !== notFoundFile) {
+      assert.equal(target.pathname, pageRoute(targetFile), `${relative}: noncanonical local page href ${tag.href}`);
+    }
     if (target.hash && pages.has(targetFile)) {
       const id = decodeURIComponent(target.hash.slice(1));
       assert(elements(pages.get(targetFile), '[a-z][a-z0-9-]*').some((element) => element.id === id), `${relative}: missing anchor ${target}`);

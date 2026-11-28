@@ -1,6 +1,6 @@
 ---
 title: What is Aura?
-description: Learn what Aura is, what it helps teams do, and where it fits in the product security and compliance workflow.
+description: See how Linuscent Aura connects software inventory, vulnerability findings, security decisions, and compliance evidence to products and releases.
 sidebar:
   order: 1
 ---
@@ -84,12 +84,12 @@ You do not need to understand all of these concepts before getting started.
 
 Continue with:
 
-- [How Aura works](/getting-started/how-aura-works)
-- [Key concepts](/getting-started/key-concepts)
-- [First steps in Aura](/getting-started/first-steps)
-- [What is an SBOM?](/sbom/what-is-an-sbom)
+- [How Aura works](/getting-started/how-aura-works/)
+- [Key concepts](/getting-started/key-concepts/)
+- [First steps in Aura](/getting-started/first-steps/)
+- [What is an SBOM?](/sbom/what-is-an-sbom/)
 
 ## Related articles
 
-- [How Aura works](/getting-started/how-aura-works)
-- [Products and releases](/products-and-releases/overview)
+- [How Aura works](/getting-started/how-aura-works/)
+- [Products and releases](/products-and-releases/overview/)

@@ -32,6 +32,6 @@ SBOM** action.
 
 ## Related articles
 
-- [Components](/inventory/components)
-- [Inventory Overview](/inventory/overview)
-- [Understanding Findings](/risks/understanding-findings)
+- [Components](/inventory/components/)
+- [Inventory Overview](/inventory/overview/)
+- [Understanding Findings](/risks/understanding-findings/)

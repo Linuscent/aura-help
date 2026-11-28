@@ -36,7 +36,7 @@ least one analyzed release to appear.
 
 ## Related articles
 
-- [Products and releases](/products-and-releases/overview)
-- [Releases](/products-and-releases/releases)
-- [Active release monitoring](/products-and-releases/active-release-monitoring)
-- [Understanding Findings](/risks/understanding-findings)
+- [Products and releases](/products-and-releases/overview/)
+- [Releases](/products-and-releases/releases/)
+- [Active release monitoring](/products-and-releases/active-release-monitoring/)
+- [Understanding Findings](/risks/understanding-findings/)

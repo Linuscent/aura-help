@@ -82,7 +82,7 @@ results are available. Select **View release** to open it.
 
 ## Related articles
 
-- [Working With Your Team](/workspace-and-account/working-with-your-team)
-- [First steps in Aura](/getting-started/first-steps)
+- [Working With Your Team](/workspace-and-account/working-with-your-team/)
+- [First steps in Aura](/getting-started/first-steps/)
 - [Prioritizing Findings](/risks/prioritizing-findings/)
 - [Vulnerability Severity](/risks/vulnerability-severity/)

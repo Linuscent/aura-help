@@ -53,7 +53,7 @@ Select **Create case** to save the case, or **Cancel** to discard it.
 
 ## Related articles
 
-- [Compliance Overview](/compliance/overview)
-- [How Aura Supports CRA](/compliance/how-aura-supports-cra)
-- [Trust Center](/compliance/trust-center)
-- [Access and Permissions](/workspace-and-account/access-and-permissions)
+- [Compliance Overview](/compliance/overview/)
+- [How Aura Supports CRA](/compliance/how-aura-supports-cra/)
+- [Trust Center](/compliance/trust-center/)
+- [Access and Permissions](/workspace-and-account/access-and-permissions/)

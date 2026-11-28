@@ -53,6 +53,6 @@ missing rather than being assigned a license.
 
 ## Related articles
 
-- [Understanding Findings](/risks/understanding-findings)
-- [Dependency Graph](/inventory/dependency-graph)
-- [Upload an SBOM](/sbom/upload-sbom)
+- [Understanding Findings](/risks/understanding-findings/)
+- [Dependency Graph](/inventory/dependency-graph/)
+- [Upload an SBOM](/sbom/upload-sbom/)

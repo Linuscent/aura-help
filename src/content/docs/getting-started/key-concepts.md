@@ -53,7 +53,7 @@ An SBOM can contain information such as:
 
 Aura accepts CycloneDX JSON/XML and SPDX 2.3 JSON. SPDX conversion can omit source details, so use CycloneDX when complete dependency relationships matter.
 
-For more information, see [What is an SBOM?](/sbom/what-is-an-sbom).
+For more information, see [What is an SBOM?](/sbom/what-is-an-sbom/).
 
 ## Component
 
@@ -175,7 +175,7 @@ Aura does not by itself determine whether a product is compliant with the CRA.
 
 ## Related articles
 
-- [How Aura works](/getting-started/how-aura-works)
-- [First steps in Aura](/getting-started/first-steps)
-- [What is Aura?](/getting-started/what-is-aura)
-- [Products and releases](/products-and-releases/overview)
+- [How Aura works](/getting-started/how-aura-works/)
+- [First steps in Aura](/getting-started/first-steps/)
+- [What is Aura?](/getting-started/what-is-aura/)
+- [Products and releases](/products-and-releases/overview/)

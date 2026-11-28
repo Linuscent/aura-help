@@ -29,6 +29,6 @@ SPDX is converted by Aura for analysis and may lose source details. Prefer Cyclo
 
 ## Related articles
 
-- [Troubleshooting Overview](/troubleshooting)
-- [SBOM Validation Errors](/troubleshooting/sbom-validation-errors)
-- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom)
+- [Troubleshooting Overview](/troubleshooting/)
+- [SBOM Validation Errors](/troubleshooting/sbom-validation-errors/)
+- [Troubleshoot an SBOM](/sbom/troubleshoot-sbom/)
