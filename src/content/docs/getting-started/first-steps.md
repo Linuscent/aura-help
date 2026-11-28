@@ -40,7 +40,9 @@ To complete this guide, you need:
 
 You can create an Aura account with email and password. If Google sign-up is
 displayed on the Aura sign-up page, you can also create your account with
-Google. Google sign-up is not offered in every deployment.
+Google. If **Sign up with GitHub** is displayed, you can also create your
+account with GitHub. Google and GitHub sign-up are not offered in every
+deployment.
 
 ### With email and password
 
@@ -64,6 +66,28 @@ Aura is provided for business use.
 
 Returning users can select **Sign in with Google** on the sign-in page to sign
 in with the Google account used for the Aura account.
+
+### With GitHub
+
+When GitHub sign-up is available on the Aura website:
+
+1. Accept the Terms & Conditions and acknowledge the Privacy Policy.
+2. Complete the human verification check when configured.
+3. Select **Sign up with GitHub** explicitly.
+4. Authorize GitHub when prompted. Use a GitHub account with a verified primary
+   email address. Aura uses your GitHub verified primary email address; it can
+   remain private on GitHub.
+
+Aura then sends an email containing a link. Open the link in the **same browser**
+where you started GitHub sign-up. If your mail application opens another
+browser, copy and paste the link into the original browser.
+
+If the link cannot be used, restart GitHub sign-up to request a new link. Do
+not use the email sign-up resend action for a GitHub sign-up link.
+
+After completing the email-link step, explicitly select **Sign in with GitHub**
+on the Aura sign-in page. Linking GitHub for sign-in does not grant access to
+your GitHub repositories or your Aura workspaces.
 
 ## 2. Verify your email
 
