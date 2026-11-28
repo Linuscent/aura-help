@@ -43,11 +43,11 @@ and [Connect with OAuth](/integrations/mcp-server/#connect-with-oauth).
 
 ### Set up a password
 
-If you created your Aura account with Google and don't have a password, open
-**Account → Security** and choose **Set up a password** in the **Password**
-card. Enter your Aura email address, then follow the reset link sent to that
-address to set a password; afterwards you can sign in with email and password
-as well.
+If you created your Aura account with a social sign-in method and don't have a
+password, open **Account → Security** and choose **Set up a password** in the
+**Password** card. Enter your Aura email address, then follow the reset link
+sent to that address to set a password; afterwards you can sign in with email
+and password as well.
 
 ### GitHub
 
@@ -69,6 +69,43 @@ Connecting GitHub doesn't replace or remove your existing sign-in method.
 Linking GitHub for sign-in doesn't grant access to your GitHub repositories or
 your Aura workspaces. This sign-in linking is separate from authorizing GitHub
 repositories, accepting workspace invitations, and authorizing other apps.
+
+### Microsoft
+
+If Microsoft sign-in is available for your account, you can connect Microsoft
+as an additional way to sign in when it is shown. Microsoft sign-in is not
+offered in every deployment. You can connect a personal, work, or school
+Microsoft account. Existing accounts are not linked automatically, even when
+the email addresses match.
+
+1. First, sign in normally to Aura with your existing sign-in method.
+2. Open **Account → Security → Sign-in methods → Connect Microsoft**.
+3. Choose the Microsoft account and complete the prompts at Microsoft. Aura
+   sends a confirmation email to your existing Aura email address; the
+   Microsoft account email address does not need to match. Open that email in
+   the **same browser** and in the **same still-recent signed-in session**;
+   opening the link is the confirmation.
+
+The **Connected** badge appears only after confirmation.
+
+Before connecting Microsoft:
+
+- Your Aura account email must be verified.
+- You need a recent Aura sign-in.
+
+Troubleshooting:
+
+- If your session is no longer recent or Aura asks you to sign in again, sign
+  in again with your usual method and start over.
+- If the confirmation link has expired or you lost it, retry connecting
+  Microsoft.
+
+After connecting, select **Sign in with Microsoft** on the Aura sign-in page
+and use the same linked Microsoft account. Connecting Microsoft doesn't
+replace or remove your existing sign-in method, and there is no disconnect
+control. Aura uses basic identity information for sign-in and does not request
+access to Microsoft files or other services. Connecting Microsoft does not
+change your Aura workspace access.
 
 ## Pending invitations
 
