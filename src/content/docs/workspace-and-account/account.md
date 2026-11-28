@@ -95,6 +95,8 @@ Before connecting Microsoft:
 
 Troubleshooting:
 
+- If the confirmation email has not arrived, check spam and wait a few minutes
+  before choosing **Connect Microsoft again**, if still signed in.
 - If your session is no longer recent or Aura asks you to sign in again, sign
   in again with your usual method and start over.
 - If the confirmation link has expired or you lost it, sign in again and restart
